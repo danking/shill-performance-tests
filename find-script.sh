@@ -13,7 +13,7 @@ fi
 for i in `seq 0 10`
 do
     echo "Test $i"
-    echo "Test $i" > ${LOG_PATH}/no-sandbox-times
+    echo "Test $i" >> ${LOG_PATH}/no-sandbox-times
     /usr/bin/time -al -o ${LOG_PATH}/no-sandbox-times \
         find . -name '*.c' -exec grep -Hi torvalds '{}' ';' > ${LOG_PATH}/no-sandbox.$i
 done
