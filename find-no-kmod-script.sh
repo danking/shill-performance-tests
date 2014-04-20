@@ -4,7 +4,7 @@
 
 
 LOG_DIR=$(date "+logs--%Y-%m-%d--%H:%M:%S")
-LOG_PATH=~/tests/find-exec/no-sandbox/${LOG_DIR}
+LOG_PATH=~/tests/find-exec/no-kmod/${LOG_DIR}
 mkdir ${LOG_PATH}
 
 if [ $? -ne 0 ]

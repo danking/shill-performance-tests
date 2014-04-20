@@ -1,0 +1,26 @@
+{ +lookup, +read, +stat, +chdir, +content }
+/
+/home/danking/linux
+{ +stat, +read , +exec }
+/usr/bin/find
+/usr/bin/grep
+{ +lookup, +read, +stat }
+/usr
+/lib
+/usr/bin
+{ +stat, +read, +exec }
+/libexec/ld-elf.so.1
+{ +stat, +read, +exec}
+/lib/libc.so.7
+/lib/libz.so.6
+/usr/lib/libbz2.so.4
+/usr/lib/libgnuregex.so.5
+{ +lookup, +read }
+/usr/share/locale/en_US.UTF-8
+/usr/share/locale/UTF-8/LC_CTYPE
+{ +read }
+/var/run/ld-elf.so.hints
+{ +read, +stat }
+&stdin
+{ +write, +append, +stat }
+&stdout
