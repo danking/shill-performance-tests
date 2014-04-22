@@ -1,7 +1,7 @@
 #!/bin/bash
 
-SCRIPTS=(find-no-kmod-script.sh find-sandbox-script.sh \
-         find-script.sh find-shil-script.sh find-shill-spawn-script.sh \
+SCRIPTS=(find-sandbox-script.sh \
+         find-script.sh find-shill-script.sh find-shill-spawn-script.sh \
          grep-recursive-script.sh)
 
 PATH_TO_LINUX=~/linux
