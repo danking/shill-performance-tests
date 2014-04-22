@@ -4,4 +4,7 @@ require "find-exec.cap";
 
 val linux = open-dir("../linux");
 
-find(linux,name(".*\\.c"),grep("Torvalds"));
+find( linux
+    , name(".*\\.c")
+    , grep("Torvalds", stdout)
+    );

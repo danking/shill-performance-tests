@@ -1,16 +1,25 @@
 #lang shill/cap
 
-provide [find : forall [X:+path,+lookup,+contents] . [f: X] [filter: [_: X] -> boolean?] [cmd: [_: X] -> any] -> any ];
+require shill/contracts
+        shill/io;
+
+provide [find : forall [X:+path,+lookup,+contents] .
+                [f: X]
+                [filter: [_: X] -> boolean?]
+                [cmd: [_: X] -> any]
+                ->
+                any ];
 
 # filter functions
 provide [name : [_: string?] -> [_ : pathable] -> boolean?]
         [fullname : [_: string?] ->  [_ : pathable] -> boolean?];
 
 # actions
-provide [grep : [regexp : or/c(string?, regexp?)] ->
-        [file : file/c(+read, +path)]
-        ->
-        any ];
+provide [grep : [regexp : or/c(string?, regexp?)]
+                [out : writeable?] ->
+                [file : file/c(+read, +path)]
+                ->
+                any ];
 
 val pathable = or/c(file/c(+path),dir/c(+path));
 
@@ -29,12 +38,18 @@ val find = fun(f, filter, cmd) {
     };
 };
 
-val grep = fun(regexp) {
+val grep = fun(regexp, out) {
   fun (file) {
     val contents = read(file);
-    if not(empty?(regexp-match*(regexp, contents)))
+    val matches = regexp-match*(regexp, contents);
+    if not(empty?(matches))
     then {
-      printf("File ~a matches\n", path(file));
+      for match in matches do {
+        fwrite(out,
+               "~a: ~a\n",
+               path(file),
+               match);
+      }
     }
   };
 };
