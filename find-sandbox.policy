@@ -1,6 +1,7 @@
-{ +lookup, +read, +stat, +chdir, +content }
+{ +lookup, +read, +stat, +chdir, +content, +read-symlink }
 /
 /home/danking/linux
+.
 { +stat, +read , +exec }
 /usr/bin/find
 /usr/bin/grep
