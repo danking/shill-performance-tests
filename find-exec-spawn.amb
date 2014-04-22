@@ -1,0 +1,20 @@
+#lang shill/ambient
+
+require "find-exec-spawn.cap",
+        shill/native;
+
+val linux = open-dir("../linux");
+val wallet = create-wallet();
+populate-native-wallet( wallet
+                      , open-dir("/")
+                      , "/usr/bin"
+                      , "/libexec:/lib:/usr/lib"
+                      , pipe-factory
+                      );
+
+find(linux,
+     name(".*\\.c"),
+     grep("Torvalds",
+          stdout,
+          linux,
+          wallet));

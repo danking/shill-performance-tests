@@ -1,0 +1,64 @@
+#lang shill/cap
+
+require shill/contracts
+        shill/io
+        shill/native;
+
+provide [find : forall [X:+path,+lookup,+contents] . [f: X]
+                                                     [filter: [_: X] -> boolean?]
+                                                     [cmd: [_: X] -> any]
+                                                     ->
+                                                     any ];
+
+# filter functions
+provide [name : [_: string?] -> [_ : pathable] -> boolean?]
+        [fullname : [_: string?] ->  [_ : pathable] -> boolean?];
+
+# actions
+provide [grep : [regexp : or/c(string?, regexp?)]
+                [out : writeable?]
+                [dir : dir/c(+lookup)]
+                [wallet : native-wallet?] ->
+                [file : file/c(+read, +path)]
+                ->
+                any ];
+
+val pathable = or/c(file/c(+path),dir/c(+path));
+
+val ls = fun(dir) { contents(dir); };
+
+val find = fun(f, filter, cmd) {
+  if and(file?(f),filter(f)) then
+     cmd(f);
+
+  # if f is a directory, recurse on its contents
+  if dir?(f) then
+    for g in ls(f) do {
+      val fc = lookup(f,g);
+      if not(sys-error?(fc)) then
+        find(fc, filter, cmd);
+    };
+};
+
+val grep = fun(regexp, out, dir, wallet) {
+  grepfun = pkg-native("grep", wallet);
+  fun (file) {
+    grepfun([regexp, file],
+            stdout = out,
+            extra = [dir])
+  };
+};
+
+val name = fun(r) { 
+  val re = regexp(r);
+  fun(f) regexp-match?(re, shortname(path(f))); 
+};
+
+val shortname = fun(path) {
+  path-element->string(last(explode-path(string->path(path))));
+};
+
+val fullname = fun(r) { 
+  val re = regexp(r);
+  fun(f) regexp-match?(re, path(f));
+};
