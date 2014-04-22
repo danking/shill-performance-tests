@@ -1,22 +1,12 @@
 #!/bin/bash
 
+PATH_TO_LINUX=~/linux
 
+TEST_NAME=find-exec-shill-no-spawn
+COMMAND="racket"
+ARGS=(find-exec.amb)
+RUNS=11
+PATH_TO_TEST_LOGS=~/tests/results
+PATH_TO_SHILL=~/shill
 
-
-LOG_DIR=$(date "+logs--%Y-%m-%d--%H:%M:%S")
-LOG_PATH=~/tests/find-exec/shill/${LOG_DIR}
-mkdir ${LOG_PATH}
-
-if [ $? -ne 0 ]
-then
-    echo "Could not create ${LOG_PATH}, failing."
-    exit 1
-fi
-
-for i in `seq 0 10`
-do
-    echo "Test $i"
-    echo "Test $i" >> ${LOG_PATH}/times
-    /usr/bin/time -al -o ${LOG_PATH}/times \
-        racket find-exec.amb > ${LOG_PATH}/log.$i
-done
+bash generic-test.sh $TEST_NAME $COMMAND "${ARGS[*]}" $RUNS $PATH_TO_TEST_LOGS $PATH_TO_SHILL
