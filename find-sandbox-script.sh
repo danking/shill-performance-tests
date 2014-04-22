@@ -1,23 +1,19 @@
 #!/bin/bash
 
-PATH_TO_TESTS=/home/danking/tests
-PATH_TO_SHILL=/home/danking/shill
+PATH_TO_LINUX=$1
+PATH_TO_TEST_LOGS=$2
+PATH_TO_SHILL=$3
+RUNS=$4
+PATH_TO_TESTS=$5
 
-LOG_DIR=$(date "+logs--%Y-%m-%d--%H:%M:%S")
-LOG_PATH=~/tests/find-exec/sandboxed/${LOG_DIR}
-mkdir ${LOG_PATH}
+function die() { echo "find-sandbox-script.sh: $@" 1>&2 ; exit 1; }
 
-if [ $? -ne 0 ]
-then
-    echo "Could not create ${LOG_PATH}, failing."
-    exit 1
-fi
+[ "$#" -eq 5 ] || die "5 arguments required, $# provided"
 
-for i in `seq 0 10`
-do
-    echo "Test $i"
-    echo "Test $i" >> ${LOG_PATH}/times
-    /usr/bin/time -al -o ${LOG_PATH}/times \
-        ${PATH_TO_SHILL}/sandbox/sandbox ${PATH_TO_TESTS}/find-sandbox.policy \
-        /usr/bin/find . -name '*.c' -exec grep -Hi torvalds '{}' ';' > ${LOG_PATH}/log.$i
-done
+TEST_NAME=find-yes-sandbox
+COMMAND=${PATH_TO_SHILL}/sandbox/sandbox
+ARGS=(${PATH_TO_TEST_LOGS}/../find-sandbox.policy \
+      /usr/bin/find ${PATH_TO_LINUX} -name '*.c' -exec grep -Hi torvalds '{}' \;)
+
+bash generic-test.sh $TEST_NAME $COMMAND "${ARGS[*]}" $RUNS $PATH_TO_TEST_LOGS $PATH_TO_SHILL
+

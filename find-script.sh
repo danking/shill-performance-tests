@@ -1,22 +1,17 @@
 #!/bin/bash
 
+PATH_TO_LINUX=$1
+PATH_TO_TEST_LOGS=$2
+PATH_TO_SHILL=$3
+RUNS=$4
+PATH_TO_TESTS=$5
 
+function die() { echo "find-script.sh: $@" 1>&2 ; exit 1; }
 
+[ "$#" -eq 5 ] || die "5 arguments required, $# provided"
 
-LOG_DIR=$(date "+logs--%Y-%m-%d--%H:%M:%S")
-LOG_PATH=~/tests/find-exec/no-sandbox/${LOG_DIR}
-mkdir ${LOG_PATH}
+TEST_NAME=find-no-sandbox
+COMMAND="find"
+ARGS=(${PATH_TO_LINUX} -name '*.c' -exec grep -Hi torvalds '{}' \;)
 
-if [ $? -ne 0 ]
-then
-    echo "Could not create ${LOG_PATH}, failing."
-    exit 1
-fi
-
-for i in `seq 0 10`
-do
-    echo "Test $i"
-    echo "Test $i" >> ${LOG_PATH}/times
-    /usr/bin/time -al -o ${LOG_PATH}/times \
-        find . -name '*.c' -exec grep -Hi torvalds '{}' ';' > ${LOG_PATH}/log.$i
-done
+bash generic-test.sh $TEST_NAME $COMMAND "${ARGS[*]}" $RUNS $PATH_TO_TEST_LOGS $PATH_TO_SHILL
