@@ -3,7 +3,7 @@
 require "find-exec-spawn.cap",
         shill/native;
 
-val linux = open-dir("../linux");
+val src = open-dir("/usr/src");
 val wallet = create-wallet();
 populate-native-wallet( wallet
                       , open-dir("/")
@@ -12,9 +12,9 @@ populate-native-wallet( wallet
                       , pipe-factory
                       );
 
-find(linux,
+find(src,
      name(".*\\.c"),
-     grep("Torvalds",
+     grep("mac_",
           stdout,
-          linux,
+          src,
           wallet));

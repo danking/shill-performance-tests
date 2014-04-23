@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/local/bin/bash
 
 PATH_TO_LINUX=$1
 PATH_TO_TEST_LOGS=$2

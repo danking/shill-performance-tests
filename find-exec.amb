@@ -2,9 +2,9 @@
 
 require "find-exec.cap";
 
-val linux = open-dir("../linux");
+val src = open-dir("/usr/src");
 
-find( linux
+find( src
     , name(".*\\.c")
-    , grep("Torvalds", stdout)
+    , grep("mac_", stdout)
     );

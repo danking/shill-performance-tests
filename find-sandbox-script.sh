@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/local/bin/bash
 
 PATH_TO_LINUX=$1
 PATH_TO_TEST_LOGS=$2
@@ -13,7 +13,7 @@ function die() { echo "find-sandbox-script.sh: $@" 1>&2 ; exit 1; }
 TEST_NAME=find-yes-sandbox
 COMMAND=${PATH_TO_SHILL}/sandbox/sandbox
 ARGS=(${PATH_TO_TEST_LOGS}/../find-sandbox.policy \
-      /usr/bin/find ${PATH_TO_LINUX} -name '*.c' -exec grep -Hi torvalds '{}' \;)
+      /usr/bin/find ${PATH_TO_LINUX} -name '*.c' -exec grep -Hi "mac_" '{}' \;)
 
 bash generic-test.sh $TEST_NAME $COMMAND "${ARGS[*]}" $RUNS $PATH_TO_TEST_LOGS $PATH_TO_SHILL
 

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/local/bin/bash
 
 function die() { echo "generic-test.sh: $@" 1>&2 ; exit 1; }
 

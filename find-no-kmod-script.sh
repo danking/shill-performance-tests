@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/local/bin/bash
 
 PATH_TO_LINUX=$1
 PATH_TO_TEST_LOGS=$2
@@ -12,6 +12,6 @@ function die() { echo "find-no-kmod-script.sh: $@" 1>&2 ; exit 1; }
 
 TEST_NAME=find-no-kmod
 COMMAND="find"
-ARGS=(${PATH_TO_LINUX} -name '*.c' -exec grep -Hi torvalds '{}' \;)
+ARGS=(${PATH_TO_LINUX} -name '*.c' -exec grep -Hi "mac_" '{}' \;)
 
 bash generic-test.sh $TEST_NAME $COMMAND "${ARGS[*]}" $RUNS $PATH_TO_TEST_LOGS $PATH_TO_SHILL

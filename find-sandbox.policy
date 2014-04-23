@@ -1,6 +1,6 @@
 { +lookup, +read, +stat, +chdir, +content, +read-symlink }
 /
-/home/danking/linux
+/usr/src
 .
 { +stat, +read , +exec }
 /usr/bin/find
