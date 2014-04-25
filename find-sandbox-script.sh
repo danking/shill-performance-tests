@@ -10,10 +10,8 @@ function die() { echo "find-sandbox-script.sh: $@" 1>&2 ; exit 1; }
 
 [ "$#" -eq 5 ] || die "5 arguments required, $# provided"
 
-TEST_NAME=find-yes-sandbox
-COMMAND=${PATH_TO_SHILL}/sandbox/sandbox
-ARGS=(${PATH_TO_TEST_LOGS}/../find-sandbox.policy \
-      /usr/bin/find ${PATH_TO_LINUX} -name '*.c' -exec grep -Hi "mac_" '{}' \;)
+TEST_NAME=find-exec-sandbox
+COMMAND=racket
+ARGS=(find-exec-sandbox.amb)
 
 bash generic-test.sh $TEST_NAME $COMMAND "${ARGS[*]}" $RUNS $PATH_TO_TEST_LOGS $PATH_TO_SHILL
-

@@ -1,0 +1,15 @@
+#lang shill/ambient
+
+require shill/native;
+require "find-exec-sandbox.cap";
+
+val wallet = create-wallet();
+populate-native-wallet(wallet
+                      ,open-dir("/")
+                      ,"/usr/bin"
+                      ,"/libexec:/lib:/usr/lib"
+                      ,pipe-factory
+                      ,lookups = [open-dir("/home"), open-dir("/dev")]);
+
+val src = open-dir("/usr/src");
+findmac(wallet,src,stdout,cwd);

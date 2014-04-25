@@ -12,6 +12,6 @@ function die() { echo "find-script.sh: $@" 1>&2 ; exit 1; }
 
 TEST_NAME=find-no-sandbox
 COMMAND="find"
-ARGS=(${PATH_TO_LINUX} -name '*.c' -exec grep -Hi "mac_" '{}' \;)
+ARGS=(${PATH_TO_LINUX} -name '*.c' -exec grep -H "mac_" '{}' \;)
 
 bash generic-test.sh $TEST_NAME $COMMAND "${ARGS[*]}" $RUNS $PATH_TO_TEST_LOGS $PATH_TO_SHILL

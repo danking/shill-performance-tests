@@ -10,8 +10,10 @@ ARGS=$3
 RUNS=$4
 PATH_TO_TEST_LOGS=$5
 PATH_TO_SHILL=$6
+BEFORE=$7
+AFTER=$8
 
-[ "$#" -eq 6 ] || die "5 arguments required, $# provided. Valid invocation:
+[ "$#" -eq 6 -o "$#" -eq 8 ] || die "6 or 8 arguments required, $# provided. Valid invocation:
 
   bash generic-test.sh name command runs test_log_path shill_path
 
@@ -42,6 +44,8 @@ do
     echo $(git log | head -n 1) > ${LOG_PATH}/git-commit
     echo "Test $i"
     echo "Test $i" >> ${LOG_PATH}/times
+    eval "$BEFORE"
     /usr/bin/time -al -o ${LOG_PATH}/times \
-        $COMMAND ${ARGS[*]} > ${LOG_PATH}/log.$i
+        $COMMAND ${ARGS[*]} &> ${LOG_PATH}/log.$i
+    eval "$AFTER"
 done

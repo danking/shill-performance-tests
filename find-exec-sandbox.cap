@@ -1,0 +1,17 @@
+#lang shill/cap
+
+provide [findmac :
+          [wallet : native-wallet?]
+          [src : dir/c(+chdir, +read, +lookup, +stat, +path, +contents)]
+          [out : writeable?]
+          [cwd : dir/c(+chdir, +lookup, +path)]
+           -> integer?];
+
+require shill/native;
+require shill/contracts;
+require shill/io;
+
+val findmac = fun (wallet,src,out,cwd) {
+    find = pkg-native("find",wallet,"grep");
+    find([src,"-name","*.c","-exec","grep","-H","mac_","{}",";"],stdout = out, stderr = out, extra = [cwd]);
+}

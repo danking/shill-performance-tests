@@ -45,7 +45,8 @@ val grep = fun(regexp, out, dir, wallet) {
   fun (file) {
     grepfun([regexp, file],
             stdout = out,
-            extra = [dir])
+            extra = [dir],
+            timeout = 1)
   };
 };
 
