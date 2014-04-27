@@ -6,7 +6,7 @@ PATH_TO_SHILL=$3
 RUNS=$4
 PATH_TO_TESTS=$5
 
-function die() { echo "find-sandbox-script.sh: $@" 1>&2 ; exit 1; }
+function die() { echo "find-exec-sandbox.sh: $@" 1>&2 ; exit 1; }
 
 [ "$#" -eq 5 ] || die "5 arguments required, $# provided"
 
