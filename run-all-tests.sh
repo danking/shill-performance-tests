@@ -3,7 +3,7 @@
 SCRIPTS+=(find-script.sh grading-bash.sh emacs-bash.sh)
 SCRIPTS+=(emacs-bash.sh)
 SCRIPTS+=(curl-bash.sh untar-bash.sh configure-bash.sh make-bash.sh install-bash.sh uninstall-bash.sh)
-SCRIPTS+=(find-script.sh find-sandbox-script.sh find-shill-script.sh)
+SCRIPTS+=(find-script.sh find-sandbox-script.sh find-exec-shill-no-spawn.sh)
 SCRIPTS+=(grading-sandbox.sh grading-bash.sh grading-shill.sh)
 SCRIPTS+=(emacs-sandbox.sh emacs-shill.sh)
 SCRIPTS+=(curl-sandbox.sh untar-sandbox.sh configure-sandbox.sh make-sandbox.sh install-sandbox.sh uninstall-sandbox.sh)
