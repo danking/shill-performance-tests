@@ -41,11 +41,19 @@ val find = fun(f, filter, cmd) {
 };
 
 val grep = fun(regexp, out, dir, wallet) {
+  val start = current-inexact-milliseconds();
   grepfun = pkg-native("grep", wallet);
+  val stop = current-inexact-milliseconds();
+  printf("pkg-native: ~a (delta)\n", -(stop, start));
+
   fun (file) {
-    grepfun(["-H",regexp, file],
-            stdout = out, stderr = out,
-            extra = [dir]);
+    val start = current-inexact-milliseconds();
+    grepfun([regexp, file],
+            stdout = out,
+            extra = [dir],
+            timeout = 1);
+    val stop = current-inexact-milliseconds();
+    printf("grepfun: ~a (delta)\n", -(stop, start));
   };
 };
 

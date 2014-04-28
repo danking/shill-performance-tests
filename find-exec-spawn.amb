@@ -1,9 +1,13 @@
 #lang shill/ambient
 
+printf("vm startup + macro expasnsion (absolute): ~a\n",
+       current-inexact-milliseconds());
+
 require "find-exec-spawn.cap",
         shill/native;
 
 val src = open-dir("/usr/src");
+val dev-null = open-file("/dev/null");
 val wallet = create-wallet();
 populate-native-wallet( wallet
                       , open-dir("/")
@@ -15,6 +19,6 @@ populate-native-wallet( wallet
 find(src,
      name(".*\\.c"),
      grep("mac_",
-          stdout,
+          dev-null,
           src,
           wallet));
