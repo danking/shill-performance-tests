@@ -1,13 +1,13 @@
 #!/usr/local/bin/bash
 
-# SCRIPTS+=(find-no-sandbox.sh grading-bash.sh emacs-bash.sh)
-# SCRIPTS+=(emacs-bash.sh)
-# SCRIPTS+=(curl-bash.sh untar-bash.sh configure-bash.sh make-bash.sh install-bash.sh uninstall-bash.sh)
-# SCRIPTS+=(find-no-sandbox.sh find-exec-sandbox.sh find-exec-shill-no-spawn.sh)
+SCRIPTS+=(find-no-sandbox.sh grading-bash.sh emacs-bash.sh)
+SCRIPTS+=(emacs-bash.sh)
+SCRIPTS+=(curl-bash.sh untar-bash.sh configure-bash.sh make-bash.sh install-bash.sh uninstall-bash.sh)
+SCRIPTS+=(find-no-sandbox.sh find-exec-sandbox.sh find-exec-shill-no-spawn.sh)
 SCRIPTS+=(find-exec-shill-yes-spawn.sh find-exec-shill-yes-spawn-compiled.sh)
-# SCRIPTS+=(grading-sandbox.sh grading-bash.sh grading-shill.sh)
-# SCRIPTS+=(emacs-sandbox.sh emacs-shill.sh)
-# SCRIPTS+=(curl-sandbox.sh untar-sandbox.sh configure-sandbox.sh make-sandbox.sh install-sandbox.sh uninstall-sandbox.sh)
+SCRIPTS+=(grading-sandbox.sh grading-bash.sh grading-shill.sh)
+SCRIPTS+=(emacs-sandbox.sh emacs-shill.sh)
+SCRIPTS+=(curl-sandbox.sh untar-sandbox.sh configure-sandbox.sh make-sandbox.sh install-sandbox.sh uninstall-sandbox.sh)
 
 echo "Starting evaluation for:"
 echo "${SCRIPTS[*]}"
