@@ -12,7 +12,7 @@ function die() { echo "untar-sandbox.sh: $@" 1>&2 ; exit 1; }
 
 TEST_NAME=untar-sandbox
 COMMAND=racket
-ARGS=(untar-sandbox.amb)
+ARGS=(untar.amb)
 BEFORE="pushd ${PATH_TO_SHILL}/examples/packages/emacs ; bash clean.sh ; bash pre-untar.sh"
 AFTER="popd"
 

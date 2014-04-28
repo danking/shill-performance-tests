@@ -12,7 +12,7 @@ function die() { echo "uninstall-sandbox.sh: $@" 1>&2 ; exit 1; }
 
 TEST_NAME=uninstall-sandbox
 COMMAND=racket
-ARGS=(uninstall-sandbox.amb)
+ARGS=(uninstall.amb)
 BEFORE="pushd ${PATH_TO_SHILL}/examples/packages/emacs ; bash clean.sh ; bash pre-uninstall.sh"
 AFTER="popd"
 

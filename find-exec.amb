@@ -6,5 +6,5 @@ val src = open-dir("/usr/src");
 
 find( src
     , name(".*\\.c")
-    , grep("mac_", stdout)
+    , grep("(?m:.*mac_.*)", stdout)
     );

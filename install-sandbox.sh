@@ -12,7 +12,7 @@ function die() { echo "install-sandbox.sh: $@" 1>&2 ; exit 1; }
 
 TEST_NAME=install-sandbox
 COMMAND=racket
-ARGS=(install-sandbox.amb)
+ARGS=(install.amb)
 BEFORE="pushd ${PATH_TO_SHILL}/examples/packages/emacs ; bash clean.sh ; bash pre-install.sh"
 AFTER="popd"
 

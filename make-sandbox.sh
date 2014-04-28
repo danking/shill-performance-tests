@@ -12,7 +12,7 @@ function die() { echo "make-sandbox.sh: $@" 1>&2 ; exit 1; }
 
 TEST_NAME=make-sandbox
 COMMAND=racket
-ARGS=(make-sandbox.amb)
+ARGS=(make.amb)
 BEFORE="pushd ${PATH_TO_SHILL}/examples/packages/emacs ; bash clean.sh ; bash pre-make.sh"
 AFTER="popd"
 

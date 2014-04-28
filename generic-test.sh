@@ -44,8 +44,16 @@ do
     echo $(git log | head -n 1) > ${LOG_PATH}/git-commit
     echo "Test $i"
     echo "Test $i" >> ${LOG_PATH}/times
-    eval "$BEFORE"
+    sysctl security.mac.shill
+    sysctl vfs.freevnodes vfs.wantfreevnodes vfs.numvnodes
+    sysctl security.mac.shill >> ${LOG_PATH}/info.$i 2>&1
+    sysctl vfs.freevnodes vfs.wantfreevnodes vfs.numvnodes >> ${LOG_PATH}/info.$i 2>&1
+    echo "Preprocessing...." >> ${LOG_PATH}/info.$i 2>&1
+    eval "$BEFORE" >> ${LOG_PATH}/info.$i 2>&1
+    echo "Preprocessing complete." >> ${LOG_PATH}/info.$i 2>&1
     /usr/bin/time -al -o ${LOG_PATH}/times \
         $COMMAND ${ARGS[*]} &> ${LOG_PATH}/log.$i
-    eval "$AFTER"
+    echo "Postprocessing...." >> ${LOG_PATH}/info.$i 2>&1
+    eval "$AFTER" >> ${LOG_PATH}/info.$i 2>&1
+    echo "Postprocessing complete...." >> ${LOG_PATH}/info.$i 2>&1
 done

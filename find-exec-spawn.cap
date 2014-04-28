@@ -43,10 +43,9 @@ val find = fun(f, filter, cmd) {
 val grep = fun(regexp, out, dir, wallet) {
   grepfun = pkg-native("grep", wallet);
   fun (file) {
-    grepfun([regexp, file],
-            stdout = out,
-            extra = [dir],
-            timeout = 1)
+    grepfun(["-H",regexp, file],
+            stdout = out, stderr = out,
+            extra = [dir]);
   };
 };
 

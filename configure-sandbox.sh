@@ -12,7 +12,7 @@ function die() { echo "configure-sandbox.sh: $@" 1>&2 ; exit 1; }
 
 TEST_NAME=configure-sandbox
 COMMAND=racket
-ARGS=(configure-sandbox.amb)
+ARGS=(configure.amb)
 BEFORE="pushd ${PATH_TO_SHILL}/examples/packages/emacs ; bash clean.sh ; bash pre-configure.sh"
 AFTER="popd"
 

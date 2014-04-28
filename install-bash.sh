@@ -13,7 +13,7 @@ function die() { echo "install-bash.sh: $@" 1>&2 ; exit 1; }
 TEST_NAME=install-bash
 COMMAND="make"
 ARGS=(install)
-BEFORE="pushd ${PATH_TO_SHILL}/examples/packages/emacs ; bash clean.sh ; bash pre-install.sh"
+BEFORE="pushd ${PATH_TO_SHILL}/examples/packages/emacs ; bash clean.sh ; bash pre-install.sh ; cd emacs-24.3"
 AFTER="popd"
 
 bash generic-test.sh $TEST_NAME $COMMAND "${ARGS[*]}" $RUNS $PATH_TO_TEST_LOGS $PATH_TO_SHILL "$BEFORE" "$AFTER"

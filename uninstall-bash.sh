@@ -13,7 +13,7 @@ function die() { echo "uninstall-bash.sh: $@" 1>&2 ; exit 1; }
 TEST_NAME=uninstall-bash
 COMMAND="make"
 ARGS=(uninstall)
-BEFORE="pushd ${PATH_TO_SHILL}/examples/packages/emacs ; bash clean.sh ; bash pre-uninstall.sh"
+BEFORE="pushd ${PATH_TO_SHILL}/examples/packages/emacs ; bash clean.sh ; bash pre-uninstall.sh ; cd emacs-24.3"
 AFTER="popd"
 
 bash generic-test.sh $TEST_NAME $COMMAND "${ARGS[*]}" $RUNS $PATH_TO_TEST_LOGS $PATH_TO_SHILL "$BEFORE" "$AFTER"
