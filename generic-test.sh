@@ -44,6 +44,7 @@ do
     echo $(git log | head -n 1) > ${LOG_PATH}/git-commit
     echo "Test $i"
     echo "Test $i" >> ${LOG_PATH}/times
+    date
     sysctl security.mac.shill
     sysctl vfs.freevnodes vfs.wantfreevnodes vfs.numvnodes
     sysctl security.mac.shill >> ${LOG_PATH}/info.$i 2>&1
