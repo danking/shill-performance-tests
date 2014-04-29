@@ -1,0 +1,399 @@
+security.mac.shill.cap_count: 0
+security.mac.shill.label_count: 0
+security.mac.shill.list_count: 7703
+security.mac.shill.session_count: 0
+security.mac.shill.shill_debug: 0
+security.mac.shill.network_cap_count: 100
+security.mac.shill.network_cap_list_count: 13
+vfs.freevnodes: 439
+vfs.wantfreevnodes: 45026
+vfs.numvnodes: 7702
+Preprocessing....
+~/shill/examples/packages/emacs ~/tests
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 20 50.1M   20 10.4M    0     0  18.9M      0  0:00:02 --:--:--  0:00:02 18.9M100 50.1M  100 50.1M    0     0  34.0M      0  0:00:01  0:00:01 --:--:-- 34.0M
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... build-aux/install-sh -c -d
+checking for gawk... no
+checking for mawk... no
+checking for nawk... nawk
+checking whether make sets $(MAKE)... yes
+checking build system type... x86_64-unknown-freebsd9.2
+checking host system type... x86_64-unknown-freebsd9.2
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking whether gcc and cc understand -c and -o together... yes
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for Minix Amsterdam compiler... no
+checking for ar... ar
+checking for ranlib... ranlib
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for gcc option to accept ISO C99... -std=gnu99
+checking for gcc -std=gnu99 option to accept ISO Standard C... (cached) -std=gnu99
+checking whether gcc -std=gnu99 accepts -g3 -O2... yes
+checking whether ln -s works... yes
+checking for install-info... /usr/bin/install-info
+checking for gzip... /usr/bin/gzip
+checking for makeinfo... /usr/bin/makeinfo
+checking for -znocombreloc... yes
+checking for pkg-config... /usr/local/bin/pkg-config
+checking machine/soundcard.h usability... no
+checking machine/soundcard.h presence... no
+checking for machine/soundcard.h... no
+checking sys/soundcard.h usability... yes
+checking sys/soundcard.h presence... yes
+checking for sys/soundcard.h... yes
+checking soundcard.h usability... no
+checking soundcard.h presence... no
+checking for soundcard.h... no
+checking for _oss_ioctl in -lossaudio... no
+checking for alsa >= 1.0.0... no
+checking for linux/version.h... no
+checking for sys/systeminfo.h... no
+checking for stdio_ext.h... no
+checking for fcntl.h... yes
+checking for coff.h... no
+checking for pty.h... no
+checking for sys/vlimit.h... no
+checking for sys/resource.h... yes
+checking for sys/utsname.h... yes
+checking for pwd.h... yes
+checking for utmp.h... no
+checking for dirent.h... yes
+checking for util.h... no
+checking for sys/socket.h... yes
+checking for stdlib.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for sys/param.h... yes
+checking for pthread.h... yes
+checking for malloc/malloc.h... no
+checking for maillock.h... no
+checking for sys/un.h... yes
+checking for execinfo.h... no
+checking for getopt.h... yes
+checking for sys/time.h... yes
+checking for wchar.h... yes
+checking for stdint.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking for sys/select.h... yes
+checking for sys/stat.h... (cached) yes
+checking for utime.h... yes
+checking if personality LINUX32 can be set... no
+checking for term.h... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking whether sys_siglist is declared... yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for speed_t... yes
+checking for net/if.h... yes
+checking for ifaddrs.h... yes
+checking for net/if_dl.h... yes
+checking for struct ifreq.ifr_flags... yes
+checking for struct ifreq.ifr_hwaddr... no
+checking for struct ifreq.ifr_netmask... no
+checking for struct ifreq.ifr_broadaddr... yes
+checking for struct ifreq.ifr_addr... yes
+checking for struct ifreq.ifr_addr.sa_len... yes
+checking whether we are using GNU Make... no
+checking for long file names... yes
+checking for X... no
+checking for X... false
+checking whether malloc is Doug Lea style... no
+checking for getpagesize... yes
+checking for working mmap... yes
+checking for dnet_ntoa in -ldnet... no
+checking for main in -lXbsd... no
+checking for pthread_atfork in -lpthread... yes
+checking for cma_open in -lpthreads... no
+checking for dbus-1 >= 1.0... no
+checking for lgetfilecon in -lselinux... no
+checking for gnutls >= 2.6.6... yes CFLAGS='-I/usr/local/include -I/usr/local/include/p11-kit-1  ' LIBS='-L/usr/local/lib -lgnutls  '
+checking for gnutls_certificate_set_verify_function... yes
+checking gpm.h usability... no
+checking gpm.h presence... no
+checking for gpm.h... no
+checking for libxml-2.0 > 2.6.17... yes CFLAGS='-I/usr/local/include/libxml2 -I/usr/local/include  ' LIBS='-L/usr/local/lib -lxml2  '
+checking for htmlReadMemory in -lxml2... yes
+checking whether netdb declares h_errno... yes
+checking for sqrt in -lm... yes
+checking for maillock in -lmail... no
+checking for maillock in -llockfile... no
+checking for liblockfile.so... no
+checking for gethostname... yes
+checking for closedir... yes
+checking for getrusage... yes
+checking for get_current_dir_name... no
+checking for lrand48... yes
+checking for setsid... yes
+checking for fpathconf... yes
+checking for select... yes
+checking for euidaccess... no
+checking for getpagesize... (cached) yes
+checking for setlocale... yes
+checking for utimes... yes
+checking for getrlimit... yes
+checking for setrlimit... yes
+checking for setpgid... yes
+checking for getcwd... yes
+checking for shutdown... yes
+checking for getaddrinfo... yes
+checking for __fpending... no
+checking for strsignal... yes
+checking for setitimer... yes
+checking for sendto... yes
+checking for recvfrom... yes
+checking for getsockname... yes
+checking for getpeername... yes
+checking for getifaddrs... yes
+checking for freeifaddrs... yes
+checking for gai_strerror... yes
+checking for mkstemp... yes
+checking for getline... yes
+checking for getdelim... yes
+checking for fsync... yes
+checking for sync... yes
+checking for difftime... yes
+checking for posix_memalign... yes
+checking for getpwent... yes
+checking for endpwent... yes
+checking for getgrent... yes
+checking for endgrent... yes
+checking for touchlock... no
+checking for cfmakeraw... yes
+checking for cfsetspeed... yes
+checking for copysign... yes
+checking for __executable_start... yes
+checking for getwd... yes
+checking for random... yes
+checking for rint... yes
+checking for __builtin_unwind_init... yes
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking whether getpgrp requires zero arguments... yes
+checking for grantpt... yes
+checking for getpt... no
+checking for posix_openpt... yes
+checking for library containing tputs... -ltinfo
+checking whether FreeBSD is new enough to use terminfo... yes
+checking for tzset... yes
+checking for readlinkat... yes
+checking for gettimeofday... yes
+checking for nanotime... no
+checking for lstat... yes
+checking for alarm... yes
+checking for pselect... yes
+checking for pthread_sigmask... yes
+checking for readlink... yes
+checking for strtoimax... yes
+checking for strtoumax... yes
+checking for symlink... yes
+checking for localtime_r... yes
+checking for futimes... yes
+checking for futimesat... yes
+checking for futimens... no
+checking for utimensat... no
+checking for lutimes... yes
+checking whether localtime caches TZ... no
+checking for socket... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking arpa/inet.h usability... yes
+checking arpa/inet.h presence... yes
+checking for arpa/inet.h... yes
+checking whether system supports dynamic ptys... no
+checking for pid_t... yes
+checking vfork.h usability... no
+checking vfork.h presence... no
+checking for vfork.h... no
+checking for fork... yes
+checking for vfork... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking for snprintf... yes
+checking for nl_langinfo and CODESET... yes
+checking for mbstate_t... yes
+checking for C restricted array declarations... yes
+checking whether we are using the GNU C library... no
+checking for _setjmp... yes
+checking for usable FIONREAD... yes
+checking for usable SIGIO... yes
+checking for working alloca.h... no
+checking for alloca... yes
+checking whether byte ordering is bigendian... no
+checking for inline... inline
+checking whether strtold conforms to C99... yes
+checking if environ is properly declared... no
+checking for st_dm_mode in struct stat... no
+checking whether strmode is declared... yes
+checking whether the preprocessor supports include_next... yes
+checking whether system header files limit the line length... no
+checking for getopt.h... (cached) yes
+checking for getopt_long_only... yes
+checking whether getopt is POSIX compatible... yes
+checking for working GNU getopt function... no
+checking whether getenv is declared... yes
+checking for C/C++ restrict keyword... __restrict
+checking for struct timeval... yes
+checking for wide-enough struct timeval.tv_sec member... yes
+checking for unsigned long long int... yes
+checking for long long int... yes
+checking whether stdint.h conforms to C99... no
+checking sys/inttypes.h usability... no
+checking sys/inttypes.h presence... no
+checking for sys/inttypes.h... no
+checking sys/bitypes.h usability... no
+checking sys/bitypes.h presence... no
+checking for sys/bitypes.h... no
+checking for bit size of ptrdiff_t... 64
+checking for bit size of size_t... 64
+checking for bit size of sig_atomic_t... 64
+checking for bit size of wchar_t... 32
+checking for bit size of wint_t... 32
+checking whether sig_atomic_t is signed... yes
+checking whether wchar_t is signed... yes
+checking whether wint_t is signed... yes
+checking for ptrdiff_t integer literal suffix... l
+checking for size_t integer literal suffix... ul
+checking for sig_atomic_t integer literal suffix... l
+checking for wchar_t integer literal suffix... 
+checking for wint_t integer literal suffix... 
+checking whether lstat correctly handles trailing slash... yes
+checking whether <sys/select.h> is self-contained... yes
+checking for sigset_t... yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking for wchar_t... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for struct tm.tm_zone... yes
+checking for struct tm.tm_gmtoff... yes
+checking whether strtoimax is declared... yes
+checking whether strtoumax is declared... yes
+checking whether stat file-mode macros are broken... no
+checking for mode_t... yes
+checking for struct timespec in <time.h>... yes
+checking whether the utimes function works... yes
+checking for struct utimbuf... yes
+checking for library containing clock_gettime... none required
+checking for clock_gettime... yes
+checking for clock_settime... yes
+checking whether dup2 works... yes
+checking for getloadavg... yes
+checking sys/loadavg.h usability... no
+checking sys/loadavg.h presence... no
+checking for sys/loadavg.h... no
+checking whether getloadavg is declared... yes
+checking whether gettimeofday clobbers localtime buffer... no
+checking for gettimeofday with POSIX signature... almost
+checking for working mktime... no
+checking whether signature of pselect conforms to POSIX... yes
+checking whether pselect detects invalid fds... yes
+checking whether pthread_sigmask works without -lpthread... yes
+checking whether pthread_sigmask returns error numbers... yes
+checking whether pthread_sigmask unblocks signals correctly... guessing yes
+checking whether readlink signature is correct... yes
+checking whether readlink handles trailing slash correctly... yes
+checking for volatile sig_atomic_t... yes
+checking for sighandler_t... no
+checking for socklen_t... yes
+checking for ssize_t... yes
+checking for struct stat.st_atim.tv_nsec... yes
+checking whether struct stat.st_atim is of type struct timespec... yes
+checking for struct stat.st_birthtimespec.tv_nsec... yes
+checking for working stdalign.h... no
+checking for va_copy... yes
+checking whether NULL can be used in arbitrary expressions... yes
+checking whether strtoimax works... yes
+checking whether symlink handles trailing slash correctly... yes
+checking whether <sys/select.h> is self-contained... (cached) yes
+checking for nlink_t... yes
+checking whether localtime_r is declared... yes
+checking whether localtime_r is compatible with its POSIX signature... yes
+checking for library containing timer_settime... -lrt
+checking for timer_settime... yes
+checking whether futimesat handles NULL file... no
+
+Configured for `x86_64-unknown-freebsd9.2'.
+
+  Where should the build process find the source code?    /home/sdmoore/shill/examples/packages/emacs/emacs-24.3
+  What compiler should emacs be built with?               gcc -std=gnu99 -g3 -O2
+  Should Emacs use the GNU version of malloc?             yes
+  Should Emacs use a relocating allocator for buffers?    no
+  Should Emacs use mmap(2) for buffer allocation?         yes
+  What window system should Emacs use?                    none
+  What toolkit should Emacs use?                          none
+  Where do we find X Windows header files?                NONE
+  Where do we find X Windows libraries?                   NONE
+  Does Emacs use -lXaw3d?                                 no
+  Does Emacs use -lXpm?                                   no
+  Does Emacs use -ljpeg?                                  no
+  Does Emacs use -ltiff?                                  no
+  Does Emacs use a gif library?                           no 
+  Does Emacs use -lpng?                                   no
+  Does Emacs use -lrsvg-2?                                no
+  Does Emacs use imagemagick?                             no
+  Does Emacs use -lgpm?                                   no
+  Does Emacs use -ldbus?                                  no
+  Does Emacs use -lgconf?                                 no
+  Does Emacs use GSettings?                               no
+  Does Emacs use -lselinux?                               no
+  Does Emacs use -lgnutls?                                yes
+  Does Emacs use -lxml2?                                  yes
+  Does Emacs use -lfreetype?                              no
+  Does Emacs use -lm17n-flt?                              no
+  Does Emacs use -lotf?                                   no
+  Does Emacs use -lxft?                                   no
+  Does Emacs use toolkit scroll bars?                     no
+
+
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating lib/Makefile
+config.status: creating lib-src/Makefile
+config.status: creating oldXMenu/Makefile
+config.status: creating doc/emacs/Makefile
+config.status: creating doc/misc/Makefile
+config.status: creating doc/lispintro/Makefile
+config.status: creating doc/lispref/Makefile
+config.status: creating src/Makefile
+config.status: creating lwlib/Makefile
+config.status: creating lisp/Makefile
+config.status: creating leim/Makefile
+config.status: creating nextstep/Makefile
+config.status: creating admin/unidata/Makefile
+config.status: creating src/config.h
+config.status: executing depfiles commands
+config.status: executing mkdirs commands
+config.status: executing epaths commands
+creating src/epaths.h
+config.status: executing gdbinit commands
+Preprocessing complete.
+Postprocessing....
+~/tests
+Postprocessing complete....

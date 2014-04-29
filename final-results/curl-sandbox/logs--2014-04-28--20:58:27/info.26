@@ -1,0 +1,16 @@
+security.mac.shill.cap_count: 0
+security.mac.shill.label_count: 0
+security.mac.shill.list_count: 2176
+security.mac.shill.session_count: 0
+security.mac.shill.shill_debug: 0
+security.mac.shill.network_cap_count: 50
+security.mac.shill.network_cap_list_count: 13
+vfs.freevnodes: 419
+vfs.wantfreevnodes: 45026
+vfs.numvnodes: 2175
+Preprocessing....
+~/shill/examples/packages/emacs ~/tests
+Preprocessing complete.
+Postprocessing....
+~/tests
+Postprocessing complete....

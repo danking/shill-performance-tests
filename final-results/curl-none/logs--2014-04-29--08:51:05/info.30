@@ -1,0 +1,10 @@
+sysctl: unknown oid 'security.mac.shill'
+vfs.freevnodes: 217
+vfs.wantfreevnodes: 45029
+vfs.numvnodes: 7712
+Preprocessing....
+~/shill/examples/packages/emacs ~/tests
+Preprocessing complete.
+Postprocessing....
+~/tests
+Postprocessing complete....

@@ -1,0 +1,10 @@
+sysctl: unknown oid 'security.mac.shill'
+vfs.freevnodes: 336
+vfs.wantfreevnodes: 45029
+vfs.numvnodes: 12713
+Preprocessing....
+~/shill/examples/grading-bash ~/tests
+Preprocessing complete.
+Postprocessing....
+~/tests
+Postprocessing complete....

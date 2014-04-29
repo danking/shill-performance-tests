@@ -1,0 +1,240 @@
+Compiling submission for student1
+Running tests...
+result mismatch on ex09
+result mismatch on poly-ex09
+result mismatch on poly-ex24
+Finished tests: 49 successes, 3 failures
+Compiling submission for student10
+Running tests...
+result mismatch on ex05
+result mismatch on ex09
+result mismatch on ex10
+result mismatch on ex14
+result mismatch on ex15
+result mismatch on ex16
+result mismatch on ex17
+result mismatch on ex18
+result mismatch on ex19
+result mismatch on ex20
+result mismatch on ex24
+result mismatch on poly-ex0
+result mismatch on poly-ex01
+result mismatch on poly-ex02
+result mismatch on poly-ex03
+result mismatch on poly-ex04
+result mismatch on poly-ex05
+result mismatch on poly-ex06
+result mismatch on poly-ex07
+result mismatch on poly-ex08
+result mismatch on poly-ex09
+result mismatch on poly-ex10
+result mismatch on poly-ex11
+result mismatch on poly-ex12
+result mismatch on poly-ex13
+result mismatch on poly-ex14
+result mismatch on poly-ex15
+result mismatch on poly-ex16
+result mismatch on poly-ex17
+result mismatch on poly-ex18
+result mismatch on poly-ex19
+result mismatch on poly-ex20
+result mismatch on poly-ex21
+result mismatch on poly-ex22
+result mismatch on poly-ex23
+result mismatch on poly-ex24
+result mismatch on poly-ex25
+Finished tests: 15 successes, 37 failures
+Compiling submission for student11
+Running tests...
+result mismatch on poly-ex18
+Finished tests: 51 successes, 1 failures
+Compiling submission for student12
+Running tests...
+result mismatch on poly-ex24
+Finished tests: 51 successes, 1 failures
+Compiling submission for student13
+Running tests...
+result mismatch on ex09
+result mismatch on poly-ex0
+result mismatch on poly-ex01
+result mismatch on poly-ex02
+result mismatch on poly-ex03
+result mismatch on poly-ex04
+result mismatch on poly-ex05
+result mismatch on poly-ex06
+result mismatch on poly-ex07
+result mismatch on poly-ex08
+result mismatch on poly-ex09
+result mismatch on poly-ex10
+result mismatch on poly-ex11
+result mismatch on poly-ex12
+result mismatch on poly-ex13
+result mismatch on poly-ex14
+result mismatch on poly-ex15
+result mismatch on poly-ex16
+result mismatch on poly-ex17
+result mismatch on poly-ex18
+result mismatch on poly-ex19
+result mismatch on poly-ex20
+result mismatch on poly-ex21
+result mismatch on poly-ex22
+result mismatch on poly-ex23
+result mismatch on poly-ex24
+result mismatch on poly-ex25
+Finished tests: 25 successes, 27 failures
+Compiling submission for student14
+Running tests...
+result mismatch on poly-ex24
+Finished tests: 51 successes, 1 failures
+Compiling submission for student15
+Running tests...
+result mismatch on poly-ex18
+result mismatch on poly-ex25
+Finished tests: 50 successes, 2 failures
+Compiling submission for student16
+Running tests...
+Finished tests: 52 successes, 0 failures
+Compiling submission for student17
+Running tests...
+Finished tests: 52 successes, 0 failures
+Compiling submission for student18
+Compilation failed
+Compiling submission for student19
+Running tests...
+result mismatch on poly-ex16
+result mismatch on poly-ex17
+result mismatch on poly-ex18
+result mismatch on poly-ex19
+result mismatch on poly-ex20
+result mismatch on poly-ex24
+Finished tests: 46 successes, 6 failures
+cp: submissions/student2-poly.ml: No such file or directory
+Compiling submission for student2
+Running tests...
+result mismatch on ex14
+result mismatch on ex15
+result mismatch on poly-ex0
+result mismatch on poly-ex01
+result mismatch on poly-ex02
+result mismatch on poly-ex03
+result mismatch on poly-ex04
+result mismatch on poly-ex05
+result mismatch on poly-ex06
+result mismatch on poly-ex07
+result mismatch on poly-ex08
+result mismatch on poly-ex09
+result mismatch on poly-ex10
+result mismatch on poly-ex11
+result mismatch on poly-ex12
+result mismatch on poly-ex13
+result mismatch on poly-ex14
+result mismatch on poly-ex15
+result mismatch on poly-ex16
+result mismatch on poly-ex17
+result mismatch on poly-ex18
+result mismatch on poly-ex19
+result mismatch on poly-ex20
+result mismatch on poly-ex21
+result mismatch on poly-ex22
+result mismatch on poly-ex23
+result mismatch on poly-ex24
+result mismatch on poly-ex25
+Finished tests: 24 successes, 28 failures
+Compiling submission for student20
+Running tests...
+result mismatch on poly-ex24
+Finished tests: 51 successes, 1 failures
+Compiling submission for student21
+Running tests...
+result mismatch on poly-ex24
+Finished tests: 51 successes, 1 failures
+Compiling submission for student22
+Compilation failed
+Compiling submission for student23
+Running tests...
+result mismatch on poly-ex16
+result mismatch on poly-ex17
+result mismatch on poly-ex18
+result mismatch on poly-ex19
+result mismatch on poly-ex20
+result mismatch on poly-ex24
+Finished tests: 46 successes, 6 failures
+Compiling submission for student24
+Running tests...
+result mismatch on poly-ex24
+Finished tests: 51 successes, 1 failures
+Compiling submission for student25
+Running tests...
+result mismatch on ex10
+result mismatch on poly-ex10
+result mismatch on poly-ex24
+Finished tests: 49 successes, 3 failures
+Compiling submission for student26
+Running tests...
+result mismatch on poly-ex24
+Finished tests: 51 successes, 1 failures
+Compiling submission for student27
+Running tests...
+result mismatch on ex14
+result mismatch on ex15
+result mismatch on poly-ex14
+result mismatch on poly-ex15
+result mismatch on poly-ex24
+Finished tests: 47 successes, 5 failures
+Compiling submission for student28
+Running tests...
+result mismatch on poly-ex24
+Finished tests: 51 successes, 1 failures
+Compiling submission for student3
+Running tests...
+result mismatch on poly-ex24
+Finished tests: 51 successes, 1 failures
+Compiling submission for student4
+Running tests...
+result mismatch on ex09
+result mismatch on poly-ex09
+Finished tests: 50 successes, 2 failures
+Compiling submission for student5
+Running tests...
+result mismatch on poly-ex0
+result mismatch on poly-ex16
+result mismatch on poly-ex17
+result mismatch on poly-ex18
+result mismatch on poly-ex19
+result mismatch on poly-ex20
+result mismatch on poly-ex22
+result mismatch on poly-ex23
+result mismatch on poly-ex24
+result mismatch on poly-ex25
+Finished tests: 42 successes, 10 failures
+Compiling submission for student6
+Running tests...
+result mismatch on poly-ex16
+result mismatch on poly-ex17
+result mismatch on poly-ex18
+result mismatch on poly-ex19
+result mismatch on poly-ex20
+result mismatch on poly-ex24
+Finished tests: 46 successes, 6 failures
+Compiling submission for student7
+Running tests...
+result mismatch on ex14
+result mismatch on ex15
+result mismatch on poly-ex09
+result mismatch on poly-ex14
+result mismatch on poly-ex15
+result mismatch on poly-ex24
+Finished tests: 46 successes, 6 failures
+Compiling submission for student8
+Running tests...
+result mismatch on poly-ex16
+result mismatch on poly-ex17
+result mismatch on poly-ex18
+result mismatch on poly-ex19
+result mismatch on poly-ex20
+result mismatch on poly-ex21
+result mismatch on poly-ex24
+Finished tests: 45 successes, 7 failures
+Compiling submission for student9
+Running tests...
+Finished tests: 52 successes, 0 failures

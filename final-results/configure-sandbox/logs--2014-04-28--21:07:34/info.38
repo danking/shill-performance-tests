@@ -1,0 +1,19 @@
+security.mac.shill.cap_count: 0
+security.mac.shill.label_count: 0
+security.mac.shill.list_count: 7399
+security.mac.shill.session_count: 0
+security.mac.shill.shill_debug: 0
+security.mac.shill.network_cap_count: 100
+security.mac.shill.network_cap_list_count: 13
+vfs.freevnodes: 423
+vfs.wantfreevnodes: 45026
+vfs.numvnodes: 7398
+Preprocessing....
+~/shill/examples/packages/emacs ~/tests
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 39 50.1M   39 19.6M    0     0  23.9M      0  0:00:02 --:--:--  0:00:02 23.9M 54 50.1M   54 27.2M    0     0  14.9M      0  0:00:03  0:00:01  0:00:02 14.9M 76 50.1M   76 38.4M    0     0  13.6M      0  0:00:03  0:00:02  0:00:01 13.6M 94 50.1M   94 47.1M    0     0  12.0M      0  0:00:04  0:00:03  0:00:01 12.0M100 50.1M  100 50.1M    0     0  12.1M      0  0:00:04  0:00:04 --:--:-- 12.1M
+Preprocessing complete.
+Postprocessing....
+~/tests
+Postprocessing complete....

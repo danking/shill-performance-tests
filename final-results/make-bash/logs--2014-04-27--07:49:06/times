@@ -1,0 +1,800 @@
+Test 1
+       64.64 real        58.18 user         4.49 sys
+    209440  maximum resident set size
+      4758  average shared memory size
+      6093  average unshared data size
+       155  average unshared stack size
+   1512146  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2540  block output operations
+         0  messages sent
+         0  messages received
+       903  signals received
+      8104  voluntary context switches
+      1205  involuntary context switches
+Test 2
+       65.11 real        58.31 user         4.43 sys
+    209448  maximum resident set size
+      4764  average shared memory size
+      6101  average unshared data size
+       155  average unshared stack size
+   1513559  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2460  block output operations
+         0  messages sent
+         0  messages received
+       931  signals received
+      8228  voluntary context switches
+      1185  involuntary context switches
+Test 3
+       65.48 real        58.09 user         4.59 sys
+    209512  maximum resident set size
+      4765  average shared memory size
+      6095  average unshared data size
+       155  average unshared stack size
+   1513152  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2572  block output operations
+         0  messages sent
+         0  messages received
+       923  signals received
+      8182  voluntary context switches
+      1317  involuntary context switches
+Test 4
+       64.60 real        58.19 user         4.49 sys
+    209848  maximum resident set size
+      4756  average shared memory size
+      6094  average unshared data size
+       155  average unshared stack size
+   1514536  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2561  block output operations
+         0  messages sent
+         0  messages received
+       947  signals received
+      8296  voluntary context switches
+      1204  involuntary context switches
+Test 5
+       73.81 real        66.73 user         4.88 sys
+    209636  maximum resident set size
+      4353  average shared memory size
+      7098  average unshared data size
+       168  average unshared stack size
+   1593531  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2436  block output operations
+         0  messages sent
+         0  messages received
+       891  signals received
+      8048  voluntary context switches
+      1254  involuntary context switches
+Test 6
+       73.71 real        66.98 user         4.72 sys
+    209852  maximum resident set size
+      4363  average shared memory size
+      7115  average unshared data size
+       168  average unshared stack size
+   1593531  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2532  block output operations
+         0  messages sent
+         0  messages received
+       891  signals received
+      8091  voluntary context switches
+      1397  involuntary context switches
+Test 7
+       64.33 real        58.10 user         4.62 sys
+    209512  maximum resident set size
+      4761  average shared memory size
+      6095  average unshared data size
+       155  average unshared stack size
+   1511251  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2481  block output operations
+         0  messages sent
+         0  messages received
+       883  signals received
+      8031  voluntary context switches
+      1187  involuntary context switches
+Test 8
+       65.29 real        58.14 user         4.50 sys
+    209848  maximum resident set size
+      4759  average shared memory size
+      6091  average unshared data size
+       155  average unshared stack size
+   1512347  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2509  block output operations
+         0  messages sent
+         0  messages received
+       907  signals received
+      8119  voluntary context switches
+      1217  involuntary context switches
+Test 9
+       64.78 real        58.53 user         4.17 sys
+    209848  maximum resident set size
+      4761  average shared memory size
+      6088  average unshared data size
+       155  average unshared stack size
+   1512127  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2473  block output operations
+         0  messages sent
+         0  messages received
+       899  signals received
+      8080  voluntary context switches
+      1240  involuntary context switches
+Test 10
+       65.63 real        58.22 user         4.49 sys
+    209648  maximum resident set size
+      4761  average shared memory size
+      6097  average unshared data size
+       155  average unshared stack size
+   1512460  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2526  block output operations
+         0  messages sent
+         0  messages received
+       907  signals received
+      8129  voluntary context switches
+      1133  involuntary context switches
+Test 11
+       64.92 real        58.36 user         4.32 sys
+    209672  maximum resident set size
+      4769  average shared memory size
+      6086  average unshared data size
+       156  average unshared stack size
+   1511937  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2445  block output operations
+         0  messages sent
+         0  messages received
+       899  signals received
+      8077  voluntary context switches
+      1271  involuntary context switches
+Test 12
+       65.22 real        58.28 user         4.40 sys
+    209524  maximum resident set size
+      4762  average shared memory size
+      6089  average unshared data size
+       155  average unshared stack size
+   1511124  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2449  block output operations
+         0  messages sent
+         0  messages received
+       883  signals received
+      8010  voluntary context switches
+      1220  involuntary context switches
+Test 13
+       64.87 real        58.25 user         4.41 sys
+    209848  maximum resident set size
+      4760  average shared memory size
+      6069  average unshared data size
+       155  average unshared stack size
+   1511540  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2448  block output operations
+         0  messages sent
+         0  messages received
+       891  signals received
+      8050  voluntary context switches
+      1211  involuntary context switches
+Test 14
+       74.12 real        66.82 user         4.89 sys
+    209468  maximum resident set size
+      4355  average shared memory size
+      7109  average unshared data size
+       168  average unshared stack size
+   1593524  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2452  block output operations
+         0  messages sent
+         0  messages received
+       891  signals received
+      8069  voluntary context switches
+      1464  involuntary context switches
+Test 15
+       74.00 real        67.01 user         4.65 sys
+    209492  maximum resident set size
+      4356  average shared memory size
+      7112  average unshared data size
+       168  average unshared stack size
+   1593519  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2433  block output operations
+         0  messages sent
+         0  messages received
+       891  signals received
+      8046  voluntary context switches
+      1530  involuntary context switches
+Test 16
+       74.19 real        67.06 user         4.68 sys
+    209676  maximum resident set size
+      4355  average shared memory size
+      7107  average unshared data size
+       168  average unshared stack size
+   1593519  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2443  block output operations
+         0  messages sent
+         0  messages received
+       891  signals received
+      8063  voluntary context switches
+      1276  involuntary context switches
+Test 17
+       74.13 real        67.30 user         4.39 sys
+    209636  maximum resident set size
+      4356  average shared memory size
+      7096  average unshared data size
+       168  average unshared stack size
+   1593531  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2444  block output operations
+         0  messages sent
+         0  messages received
+       891  signals received
+      8055  voluntary context switches
+      1360  involuntary context switches
+Test 18
+       65.09 real        58.13 user         4.54 sys
+    209684  maximum resident set size
+      4761  average shared memory size
+      6098  average unshared data size
+       156  average unshared stack size
+   1511338  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2554  block output operations
+         0  messages sent
+         0  messages received
+       887  signals received
+      8031  voluntary context switches
+      1241  involuntary context switches
+Test 19
+       73.58 real        67.18 user         4.52 sys
+    209708  maximum resident set size
+      4359  average shared memory size
+      7122  average unshared data size
+       168  average unshared stack size
+   1593708  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2569  block output operations
+         0  messages sent
+         0  messages received
+       891  signals received
+      8062  voluntary context switches
+      1341  involuntary context switches
+Test 20
+       74.57 real        67.00 user         4.76 sys
+    209468  maximum resident set size
+      4364  average shared memory size
+      7100  average unshared data size
+       168  average unshared stack size
+   1593643  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2466  block output operations
+         0  messages sent
+         0  messages received
+       891  signals received
+      8048  voluntary context switches
+      1420  involuntary context switches
+Test 21
+       64.84 real        58.16 user         4.47 sys
+    209640  maximum resident set size
+      4757  average shared memory size
+      6097  average unshared data size
+       155  average unshared stack size
+   1512956  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2452  block output operations
+         0  messages sent
+         0  messages received
+       919  signals received
+      8164  voluntary context switches
+      1120  involuntary context switches
+Test 22
+       64.45 real        58.21 user         4.51 sys
+    209476  maximum resident set size
+      4762  average shared memory size
+      6092  average unshared data size
+       155  average unshared stack size
+   1512136  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2472  block output operations
+         0  messages sent
+         0  messages received
+       903  signals received
+      8110  voluntary context switches
+      1130  involuntary context switches
+Test 23
+       64.72 real        58.08 user         4.56 sys
+    209704  maximum resident set size
+      4758  average shared memory size
+      6087  average unshared data size
+       155  average unshared stack size
+   1512147  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2473  block output operations
+         0  messages sent
+         0  messages received
+       903  signals received
+      8120  voluntary context switches
+      1181  involuntary context switches
+Test 24
+       65.40 real        58.50 user         4.25 sys
+    209528  maximum resident set size
+      4764  average shared memory size
+      6077  average unshared data size
+       155  average unshared stack size
+   1511137  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2488  block output operations
+         0  messages sent
+         0  messages received
+       883  signals received
+      8020  voluntary context switches
+      1209  involuntary context switches
+Test 25
+       73.85 real        67.03 user         4.65 sys
+    209848  maximum resident set size
+      4356  average shared memory size
+      7111  average unshared data size
+       168  average unshared stack size
+   1593540  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2481  block output operations
+         0  messages sent
+         0  messages received
+       891  signals received
+      8070  voluntary context switches
+      1353  involuntary context switches
+Test 26
+       73.82 real        67.22 user         4.52 sys
+    209848  maximum resident set size
+      4360  average shared memory size
+      7101  average unshared data size
+       168  average unshared stack size
+   1593708  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2438  block output operations
+         0  messages sent
+         0  messages received
+       891  signals received
+      8053  voluntary context switches
+      1353  involuntary context switches
+Test 27
+       64.31 real        58.48 user         4.21 sys
+    209848  maximum resident set size
+      4763  average shared memory size
+      6106  average unshared data size
+       156  average unshared stack size
+   1512146  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2440  block output operations
+         0  messages sent
+         0  messages received
+       903  signals received
+      8101  voluntary context switches
+      1289  involuntary context switches
+Test 28
+       64.97 real        58.24 user         4.50 sys
+    209492  maximum resident set size
+      4762  average shared memory size
+      6088  average unshared data size
+       155  average unshared stack size
+   1514347  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2517  block output operations
+         0  messages sent
+         0  messages received
+       943  signals received
+      8293  voluntary context switches
+      1342  involuntary context switches
+Test 29
+       74.05 real        67.10 user         4.66 sys
+    209580  maximum resident set size
+      4357  average shared memory size
+      7107  average unshared data size
+       168  average unshared stack size
+   1593647  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2437  block output operations
+         0  messages sent
+         0  messages received
+       891  signals received
+      8033  voluntary context switches
+      1219  involuntary context switches
+Test 30
+       64.55 real        58.45 user         4.28 sys
+    209480  maximum resident set size
+      4762  average shared memory size
+      6065  average unshared data size
+       155  average unshared stack size
+   1514366  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2454  block output operations
+         0  messages sent
+         0  messages received
+       947  signals received
+      8272  voluntary context switches
+      1192  involuntary context switches
+Test 31
+       64.47 real        58.25 user         4.38 sys
+    209348  maximum resident set size
+      4760  average shared memory size
+      6098  average unshared data size
+       156  average unshared stack size
+   1512336  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2477  block output operations
+         0  messages sent
+         0  messages received
+       907  signals received
+      8136  voluntary context switches
+      1249  involuntary context switches
+Test 32
+       64.92 real        58.18 user         4.53 sys
+    209452  maximum resident set size
+      4755  average shared memory size
+      6075  average unshared data size
+       156  average unshared stack size
+   1514562  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2436  block output operations
+         0  messages sent
+         0  messages received
+       951  signals received
+      8274  voluntary context switches
+      1123  involuntary context switches
+Test 33
+       65.13 real        58.30 user         4.46 sys
+    209848  maximum resident set size
+      4764  average shared memory size
+      6081  average unshared data size
+       155  average unshared stack size
+   1512139  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2468  block output operations
+         0  messages sent
+         0  messages received
+       903  signals received
+      8106  voluntary context switches
+      1254  involuntary context switches
+Test 34
+       65.22 real        57.94 user         4.73 sys
+    209688  maximum resident set size
+      4755  average shared memory size
+      6081  average unshared data size
+       155  average unshared stack size
+   1511939  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2443  block output operations
+         0  messages sent
+         0  messages received
+       899  signals received
+      8075  voluntary context switches
+      1184  involuntary context switches
+Test 35
+       74.11 real        67.38 user         4.41 sys
+    209468  maximum resident set size
+      4361  average shared memory size
+      7098  average unshared data size
+       168  average unshared stack size
+   1593520  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2467  block output operations
+         0  messages sent
+         0  messages received
+       891  signals received
+      8063  voluntary context switches
+      1332  involuntary context switches
+Test 36
+       65.38 real        58.06 user         4.67 sys
+    209504  maximum resident set size
+      4760  average shared memory size
+      6074  average unshared data size
+       155  average unshared stack size
+   1511948  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2458  block output operations
+         0  messages sent
+         0  messages received
+       899  signals received
+      8091  voluntary context switches
+      1263  involuntary context switches
+Test 37
+       65.14 real        58.30 user         4.41 sys
+    209756  maximum resident set size
+      4769  average shared memory size
+      6083  average unshared data size
+       155  average unshared stack size
+   1512139  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2438  block output operations
+         0  messages sent
+         0  messages received
+       903  signals received
+      8091  voluntary context switches
+      1241  involuntary context switches
+Test 38
+       73.52 real        67.24 user         4.51 sys
+    209712  maximum resident set size
+      4363  average shared memory size
+      7128  average unshared data size
+       168  average unshared stack size
+   1593531  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2452  block output operations
+         0  messages sent
+         0  messages received
+       891  signals received
+      8056  voluntary context switches
+      1279  involuntary context switches
+Test 39
+       65.10 real        58.34 user         4.36 sys
+    209468  maximum resident set size
+      4759  average shared memory size
+      6093  average unshared data size
+       155  average unshared stack size
+   1513552  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2496  block output operations
+         0  messages sent
+         0  messages received
+       931  signals received
+      8212  voluntary context switches
+      1228  involuntary context switches
+Test 40
+       64.79 real        58.22 user         4.48 sys
+    209576  maximum resident set size
+      4760  average shared memory size
+      6074  average unshared data size
+       155  average unshared stack size
+   1512351  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2466  block output operations
+         0  messages sent
+         0  messages received
+       907  signals received
+      8113  voluntary context switches
+      1172  involuntary context switches
+Test 41
+       64.96 real        58.67 user         4.05 sys
+    209408  maximum resident set size
+      4760  average shared memory size
+      6098  average unshared data size
+       156  average unshared stack size
+   1514151  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2454  block output operations
+         0  messages sent
+         0  messages received
+       943  signals received
+      8267  voluntary context switches
+      1188  involuntary context switches
+Test 42
+       65.06 real        58.20 user         4.47 sys
+    209848  maximum resident set size
+      4764  average shared memory size
+      6097  average unshared data size
+       155  average unshared stack size
+   1511734  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2452  block output operations
+         0  messages sent
+         0  messages received
+       895  signals received
+      8070  voluntary context switches
+      1280  involuntary context switches
+Test 43
+       65.37 real        57.81 user         4.90 sys
+    209688  maximum resident set size
+      4760  average shared memory size
+      6092  average unshared data size
+       155  average unshared stack size
+   1512135  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2450  block output operations
+         0  messages sent
+         0  messages received
+       903  signals received
+      8105  voluntary context switches
+      1105  involuntary context switches
+Test 44
+       65.02 real        58.02 user         4.69 sys
+    209408  maximum resident set size
+      4754  average shared memory size
+      6086  average unshared data size
+       155  average unshared stack size
+   1512548  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2439  block output operations
+         0  messages sent
+         0  messages received
+       911  signals received
+      8118  voluntary context switches
+      1119  involuntary context switches
+Test 45
+       65.15 real        58.25 user         4.36 sys
+    209444  maximum resident set size
+      4760  average shared memory size
+      6105  average unshared data size
+       155  average unshared stack size
+   1511124  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2451  block output operations
+         0  messages sent
+         0  messages received
+       883  signals received
+      8018  voluntary context switches
+      1243  involuntary context switches
+Test 46
+       65.06 real        58.24 user         4.42 sys
+    209752  maximum resident set size
+      4759  average shared memory size
+      6074  average unshared data size
+       155  average unshared stack size
+   1512146  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2442  block output operations
+         0  messages sent
+         0  messages received
+       903  signals received
+      8089  voluntary context switches
+      1143  involuntary context switches
+Test 47
+       64.41 real        58.18 user         4.48 sys
+    209548  maximum resident set size
+      4758  average shared memory size
+      6084  average unshared data size
+       155  average unshared stack size
+   1514361  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2591  block output operations
+         0  messages sent
+         0  messages received
+       947  signals received
+      8299  voluntary context switches
+      1264  involuntary context switches
+Test 48
+       64.96 real        57.98 user         4.70 sys
+    209424  maximum resident set size
+      4766  average shared memory size
+      6105  average unshared data size
+       155  average unshared stack size
+   1512258  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2433  block output operations
+         0  messages sent
+         0  messages received
+       903  signals received
+      8092  voluntary context switches
+      1255  involuntary context switches
+Test 49
+       65.31 real        58.33 user         4.28 sys
+    209524  maximum resident set size
+      4756  average shared memory size
+      6100  average unshared data size
+       156  average unshared stack size
+   1511136  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2488  block output operations
+         0  messages sent
+         0  messages received
+       883  signals received
+      8014  voluntary context switches
+      1292  involuntary context switches
+Test 50
+       73.65 real        67.35 user         4.40 sys
+    209524  maximum resident set size
+      4361  average shared memory size
+      7100  average unshared data size
+       168  average unshared stack size
+   1593720  page reclaims
+         0  page faults
+         0  swaps
+         0  block input operations
+      2501  block output operations
+         0  messages sent
+         0  messages received
+       891  signals received
+      8066  voluntary context switches
+      1388  involuntary context switches

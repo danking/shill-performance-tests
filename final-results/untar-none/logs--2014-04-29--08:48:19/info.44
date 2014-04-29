@@ -1,0 +1,13 @@
+sysctl: unknown oid 'security.mac.shill'
+vfs.freevnodes: 210
+vfs.wantfreevnodes: 45029
+vfs.numvnodes: 12557
+Preprocessing....
+~/shill/examples/packages/emacs ~/tests
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 38 50.1M   38 19.1M    0     0  22.8M      0  0:00:02 --:--:--  0:00:02 22.8M100 50.1M  100 50.1M    0     0  33.1M      0  0:00:01  0:00:01 --:--:-- 33.1M
+Preprocessing complete.
+Postprocessing....
+~/tests
+Postprocessing complete....

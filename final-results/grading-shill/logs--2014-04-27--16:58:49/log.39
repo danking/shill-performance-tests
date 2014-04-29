@@ -1,0 +1,265 @@
+Compiling submission for student1...
+Compilation successful.
+Running tests...
+Result mismatch on test ex09.lam
+Result mismatch on test poly-ex24.lam
+Result mismatch on test poly-ex09.lam
+Finished tests: 49 successes, 3 failures
+Compiling submission for student2...
+Compilation successful.
+Running tests...
+Result mismatch on test poly-ex25.lam
+Result mismatch on test poly-ex24.lam
+Result mismatch on test poly-ex23.lam
+Result mismatch on test poly-ex22.lam
+Result mismatch on test poly-ex21.lam
+Result mismatch on test poly-ex20.lam
+Result mismatch on test poly-ex19.lam
+Result mismatch on test poly-ex18.lam
+Result mismatch on test poly-ex17.lam
+Result mismatch on test poly-ex16.lam
+Result mismatch on test poly-ex15.lam
+Result mismatch on test poly-ex14.lam
+Result mismatch on test poly-ex13.lam
+Result mismatch on test poly-ex12.lam
+Result mismatch on test poly-ex11.lam
+Result mismatch on test poly-ex10.lam
+Result mismatch on test poly-ex09.lam
+Result mismatch on test poly-ex08.lam
+Result mismatch on test poly-ex07.lam
+Result mismatch on test poly-ex06.lam
+Result mismatch on test poly-ex05.lam
+Result mismatch on test poly-ex04.lam
+Result mismatch on test poly-ex03.lam
+Result mismatch on test poly-ex02.lam
+Result mismatch on test poly-ex01.lam
+Result mismatch on test poly-ex0.lam
+Result mismatch on test ex15.lam
+Result mismatch on test ex14.lam
+Finished tests: 24 successes, 28 failures
+Compiling submission for student3...
+Compilation successful.
+Running tests...
+Result mismatch on test poly-ex24.lam
+Finished tests: 51 successes, 1 failures
+Compiling submission for student4...
+Compilation successful.
+Running tests...
+Result mismatch on test ex09.lam
+Result mismatch on test poly-ex09.lam
+Finished tests: 50 successes, 2 failures
+Compiling submission for student5...
+Compilation successful.
+Running tests...
+Result mismatch on test poly-ex25.lam
+Result mismatch on test poly-ex24.lam
+Result mismatch on test poly-ex23.lam
+Result mismatch on test poly-ex22.lam
+Result mismatch on test poly-ex20.lam
+Result mismatch on test poly-ex19.lam
+Result mismatch on test poly-ex18.lam
+Result mismatch on test poly-ex17.lam
+Result mismatch on test poly-ex16.lam
+Result mismatch on test poly-ex0.lam
+Finished tests: 42 successes, 10 failures
+Compiling submission for student6...
+Compilation successful.
+Running tests...
+Result mismatch on test poly-ex24.lam
+Result mismatch on test poly-ex20.lam
+Result mismatch on test poly-ex19.lam
+Result mismatch on test poly-ex18.lam
+Result mismatch on test poly-ex17.lam
+Result mismatch on test poly-ex16.lam
+Finished tests: 46 successes, 6 failures
+Compiling submission for student7...
+Compilation successful.
+Running tests...
+Result mismatch on test poly-ex24.lam
+Result mismatch on test poly-ex15.lam
+Result mismatch on test poly-ex14.lam
+Result mismatch on test poly-ex09.lam
+Result mismatch on test ex15.lam
+Result mismatch on test ex14.lam
+Finished tests: 46 successes, 6 failures
+Compiling submission for student8...
+Compilation successful.
+Running tests...
+Result mismatch on test poly-ex24.lam
+Result mismatch on test poly-ex21.lam
+Result mismatch on test poly-ex20.lam
+Result mismatch on test poly-ex19.lam
+Result mismatch on test poly-ex18.lam
+Result mismatch on test poly-ex17.lam
+Result mismatch on test poly-ex16.lam
+Finished tests: 45 successes, 7 failures
+Compiling submission for student10...
+Compilation successful.
+Running tests...
+Result mismatch on test ex05.lam
+Result mismatch on test ex09.lam
+Result mismatch on test ex19.lam
+Result mismatch on test poly-ex25.lam
+Result mismatch on test poly-ex24.lam
+Result mismatch on test poly-ex23.lam
+Result mismatch on test poly-ex22.lam
+Result mismatch on test poly-ex21.lam
+Result mismatch on test poly-ex20.lam
+Result mismatch on test poly-ex19.lam
+Result mismatch on test poly-ex18.lam
+Result mismatch on test poly-ex17.lam
+Result mismatch on test poly-ex16.lam
+Result mismatch on test poly-ex15.lam
+Result mismatch on test poly-ex14.lam
+Result mismatch on test poly-ex13.lam
+Result mismatch on test poly-ex12.lam
+Result mismatch on test poly-ex11.lam
+Result mismatch on test poly-ex10.lam
+Result mismatch on test poly-ex09.lam
+Result mismatch on test poly-ex08.lam
+Result mismatch on test poly-ex07.lam
+Result mismatch on test poly-ex06.lam
+Result mismatch on test poly-ex05.lam
+Result mismatch on test poly-ex04.lam
+Result mismatch on test poly-ex03.lam
+Result mismatch on test poly-ex02.lam
+Result mismatch on test poly-ex01.lam
+Result mismatch on test poly-ex0.lam
+Result mismatch on test ex24.lam
+Result mismatch on test ex20.lam
+Result mismatch on test ex18.lam
+Result mismatch on test ex17.lam
+Result mismatch on test ex16.lam
+Result mismatch on test ex15.lam
+Result mismatch on test ex14.lam
+Result mismatch on test ex10.lam
+Finished tests: 15 successes, 37 failures
+Compiling submission for student11...
+Compilation successful.
+Running tests...
+Result mismatch on test poly-ex18.lam
+Finished tests: 51 successes, 1 failures
+Compiling submission for student12...
+Compilation successful.
+Running tests...
+Result mismatch on test poly-ex24.lam
+Finished tests: 51 successes, 1 failures
+Compiling submission for student13...
+Compilation successful.
+Running tests...
+Result mismatch on test ex09.lam
+Result mismatch on test poly-ex25.lam
+Result mismatch on test poly-ex24.lam
+Result mismatch on test poly-ex23.lam
+Result mismatch on test poly-ex22.lam
+Result mismatch on test poly-ex21.lam
+Result mismatch on test poly-ex20.lam
+Result mismatch on test poly-ex19.lam
+Result mismatch on test poly-ex18.lam
+Result mismatch on test poly-ex17.lam
+Result mismatch on test poly-ex16.lam
+Result mismatch on test poly-ex15.lam
+Result mismatch on test poly-ex14.lam
+Result mismatch on test poly-ex13.lam
+Result mismatch on test poly-ex12.lam
+Result mismatch on test poly-ex11.lam
+Result mismatch on test poly-ex10.lam
+Result mismatch on test poly-ex09.lam
+Result mismatch on test poly-ex08.lam
+Result mismatch on test poly-ex07.lam
+Result mismatch on test poly-ex06.lam
+Result mismatch on test poly-ex05.lam
+Result mismatch on test poly-ex04.lam
+Result mismatch on test poly-ex03.lam
+Result mismatch on test poly-ex02.lam
+Result mismatch on test poly-ex01.lam
+Result mismatch on test poly-ex0.lam
+Finished tests: 25 successes, 27 failures
+Compiling submission for student14...
+Compilation successful.
+Running tests...
+Result mismatch on test poly-ex24.lam
+Finished tests: 51 successes, 1 failures
+Compiling submission for student15...
+Compilation successful.
+Running tests...
+Result mismatch on test poly-ex25.lam
+Result mismatch on test poly-ex18.lam
+Finished tests: 50 successes, 2 failures
+Compiling submission for student16...
+Compilation successful.
+Running tests...
+Finished tests: 52 successes, 0 failures
+Compiling submission for student17...
+Compilation successful.
+Running tests...
+Finished tests: 52 successes, 0 failures
+Compiling submission for student18...
+Compilation failed.
+Compiling submission for student19...
+Compilation successful.
+Running tests...
+Result mismatch on test poly-ex24.lam
+Result mismatch on test poly-ex20.lam
+Result mismatch on test poly-ex19.lam
+Result mismatch on test poly-ex18.lam
+Result mismatch on test poly-ex17.lam
+Result mismatch on test poly-ex16.lam
+Finished tests: 46 successes, 6 failures
+Compiling submission for student20...
+Compilation successful.
+Running tests...
+Result mismatch on test poly-ex24.lam
+Finished tests: 51 successes, 1 failures
+Compiling submission for student21...
+Compilation successful.
+Running tests...
+Result mismatch on test poly-ex24.lam
+Finished tests: 51 successes, 1 failures
+Compiling submission for student22...
+Compilation failed.
+Compiling submission for student23...
+Compilation successful.
+Running tests...
+Result mismatch on test poly-ex24.lam
+Result mismatch on test poly-ex20.lam
+Result mismatch on test poly-ex19.lam
+Result mismatch on test poly-ex18.lam
+Result mismatch on test poly-ex17.lam
+Result mismatch on test poly-ex16.lam
+Finished tests: 46 successes, 6 failures
+Compiling submission for student24...
+Compilation successful.
+Running tests...
+Result mismatch on test poly-ex24.lam
+Finished tests: 51 successes, 1 failures
+Compiling submission for student25...
+Compilation successful.
+Running tests...
+Result mismatch on test poly-ex24.lam
+Result mismatch on test poly-ex10.lam
+Result mismatch on test ex10.lam
+Finished tests: 49 successes, 3 failures
+Compiling submission for student26...
+Compilation successful.
+Running tests...
+Result mismatch on test poly-ex24.lam
+Finished tests: 51 successes, 1 failures
+Compiling submission for student27...
+Compilation successful.
+Running tests...
+Result mismatch on test poly-ex24.lam
+Result mismatch on test poly-ex15.lam
+Result mismatch on test poly-ex14.lam
+Result mismatch on test ex15.lam
+Result mismatch on test ex14.lam
+Finished tests: 47 successes, 5 failures
+Compiling submission for student28...
+Compilation successful.
+Running tests...
+Result mismatch on test poly-ex24.lam
+Finished tests: 51 successes, 1 failures
+Compiling submission for student9...
+Compilation successful.
+Running tests...
+Finished tests: 52 successes, 0 failures

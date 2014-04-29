@@ -1,0 +1,2461 @@
+security.mac.shill.cap_count: 0
+security.mac.shill.label_count: 0
+security.mac.shill.list_count: 32220
+security.mac.shill.session_count: 0
+security.mac.shill.shill_debug: 0
+security.mac.shill.network_cap_count: 0
+security.mac.shill.network_cap_list_count: 14
+vfs.freevnodes: 183
+vfs.wantfreevnodes: 45026
+vfs.numvnodes: 32219
+Preprocessing....
+~/shill/examples/packages/emacs ~/tests
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 21 50.1M   21 10.8M    0     0  21.8M      0  0:00:02 --:--:--  0:00:02 21.8M 70 50.1M   70 35.2M    0     0  23.5M      0  0:00:02  0:00:01  0:00:01 23.5M100 50.1M  100 50.1M    0     0  24.7M      0  0:00:02  0:00:02 --:--:-- 24.7M
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... build-aux/install-sh -c -d
+checking for gawk... no
+checking for mawk... no
+checking for nawk... nawk
+checking whether make sets $(MAKE)... yes
+checking build system type... x86_64-unknown-freebsd9.2
+checking host system type... x86_64-unknown-freebsd9.2
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking whether gcc and cc understand -c and -o together... yes
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for Minix Amsterdam compiler... no
+checking for ar... ar
+checking for ranlib... ranlib
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for gcc option to accept ISO C99... -std=gnu99
+checking for gcc -std=gnu99 option to accept ISO Standard C... (cached) -std=gnu99
+checking whether gcc -std=gnu99 accepts -g3 -O2... yes
+checking whether ln -s works... yes
+checking for install-info... /usr/bin/install-info
+checking for gzip... /usr/bin/gzip
+checking for makeinfo... /usr/bin/makeinfo
+checking for -znocombreloc... yes
+checking for pkg-config... /usr/local/bin/pkg-config
+checking machine/soundcard.h usability... no
+checking machine/soundcard.h presence... no
+checking for machine/soundcard.h... no
+checking sys/soundcard.h usability... yes
+checking sys/soundcard.h presence... yes
+checking for sys/soundcard.h... yes
+checking soundcard.h usability... no
+checking soundcard.h presence... no
+checking for soundcard.h... no
+checking for _oss_ioctl in -lossaudio... no
+checking for alsa >= 1.0.0... no
+checking for linux/version.h... no
+checking for sys/systeminfo.h... no
+checking for stdio_ext.h... no
+checking for fcntl.h... yes
+checking for coff.h... no
+checking for pty.h... no
+checking for sys/vlimit.h... no
+checking for sys/resource.h... yes
+checking for sys/utsname.h... yes
+checking for pwd.h... yes
+checking for utmp.h... no
+checking for dirent.h... yes
+checking for util.h... no
+checking for sys/socket.h... yes
+checking for stdlib.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for sys/param.h... yes
+checking for pthread.h... yes
+checking for malloc/malloc.h... no
+checking for maillock.h... no
+checking for sys/un.h... yes
+checking for execinfo.h... no
+checking for getopt.h... yes
+checking for sys/time.h... yes
+checking for wchar.h... yes
+checking for stdint.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking for sys/select.h... yes
+checking for sys/stat.h... (cached) yes
+checking for utime.h... yes
+checking if personality LINUX32 can be set... no
+checking for term.h... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking whether sys_siglist is declared... yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for speed_t... yes
+checking for net/if.h... yes
+checking for ifaddrs.h... yes
+checking for net/if_dl.h... yes
+checking for struct ifreq.ifr_flags... yes
+checking for struct ifreq.ifr_hwaddr... no
+checking for struct ifreq.ifr_netmask... no
+checking for struct ifreq.ifr_broadaddr... yes
+checking for struct ifreq.ifr_addr... yes
+checking for struct ifreq.ifr_addr.sa_len... yes
+checking whether we are using GNU Make... no
+checking for long file names... yes
+checking for X... no
+checking for X... false
+checking whether malloc is Doug Lea style... no
+checking for getpagesize... yes
+checking for working mmap... yes
+checking for dnet_ntoa in -ldnet... no
+checking for main in -lXbsd... no
+checking for pthread_atfork in -lpthread... yes
+checking for cma_open in -lpthreads... no
+checking for dbus-1 >= 1.0... no
+checking for lgetfilecon in -lselinux... no
+checking for gnutls >= 2.6.6... yes CFLAGS='-I/usr/local/include -I/usr/local/include/p11-kit-1  ' LIBS='-L/usr/local/lib -lgnutls  '
+checking for gnutls_certificate_set_verify_function... yes
+checking gpm.h usability... no
+checking gpm.h presence... no
+checking for gpm.h... no
+checking for libxml-2.0 > 2.6.17... yes CFLAGS='-I/usr/local/include/libxml2 -I/usr/local/include  ' LIBS='-L/usr/local/lib -lxml2  '
+checking for htmlReadMemory in -lxml2... yes
+checking whether netdb declares h_errno... yes
+checking for sqrt in -lm... yes
+checking for maillock in -lmail... no
+checking for maillock in -llockfile... no
+checking for liblockfile.so... no
+checking for gethostname... yes
+checking for closedir... yes
+checking for getrusage... yes
+checking for get_current_dir_name... no
+checking for lrand48... yes
+checking for setsid... yes
+checking for fpathconf... yes
+checking for select... yes
+checking for euidaccess... no
+checking for getpagesize... (cached) yes
+checking for setlocale... yes
+checking for utimes... yes
+checking for getrlimit... yes
+checking for setrlimit... yes
+checking for setpgid... yes
+checking for getcwd... yes
+checking for shutdown... yes
+checking for getaddrinfo... yes
+checking for __fpending... no
+checking for strsignal... yes
+checking for setitimer... yes
+checking for sendto... yes
+checking for recvfrom... yes
+checking for getsockname... yes
+checking for getpeername... yes
+checking for getifaddrs... yes
+checking for freeifaddrs... yes
+checking for gai_strerror... yes
+checking for mkstemp... yes
+checking for getline... yes
+checking for getdelim... yes
+checking for fsync... yes
+checking for sync... yes
+checking for difftime... yes
+checking for posix_memalign... yes
+checking for getpwent... yes
+checking for endpwent... yes
+checking for getgrent... yes
+checking for endgrent... yes
+checking for touchlock... no
+checking for cfmakeraw... yes
+checking for cfsetspeed... yes
+checking for copysign... yes
+checking for __executable_start... yes
+checking for getwd... yes
+checking for random... yes
+checking for rint... yes
+checking for __builtin_unwind_init... yes
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking whether getpgrp requires zero arguments... yes
+checking for grantpt... yes
+checking for getpt... no
+checking for posix_openpt... yes
+checking for library containing tputs... -ltinfo
+checking whether FreeBSD is new enough to use terminfo... yes
+checking for tzset... yes
+checking for readlinkat... yes
+checking for gettimeofday... yes
+checking for nanotime... no
+checking for lstat... yes
+checking for alarm... yes
+checking for pselect... yes
+checking for pthread_sigmask... yes
+checking for readlink... yes
+checking for strtoimax... yes
+checking for strtoumax... yes
+checking for symlink... yes
+checking for localtime_r... yes
+checking for futimes... yes
+checking for futimesat... yes
+checking for futimens... no
+checking for utimensat... no
+checking for lutimes... yes
+checking whether localtime caches TZ... no
+checking for socket... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking arpa/inet.h usability... yes
+checking arpa/inet.h presence... yes
+checking for arpa/inet.h... yes
+checking whether system supports dynamic ptys... yes
+checking for pid_t... yes
+checking vfork.h usability... no
+checking vfork.h presence... no
+checking for vfork.h... no
+checking for fork... yes
+checking for vfork... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking for snprintf... yes
+checking for nl_langinfo and CODESET... yes
+checking for mbstate_t... yes
+checking for C restricted array declarations... yes
+checking whether we are using the GNU C library... no
+checking for _setjmp... yes
+checking for usable FIONREAD... yes
+checking for usable SIGIO... yes
+checking for working alloca.h... no
+checking for alloca... yes
+checking whether byte ordering is bigendian... no
+checking for inline... inline
+checking whether strtold conforms to C99... yes
+checking if environ is properly declared... no
+checking for st_dm_mode in struct stat... no
+checking whether strmode is declared... yes
+checking whether the preprocessor supports include_next... yes
+checking whether system header files limit the line length... no
+checking for getopt.h... (cached) yes
+checking for getopt_long_only... yes
+checking whether getopt is POSIX compatible... yes
+checking for working GNU getopt function... no
+checking whether getenv is declared... yes
+checking for C/C++ restrict keyword... __restrict
+checking for struct timeval... yes
+checking for wide-enough struct timeval.tv_sec member... yes
+checking for unsigned long long int... yes
+checking for long long int... yes
+checking whether stdint.h conforms to C99... no
+checking sys/inttypes.h usability... no
+checking sys/inttypes.h presence... no
+checking for sys/inttypes.h... no
+checking sys/bitypes.h usability... no
+checking sys/bitypes.h presence... no
+checking for sys/bitypes.h... no
+checking for bit size of ptrdiff_t... 64
+checking for bit size of size_t... 64
+checking for bit size of sig_atomic_t... 64
+checking for bit size of wchar_t... 32
+checking for bit size of wint_t... 32
+checking whether sig_atomic_t is signed... yes
+checking whether wchar_t is signed... yes
+checking whether wint_t is signed... yes
+checking for ptrdiff_t integer literal suffix... l
+checking for size_t integer literal suffix... ul
+checking for sig_atomic_t integer literal suffix... l
+checking for wchar_t integer literal suffix... 
+checking for wint_t integer literal suffix... 
+checking whether lstat correctly handles trailing slash... yes
+checking whether <sys/select.h> is self-contained... yes
+checking for sigset_t... yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking for wchar_t... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for struct tm.tm_zone... yes
+checking for struct tm.tm_gmtoff... yes
+checking whether strtoimax is declared... yes
+checking whether strtoumax is declared... yes
+checking whether stat file-mode macros are broken... no
+checking for mode_t... yes
+checking for struct timespec in <time.h>... yes
+checking whether the utimes function works... yes
+checking for struct utimbuf... yes
+checking for library containing clock_gettime... none required
+checking for clock_gettime... yes
+checking for clock_settime... yes
+checking whether dup2 works... yes
+checking for getloadavg... yes
+checking sys/loadavg.h usability... no
+checking sys/loadavg.h presence... no
+checking for sys/loadavg.h... no
+checking whether getloadavg is declared... yes
+checking whether gettimeofday clobbers localtime buffer... no
+checking for gettimeofday with POSIX signature... almost
+checking for working mktime... no
+checking whether signature of pselect conforms to POSIX... yes
+checking whether pselect detects invalid fds... yes
+checking whether pthread_sigmask works without -lpthread... yes
+checking whether pthread_sigmask returns error numbers... yes
+checking whether pthread_sigmask unblocks signals correctly... guessing yes
+checking whether readlink signature is correct... yes
+checking whether readlink handles trailing slash correctly... yes
+checking for volatile sig_atomic_t... yes
+checking for sighandler_t... no
+checking for socklen_t... yes
+checking for ssize_t... yes
+checking for struct stat.st_atim.tv_nsec... yes
+checking whether struct stat.st_atim is of type struct timespec... yes
+checking for struct stat.st_birthtimespec.tv_nsec... yes
+checking for working stdalign.h... no
+checking for va_copy... yes
+checking whether NULL can be used in arbitrary expressions... yes
+checking whether strtoimax works... yes
+checking whether symlink handles trailing slash correctly... yes
+checking whether <sys/select.h> is self-contained... (cached) yes
+checking for nlink_t... yes
+checking whether localtime_r is declared... yes
+checking whether localtime_r is compatible with its POSIX signature... yes
+checking for library containing timer_settime... -lrt
+checking for timer_settime... yes
+checking whether futimesat handles NULL file... no
+
+Configured for `x86_64-unknown-freebsd9.2'.
+
+  Where should the build process find the source code?    /home/sdmoore/shill/examples/packages/emacs/emacs-24.3
+  What compiler should emacs be built with?               gcc -std=gnu99 -g3 -O2
+  Should Emacs use the GNU version of malloc?             yes
+  Should Emacs use a relocating allocator for buffers?    no
+  Should Emacs use mmap(2) for buffer allocation?         yes
+  What window system should Emacs use?                    none
+  What toolkit should Emacs use?                          none
+  Where do we find X Windows header files?                NONE
+  Where do we find X Windows libraries?                   NONE
+  Does Emacs use -lXaw3d?                                 no
+  Does Emacs use -lXpm?                                   no
+  Does Emacs use -ljpeg?                                  no
+  Does Emacs use -ltiff?                                  no
+  Does Emacs use a gif library?                           no 
+  Does Emacs use -lpng?                                   no
+  Does Emacs use -lrsvg-2?                                no
+  Does Emacs use imagemagick?                             no
+  Does Emacs use -lgpm?                                   no
+  Does Emacs use -ldbus?                                  no
+  Does Emacs use -lgconf?                                 no
+  Does Emacs use GSettings?                               no
+  Does Emacs use -lselinux?                               no
+  Does Emacs use -lgnutls?                                yes
+  Does Emacs use -lxml2?                                  yes
+  Does Emacs use -lfreetype?                              no
+  Does Emacs use -lm17n-flt?                              no
+  Does Emacs use -lotf?                                   no
+  Does Emacs use -lxft?                                   no
+  Does Emacs use toolkit scroll bars?                     no
+
+
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating lib/Makefile
+config.status: creating lib-src/Makefile
+config.status: creating oldXMenu/Makefile
+config.status: creating doc/emacs/Makefile
+config.status: creating doc/misc/Makefile
+config.status: creating doc/lispintro/Makefile
+config.status: creating doc/lispref/Makefile
+config.status: creating src/Makefile
+config.status: creating lwlib/Makefile
+config.status: creating lisp/Makefile
+config.status: creating leim/Makefile
+config.status: creating nextstep/Makefile
+config.status: creating admin/unidata/Makefile
+config.status: creating src/config.h
+config.status: executing depfiles commands
+config.status: executing mkdirs commands
+config.status: executing epaths commands
+creating src/epaths.h
+config.status: executing gdbinit commands
+[ -r "/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/config.in" ] || ( cd /home/sdmoore/shill/examples/packages/emacs/emacs-24.3 && autoheader )
+cd lib && make all                           CC='gcc -std=gnu99' CFLAGS='-g3 -O2' CPPFLAGS=''  LDFLAGS='-Wl,-znocombreloc' MAKE='make'
+rm -f alloca.h-t alloca.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  cat /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib/alloca.in.h;  } > alloca.h-t &&  mv -f alloca.h-t alloca.h
+rm -f execinfo.h-t execinfo.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  cat /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib/execinfo.in.h;  } > execinfo.h-t &&  mv execinfo.h-t execinfo.h
+rm -f arg-nonnull.h-t arg-nonnull.h &&  sed -n -e '/GL_ARG_NONNULL/,$p'  < /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/build-aux/snippet/arg-nonnull.h  > arg-nonnull.h-t &&  mv arg-nonnull.h-t arg-nonnull.h
+rm -f getopt.h-t getopt.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's|@''HAVE_GETOPT_H''@|1|g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_GETOPT_H''@|<getopt.h>|g'  -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h'  < /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib/getopt.in.h;  } > getopt.h-t &&  mv -f getopt.h-t getopt.h
+rm -f c++defs.h-t c++defs.h &&  sed -n -e '/_GL_CXXDEFS/,$p'  < /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/build-aux/snippet/c++defs.h  > c++defs.h-t &&  mv c++defs.h-t c++defs.h
+rm -f warn-on-use.h-t warn-on-use.h &&  sed -n -e '/^.ifndef/,$p'  < /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/build-aux/snippet/warn-on-use.h  > warn-on-use.h-t &&  mv warn-on-use.h-t warn-on-use.h
+rm -f inttypes.h-t inttypes.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  sed -e 's/@''HAVE_INTTYPES_H''@/1/g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_INTTYPES_H''@|<inttypes.h>|g'  -e 's/@''PRI_MACROS_BROKEN''@/0/g'  -e 's/@''APPLE_UNIVERSAL_BUILD''@/0/g'  -e 's/@''HAVE_LONG_LONG_INT''@/1/g'  -e 's/@''HAVE_UNSIGNED_LONG_LONG_INT''@/1/g'  -e 's/@''PRIPTR_PREFIX''@/__PRIPTR_PREFIX/g'  -e 's/@''GNULIB_IMAXABS''@/0/g'  -e 's/@''GNULIB_IMAXDIV''@/0/g'  -e 's/@''GNULIB_STRTOIMAX''@/1/g'  -e 's/@''GNULIB_STRTOUMAX''@/1/g'  -e 's/@''HAVE_DECL_IMAXABS''@/1/g'  -e 's/@''HAVE_DECL_IMAXDIV''@/1/g'  -e 's/@''HAVE_DECL_STRTOIMAX''@/1/g'  -e 's/@''HAVE_DECL_STRTOUMAX''@/1/g'  -e 's/@''REPLACE_STRTOIMAX''@/0/g'  -e 's/@''INT32_MAX_LT_INTMAX_MAX''@/1/g'  -e 's/@''INT64_MAX_EQ_LONG_MAX''@/defined _LP64/g'  -e 's/@''UINT32_MAX_LT_UINTMAX_MAX''@/1/g'  -e 's/@''UINT64_MAX_EQ_ULONG_MAX''@/defined _LP64/g'  -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h'  -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h'  -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h'  < /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib/inttypes.in.h;  } > inttypes.h-t &&  mv inttypes.h-t inttypes.h
+rm -f signal.h-t signal.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' &&  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_SIGNAL_H''@|<signal.h>|g'  -e 's|@''GNULIB_PTHREAD_SIGMASK''@|1|g'  -e 's|@''GNULIB_RAISE''@|0|g'  -e 's/@''GNULIB_SIGNAL_H_SIGPIPE''@/0/g'  -e 's/@''GNULIB_SIGPROCMASK''@/0/g'  -e 's/@''GNULIB_SIGACTION''@/0/g'  -e 's|@''HAVE_POSIX_SIGNALBLOCKING''@|1|g'  -e 's|@''HAVE_PTHREAD_SIGMASK''@|1|g'  -e 's|@''HAVE_RAISE''@|1|g'  -e 's|@''HAVE_SIGSET_T''@|1|g'  -e 's|@''HAVE_SIGINFO_T''@|1|g'  -e 's|@''HAVE_SIGACTION''@|1|g'  -e 's|@''HAVE_STRUCT_SIGACTION_SA_SIGACTION''@|1|g'  -e 's|@''HAVE_TYPE_VOLATILE_SIG_ATOMIC_T''@|1|g'  -e 's|@''HAVE_SIGHANDLER_T''@|0|g'  -e 's|@''REPLACE_PTHREAD_SIGMASK''@|1|g'  -e 's|@''REPLACE_RAISE''@|0|g'  -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h'  -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h'  -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h'  < /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib/signal.in.h;  } > signal.h-t &&  mv signal.h-t signal.h
+rm -f stdalign.h-t stdalign.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  cat /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib/stdalign.in.h;  } > stdalign.h-t &&  mv stdalign.h-t stdalign.h
+rm -f stdint.h-t stdint.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's/@''HAVE_STDINT_H''@/1/g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_STDINT_H''@|<stdint.h>|g'  -e 's/@''HAVE_SYS_TYPES_H''@/1/g'  -e 's/@''HAVE_INTTYPES_H''@/1/g'  -e 's/@''HAVE_SYS_INTTYPES_H''@/0/g'  -e 's/@''HAVE_SYS_BITYPES_H''@/0/g'  -e 's/@''HAVE_WCHAR_H''@/1/g'  -e 's/@''HAVE_LONG_LONG_INT''@/1/g'  -e 's/@''HAVE_UNSIGNED_LONG_LONG_INT''@/1/g'  -e 's/@''APPLE_UNIVERSAL_BUILD''@/0/g'  -e 's/@''BITSIZEOF_PTRDIFF_T''@/64/g'  -e 's/@''PTRDIFF_T_SUFFIX''@/l/g'  -e 's/@''BITSIZEOF_SIG_ATOMIC_T''@/64/g'  -e 's/@''HAVE_SIGNED_SIG_ATOMIC_T''@/1/g'  -e 's/@''SIG_ATOMIC_T_SUFFIX''@/l/g'  -e 's/@''BITSIZEOF_SIZE_T''@/64/g'  -e 's/@''SIZE_T_SUFFIX''@/ul/g'  -e 's/@''BITSIZEOF_WCHAR_T''@/32/g'  -e 's/@''HAVE_SIGNED_WCHAR_T''@/1/g'  -e 's/@''WCHAR_T_SUFFIX''@//g'  -e 's/@''BITSIZEOF_WINT_T''@/32/g'  -e 's/@''HAVE_SIGNED_WINT_T''@/1/g'  -e 's/@''WINT_T_SUFFIX''@//g'  < /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib/stdint.in.h;  } > stdint.h-t &&  mv stdint.h-t stdint.h
+rm -f stdio.h-t stdio.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' &&  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_STDIO_H''@|<stdio.h>|g'  -e 's/@''GNULIB_DPRINTF''@/0/g'  -e 's/@''GNULIB_FCLOSE''@/0/g'  -e 's/@''GNULIB_FDOPEN''@/0/g'  -e 's/@''GNULIB_FFLUSH''@/0/g'  -e 's/@''GNULIB_FGETC''@/1/g'  -e 's/@''GNULIB_FGETS''@/1/g'  -e 's/@''GNULIB_FOPEN''@/0/g'  -e 's/@''GNULIB_FPRINTF''@/1/g'  -e 's/@''GNULIB_FPRINTF_POSIX''@/0/g'  -e 's/@''GNULIB_FPURGE''@/0/g'  -e 's/@''GNULIB_FPUTC''@/1/g'  -e 's/@''GNULIB_FPUTS''@/1/g'  -e 's/@''GNULIB_FREAD''@/1/g'  -e 's/@''GNULIB_FREOPEN''@/0/g'  -e 's/@''GNULIB_FSCANF''@/1/g'  -e 's/@''GNULIB_FSEEK''@/0/g'  -e 's/@''GNULIB_FSEEKO''@/0/g'  -e 's/@''GNULIB_FTELL''@/0/g'  -e 's/@''GNULIB_FTELLO''@/0/g'  -e 's/@''GNULIB_FWRITE''@/1/g'  -e 's/@''GNULIB_GETC''@/1/g'  -e 's/@''GNULIB_GETCHAR''@/1/g'  -e 's/@''GNULIB_GETDELIM''@/0/g'  -e 's/@''GNULIB_GETLINE''@/0/g'  -e 's/@''GNULIB_OBSTACK_PRINTF''@/0/g'  -e 's/@''GNULIB_OBSTACK_PRINTF_POSIX''@/0/g'  -e 's/@''GNULIB_PCLOSE''@/0/g'  -e 's/@''GNULIB_PERROR''@/0/g'  -e 's/@''GNULIB_POPEN''@/0/g'  -e 's/@''GNULIB_PRINTF''@/1/g'  -e 's/@''GNULIB_PRINTF_POSIX''@/0/g'  -e 's/@''GNULIB_PUTC''@/1/g'  -e 's/@''GNULIB_PUTCHAR''@/1/g'  -e 's/@''GNULIB_PUTS''@/1/g'  -e 's/@''GNULIB_REMOVE''@/0/g'  -e 's/@''GNULIB_RENAME''@/0/g'  -e 's/@''GNULIB_RENAMEAT''@/0/g'  -e 's/@''GNULIB_SCANF''@/1/g'  -e 's/@''GNULIB_SNPRINTF''@/0/g'  -e 's/@''GNULIB_SPRINTF_POSIX''@/0/g'  -e 's/@''GNULIB_STDIO_H_NONBLOCKING''@/0/g'  -e 's/@''GNULIB_STDIO_H_SIGPIPE''@/0/g'  -e 's/@''GNULIB_TMPFILE''@/0/g'  -e 's/@''GNULIB_VASPRINTF''@/0/g'  -e 's/@''GNULIB_VDPRINTF''@/0/g'  -e 's/@''GNULIB_VFPRINTF''@/1/g'  -e 's/@''GNULIB_VFPRINTF_POSIX''@/0/g'  -e 's/@''GNULIB_VFSCANF''@/0/g'  -e 's/@''GNULIB_VSCANF''@/0/g'  -e 's/@''GNULIB_VPRINTF''@/1/g'  -e 's/@''GNULIB_VPRINTF_POSIX''@/0/g'  -e 's/@''GNULIB_VSNPRINTF''@/0/g'  -e 's/@''GNULIB_VSPRINTF_POSIX''@/0/g'  < /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib/stdio.in.h |  sed -e 's|@''HAVE_DECL_FPURGE''@|1|g'  -e 's|@''HAVE_DECL_FSEEKO''@|1|g'  -e 's|@''HAVE_DECL_FTELLO''@|1|g'  -e 's|@''HAVE_DECL_GETDELIM''@|1|g'  -e 's|@''HAVE_DECL_GETLINE''@|1|g'  -e 's|@''HAVE_DECL_OBSTACK_PRINTF''@|1|g'  -e 's|@''HAVE_DECL_SNPRINTF''@|1|g'  -e 's|@''HAVE_DECL_VSNPRINTF''@|1|g'  -e 's|@''HAVE_DPRINTF''@|1|g'  -e 's|@''HAVE_FSEEKO''@|1|g'  -e 's|@''HAVE_FTELLO''@|1|g'  -e 's|@''HAVE_PCLOSE''@|1|g'  -e 's|@''HAVE_POPEN''@|1|g'  -e 's|@''HAVE_RENAMEAT''@|1|g'  -e 's|@''HAVE_VASPRINTF''@|1|g'  -e 's|@''HAVE_VDPRINTF''@|1|g'  -e 's|@''REPLACE_DPRINTF''@|0|g'  -e 's|@''REPLACE_FCLOSE''@|0|g'  -e 's|@''REPLACE_FDOPEN''@|0|g'  -e 's|@''REPLACE_FFLUSH''@|0|g'  -e 's|@''REPLACE_FOPEN''@|0|g'  -e 's|@''REPLACE_FPRINTF''@|0|g'  -e 's|@''REPLACE_FPURGE''@|0|g'  -e 's|@''REPLACE_FREOPEN''@|0|g'  -e 's|@''REPLACE_FSEEK''@|0|g'  -e 's|@''REPLACE_FSEEKO''@|0|g'  -e 's|@''REPLACE_FTELL''@|0|g'  -e 's|@''REPLACE_FTELLO''@|0|g'  -e 's|@''REPLACE_GETDELIM''@|0|g'  -e 's|@''REPLACE_GETLINE''@|0|g'  -e 's|@''REPLACE_OBSTACK_PRINTF''@|0|g'  -e 's|@''REPLACE_PERROR''@|0|g'  -e 's|@''REPLACE_POPEN''@|0|g'  -e 's|@''REPLACE_PRINTF''@|0|g'  -e 's|@''REPLACE_REMOVE''@|0|g'  -e 's|@''REPLACE_RENAME''@|0|g'  -e 's|@''REPLACE_RENAMEAT''@|0|g'  -e 's|@''REPLACE_SNPRINTF''@|0|g'  -e 's|@''REPLACE_SPRINTF''@|0|g'  -e 's|@''REPLACE_STDIO_READ_FUNCS''@|0|g'  -e 's|@''REPLACE_STDIO_WRITE_FUNCS''@|0|g'  -e 's|@''REPLACE_TMPFILE''@|0|g'  -e 's|@''REPLACE_VASPRINTF''@|0|g'  -e 's|@''REPLACE_VDPRINTF''@|0|g'  -e 's|@''REPLACE_VFPRINTF''@|0|g'  -e 's|@''REPLACE_VPRINTF''@|0|g'  -e 's|@''REPLACE_VSNPRINTF''@|0|g'  -e 's|@''REPLACE_VSPRINTF''@|0|g'  -e 's|@''ASM_SYMBOL_PREFIX''@||g'  -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h'  -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h'  -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h';  } > stdio.h-t &&  mv stdio.h-t stdio.h
+rm -f stdlib.h-t stdlib.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' &&  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_STDLIB_H''@|<stdlib.h>|g'  -e 's/@''GNULIB__EXIT''@/0/g'  -e 's/@''GNULIB_ATOLL''@/0/g'  -e 's/@''GNULIB_CALLOC_POSIX''@/0/g'  -e 's/@''GNULIB_CANONICALIZE_FILE_NAME''@/0/g'  -e 's/@''GNULIB_GETLOADAVG''@/1/g'  -e 's/@''GNULIB_GETSUBOPT''@/0/g'  -e 's/@''GNULIB_GRANTPT''@/0/g'  -e 's/@''GNULIB_MALLOC_POSIX''@/0/g'  -e 's/@''GNULIB_MBTOWC''@/0/g'  -e 's/@''GNULIB_MKDTEMP''@/0/g'  -e 's/@''GNULIB_MKOSTEMP''@/0/g'  -e 's/@''GNULIB_MKOSTEMPS''@/0/g'  -e 's/@''GNULIB_MKSTEMP''@/0/g'  -e 's/@''GNULIB_MKSTEMPS''@/0/g'  -e 's/@''GNULIB_POSIX_OPENPT''@/0/g'  -e 's/@''GNULIB_PTSNAME''@/0/g'  -e 's/@''GNULIB_PTSNAME_R''@/0/g'  -e 's/@''GNULIB_PUTENV''@/0/g'  -e 's/@''GNULIB_RANDOM''@/0/g'  -e 's/@''GNULIB_RANDOM_R''@/0/g'  -e 's/@''GNULIB_REALLOC_POSIX''@/0/g'  -e 's/@''GNULIB_REALPATH''@/0/g'  -e 's/@''GNULIB_RPMATCH''@/0/g'  -e 's/@''GNULIB_SETENV''@/0/g'  -e 's/@''GNULIB_STRTOD''@/0/g'  -e 's/@''GNULIB_STRTOLL''@/0/g'  -e 's/@''GNULIB_STRTOULL''@/0/g'  -e 's/@''GNULIB_SYSTEM_POSIX''@/0/g'  -e 's/@''GNULIB_UNLOCKPT''@/0/g'  -e 's/@''GNULIB_UNSETENV''@/0/g'  -e 's/@''GNULIB_WCTOMB''@/0/g'  < /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib/stdlib.in.h |  sed -e 's|@''HAVE__EXIT''@|1|g'  -e 's|@''HAVE_ATOLL''@|1|g'  -e 's|@''HAVE_CANONICALIZE_FILE_NAME''@|1|g'  -e 's|@''HAVE_DECL_GETLOADAVG''@|1|g'  -e 's|@''HAVE_GETSUBOPT''@|1|g'  -e 's|@''HAVE_GRANTPT''@|1|g'  -e 's|@''HAVE_MKDTEMP''@|1|g'  -e 's|@''HAVE_MKOSTEMP''@|1|g'  -e 's|@''HAVE_MKOSTEMPS''@|1|g'  -e 's|@''HAVE_MKSTEMP''@|1|g'  -e 's|@''HAVE_MKSTEMPS''@|1|g'  -e 's|@''HAVE_POSIX_OPENPT''@|1|g'  -e 's|@''HAVE_PTSNAME''@|1|g'  -e 's|@''HAVE_PTSNAME_R''@|1|g'  -e 's|@''HAVE_RANDOM''@|1|g'  -e 's|@''HAVE_RANDOM_H''@|1|g'  -e 's|@''HAVE_RANDOM_R''@|1|g'  -e 's|@''HAVE_REALPATH''@|1|g'  -e 's|@''HAVE_RPMATCH''@|1|g'  -e 's|@''HAVE_DECL_SETENV''@|1|g'  -e 's|@''HAVE_STRTOD''@|1|g'  -e 's|@''HAVE_STRTOLL''@|1|g'  -e 's|@''HAVE_STRTOULL''@|1|g'  -e 's|@''HAVE_STRUCT_RANDOM_DATA''@|1|g'  -e 's|@''HAVE_SYS_LOADAVG_H''@|0|g'  -e 's|@''HAVE_UNLOCKPT''@|1|g'  -e 's|@''HAVE_DECL_UNSETENV''@|1|g'  -e 's|@''REPLACE_CALLOC''@|0|g'  -e 's|@''REPLACE_CANONICALIZE_FILE_NAME''@|0|g'  -e 's|@''REPLACE_MALLOC''@|0|g'  -e 's|@''REPLACE_MBTOWC''@|0|g'  -e 's|@''REPLACE_MKSTEMP''@|0|g'  -e 's|@''REPLACE_PTSNAME''@|0|g'  -e 's|@''REPLACE_PTSNAME_R''@|0|g'  -e 's|@''REPLACE_PUTENV''@|0|g'  -e 's|@''REPLACE_RANDOM_R''@|0|g'  -e 's|@''REPLACE_REALLOC''@|0|g'  -e 's|@''REPLACE_REALPATH''@|0|g'  -e 's|@''REPLACE_SETENV''@|0|g'  -e 's|@''REPLACE_STRTOD''@|0|g'  -e 's|@''REPLACE_UNSETENV''@|0|g'  -e 's|@''REPLACE_WCTOMB''@|0|g'  -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h'  -e '/definition of _Noreturn/r /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/build-aux/snippet/_Noreturn.h'  -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h'  -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h';  } > stdlib.h-t &&  mv stdlib.h-t stdlib.h
+../build-aux/install-sh -c -d sys
+rm -f sys/select.h-t sys/select.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_SYS_SELECT_H''@|<sys/select.h>|g'  -e 's|@''HAVE_SYS_SELECT_H''@|1|g'  -e 's/@''GNULIB_PSELECT''@/1/g'  -e 's/@''GNULIB_SELECT''@/0/g'  -e 's|@''HAVE_WINSOCK2_H''@|0|g'  -e 's|@''HAVE_PSELECT''@|1|g'  -e 's|@''REPLACE_PSELECT''@|0|g'  -e 's|@''REPLACE_SELECT''@|0|g'  -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h'  -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h'  < /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib/sys_select.in.h;  } > sys/select.h-t &&  mv sys/select.h-t sys/select.h
+../build-aux/install-sh -c -d sys
+rm -f sys/stat.h-t sys/stat.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_SYS_STAT_H''@|<sys/stat.h>|g'  -e 's|@''WINDOWS_64_BIT_ST_SIZE''@|0|g'  -e 's/@''GNULIB_FCHMODAT''@/0/g'  -e 's/@''GNULIB_FSTAT''@/0/g'  -e 's/@''GNULIB_FSTATAT''@/0/g'  -e 's/@''GNULIB_FUTIMENS''@/0/g'  -e 's/@''GNULIB_LCHMOD''@/0/g'  -e 's/@''GNULIB_LSTAT''@/1/g'  -e 's/@''GNULIB_MKDIRAT''@/0/g'  -e 's/@''GNULIB_MKFIFO''@/0/g'  -e 's/@''GNULIB_MKFIFOAT''@/0/g'  -e 's/@''GNULIB_MKNOD''@/0/g'  -e 's/@''GNULIB_MKNODAT''@/0/g'  -e 's/@''GNULIB_STAT''@/0/g'  -e 's/@''GNULIB_UTIMENSAT''@/0/g'  -e 's|@''HAVE_FCHMODAT''@|1|g'  -e 's|@''HAVE_FSTATAT''@|1|g'  -e 's|@''HAVE_FUTIMENS''@|1|g'  -e 's|@''HAVE_LCHMOD''@|1|g'  -e 's|@''HAVE_LSTAT''@|1|g'  -e 's|@''HAVE_MKDIRAT''@|1|g'  -e 's|@''HAVE_MKFIFO''@|1|g'  -e 's|@''HAVE_MKFIFOAT''@|1|g'  -e 's|@''HAVE_MKNOD''@|1|g'  -e 's|@''HAVE_MKNODAT''@|1|g'  -e 's|@''HAVE_UTIMENSAT''@|1|g'  -e 's|@''REPLACE_FSTAT''@|0|g'  -e 's|@''REPLACE_FSTATAT''@|0|g'  -e 's|@''REPLACE_FUTIMENS''@|0|g'  -e 's|@''REPLACE_LSTAT''@|0|g'  -e 's|@''REPLACE_MKDIR''@|0|g'  -e 's|@''REPLACE_MKFIFO''@|0|g'  -e 's|@''REPLACE_MKNOD''@|0|g'  -e 's|@''REPLACE_STAT''@|0|g'  -e 's|@''REPLACE_UTIMENSAT''@|0|g'  -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h'  -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h'  -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h'  < /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib/sys_stat.in.h;  } > sys/stat.h-t &&  mv sys/stat.h-t sys/stat.h
+../build-aux/install-sh -c -d sys
+rm -f sys/time.h-t sys/time.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's/@''HAVE_SYS_TIME_H''@/1/g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_SYS_TIME_H''@|<sys/time.h>|g'  -e 's/@''GNULIB_GETTIMEOFDAY''@/1/g'  -e 's|@''HAVE_WINSOCK2_H''@|0|g'  -e 's/@''HAVE_GETTIMEOFDAY''@/1/g'  -e 's/@''HAVE_STRUCT_TIMEVAL''@/1/g'  -e 's/@''REPLACE_GETTIMEOFDAY''@/0/g'  -e 's/@''REPLACE_STRUCT_TIMEVAL''@/0/g'  -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h'  -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h'  -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h'  < /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib/sys_time.in.h;  } > sys/time.h-t &&  mv sys/time.h-t sys/time.h
+rm -f time.h-t time.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' &&  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_TIME_H''@|<time.h>|g'  -e 's/@''GNULIB_MKTIME''@/1/g'  -e 's/@''GNULIB_NANOSLEEP''@/0/g'  -e 's/@''GNULIB_STRPTIME''@/0/g'  -e 's/@''GNULIB_TIMEGM''@/0/g'  -e 's/@''GNULIB_TIME_R''@/1/g'  -e 's|@''HAVE_DECL_LOCALTIME_R''@|1|g'  -e 's|@''HAVE_NANOSLEEP''@|1|g'  -e 's|@''HAVE_STRPTIME''@|1|g'  -e 's|@''HAVE_TIMEGM''@|1|g'  -e 's|@''REPLACE_LOCALTIME_R''@|0|g'  -e 's|@''REPLACE_MKTIME''@|1|g'  -e 's|@''REPLACE_NANOSLEEP''@|GNULIB_PORTCHECK|g'  -e 's|@''REPLACE_TIMEGM''@|GNULIB_PORTCHECK|g'  -e 's|@''PTHREAD_H_DEFINES_STRUCT_TIMESPEC''@|0|g'  -e 's|@''SYS_TIME_H_DEFINES_STRUCT_TIMESPEC''@|0|g'  -e 's|@''TIME_H_DEFINES_STRUCT_TIMESPEC''@|1|g'  -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h'  -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h'  -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h'  < /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib/time.in.h;  } > time.h-t &&  mv time.h-t time.h
+rm -f unistd.h-t unistd.h &&  { echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */';  sed -e 's|@''GUARD_PREFIX''@|GL|g'  -e 's|@''HAVE_UNISTD_H''@|1|g'  -e 's|@''INCLUDE_NEXT''@|include_next|g'  -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g'  -e 's|@''PRAGMA_COLUMNS''@||g'  -e 's|@''NEXT_UNISTD_H''@|<unistd.h>|g'  -e 's|@''WINDOWS_64_BIT_OFF_T''@|0|g'  -e 's/@''GNULIB_CHDIR''@/0/g'  -e 's/@''GNULIB_CHOWN''@/0/g'  -e 's/@''GNULIB_CLOSE''@/0/g'  -e 's/@''GNULIB_DUP''@/0/g'  -e 's/@''GNULIB_DUP2''@/1/g'  -e 's/@''GNULIB_DUP3''@/0/g'  -e 's/@''GNULIB_ENVIRON''@/1/g'  -e 's/@''GNULIB_EUIDACCESS''@/0/g'  -e 's/@''GNULIB_FACCESSAT''@/0/g'  -e 's/@''GNULIB_FCHDIR''@/0/g'  -e 's/@''GNULIB_FCHOWNAT''@/0/g'  -e 's/@''GNULIB_FDATASYNC''@/0/g'  -e 's/@''GNULIB_FSYNC''@/0/g'  -e 's/@''GNULIB_FTRUNCATE''@/0/g'  -e 's/@''GNULIB_GETCWD''@/0/g'  -e 's/@''GNULIB_GETDOMAINNAME''@/0/g'  -e 's/@''GNULIB_GETDTABLESIZE''@/0/g'  -e 's/@''GNULIB_GETGROUPS''@/0/g'  -e 's/@''GNULIB_GETHOSTNAME''@/0/g'  -e 's/@''GNULIB_GETLOGIN''@/0/g'  -e 's/@''GNULIB_GETLOGIN_R''@/0/g'  -e 's/@''GNULIB_GETPAGESIZE''@/0/g'  -e 's/@''GNULIB_GETUSERSHELL''@/0/g'  -e 's/@''GNULIB_GROUP_MEMBER''@/0/g'  -e 's/@''GNULIB_ISATTY''@/0/g'  -e 's/@''GNULIB_LCHOWN''@/0/g'  -e 's/@''GNULIB_LINK''@/0/g'  -e 's/@''GNULIB_LINKAT''@/0/g'  -e 's/@''GNULIB_LSEEK''@/0/g'  -e 's/@''GNULIB_PIPE''@/0/g'  -e 's/@''GNULIB_PIPE2''@/0/g'  -e 's/@''GNULIB_PREAD''@/0/g'  -e 's/@''GNULIB_PWRITE''@/0/g'  -e 's/@''GNULIB_READ''@/0/g'  -e 's/@''GNULIB_READLINK''@/1/g'  -e 's/@''GNULIB_READLINKAT''@/0/g'  -e 's/@''GNULIB_RMDIR''@/0/g'  -e 's/@''GNULIB_SETHOSTNAME''@/0/g'  -e 's/@''GNULIB_SLEEP''@/0/g'  -e 's/@''GNULIB_SYMLINK''@/1/g'  -e 's/@''GNULIB_SYMLINKAT''@/0/g'  -e 's/@''GNULIB_TTYNAME_R''@/0/g'  -e 's/@''GNULIB_UNISTD_H_GETOPT''@/01/g'  -e 's/@''GNULIB_UNISTD_H_NONBLOCKING''@/0/g'  -e 's/@''GNULIB_UNISTD_H_SIGPIPE''@/0/g'  -e 's/@''GNULIB_UNLINK''@/0/g'  -e 's/@''GNULIB_UNLINKAT''@/0/g'  -e 's/@''GNULIB_USLEEP''@/0/g'  -e 's/@''GNULIB_WRITE''@/0/g'  < /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib/unistd.in.h |  sed -e 's|@''HAVE_CHOWN''@|1|g'  -e 's|@''HAVE_DUP2''@|1|g'  -e 's|@''HAVE_DUP3''@|1|g'  -e 's|@''HAVE_EUIDACCESS''@|1|g'  -e 's|@''HAVE_FACCESSAT''@|1|g'  -e 's|@''HAVE_FCHDIR''@|1|g'  -e 's|@''HAVE_FCHOWNAT''@|1|g'  -e 's|@''HAVE_FDATASYNC''@|1|g'  -e 's|@''HAVE_FSYNC''@|1|g'  -e 's|@''HAVE_FTRUNCATE''@|1|g'  -e 's|@''HAVE_GETDTABLESIZE''@|1|g'  -e 's|@''HAVE_GETGROUPS''@|1|g'  -e 's|@''HAVE_GETHOSTNAME''@|1|g'  -e 's|@''HAVE_GETLOGIN''@|1|g'  -e 's|@''HAVE_GETPAGESIZE''@|1|g'  -e 's|@''HAVE_GROUP_MEMBER''@|1|g'  -e 's|@''HAVE_LCHOWN''@|1|g'  -e 's|@''HAVE_LINK''@|1|g'  -e 's|@''HAVE_LINKAT''@|1|g'  -e 's|@''HAVE_PIPE''@|1|g'  -e 's|@''HAVE_PIPE2''@|1|g'  -e 's|@''HAVE_PREAD''@|1|g'  -e 's|@''HAVE_PWRITE''@|1|g'  -e 's|@''HAVE_READLINK''@|1|g'  -e 's|@''HAVE_READLINKAT''@|1|g'  -e 's|@''HAVE_SETHOSTNAME''@|1|g'  -e 's|@''HAVE_SLEEP''@|1|g'  -e 's|@''HAVE_SYMLINK''@|1|g'  -e 's|@''HAVE_SYMLINKAT''@|1|g'  -e 's|@''HAVE_UNLINKAT''@|1|g'  -e 's|@''HAVE_USLEEP''@|1|g'  -e 's|@''HAVE_DECL_ENVIRON''@|0|g'  -e 's|@''HAVE_DECL_FCHDIR''@|1|g'  -e 's|@''HAVE_DECL_FDATASYNC''@|1|g'  -e 's|@''HAVE_DECL_GETDOMAINNAME''@|1|g'  -e 's|@''HAVE_DECL_GETLOGIN_R''@|1|g'  -e 's|@''HAVE_DECL_GETPAGESIZE''@|1|g'  -e 's|@''HAVE_DECL_GETUSERSHELL''@|1|g'  -e 's|@''HAVE_DECL_SETHOSTNAME''@|1|g'  -e 's|@''HAVE_DECL_TTYNAME_R''@|1|g'  -e 's|@''HAVE_OS_H''@|0|g'  -e 's|@''HAVE_SYS_PARAM_H''@|0|g'  |  sed -e 's|@''REPLACE_CHOWN''@|0|g'  -e 's|@''REPLACE_CLOSE''@|0|g'  -e 's|@''REPLACE_DUP''@|0|g'  -e 's|@''REPLACE_DUP2''@|0|g'  -e 's|@''REPLACE_FCHOWNAT''@|0|g'  -e 's|@''REPLACE_FTRUNCATE''@|0|g'  -e 's|@''REPLACE_GETCWD''@|0|g'  -e 's|@''REPLACE_GETDOMAINNAME''@|0|g'  -e 's|@''REPLACE_GETLOGIN_R''@|0|g'  -e 's|@''REPLACE_GETGROUPS''@|0|g'  -e 's|@''REPLACE_GETPAGESIZE''@|0|g'  -e 's|@''REPLACE_ISATTY''@|0|g'  -e 's|@''REPLACE_LCHOWN''@|0|g'  -e 's|@''REPLACE_LINK''@|0|g'  -e 's|@''REPLACE_LINKAT''@|0|g'  -e 's|@''REPLACE_LSEEK''@|0|g'  -e 's|@''REPLACE_PREAD''@|0|g'  -e 's|@''REPLACE_PWRITE''@|0|g'  -e 's|@''REPLACE_READ''@|0|g'  -e 's|@''REPLACE_READLINK''@|0|g'  -e 's|@''REPLACE_RMDIR''@|0|g'  -e 's|@''REPLACE_SLEEP''@|0|g'  -e 's|@''REPLACE_SYMLINK''@|0|g'  -e 's|@''REPLACE_TTYNAME_R''@|0|g'  -e 's|@''REPLACE_UNLINK''@|0|g'  -e 's|@''REPLACE_UNLINKAT''@|0|g'  -e 's|@''REPLACE_USLEEP''@|0|g'  -e 's|@''REPLACE_WRITE''@|0|g'  -e 's|@''UNISTD_H_HAVE_WINSOCK2_H''@|0|g'  -e 's|@''UNISTD_H_HAVE_WINSOCK2_H_AND_USE_SOCKETS''@|0|g'  -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h'  -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h'  -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h';  } > unistd.h-t &&  mv unistd.h-t unistd.h
+make  all-am
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT allocator.o -MD -MP -MF .deps/allocator.Tpo -c -o allocator.o allocator.c
+mv -f .deps/allocator.Tpo .deps/allocator.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT c-ctype.o -MD -MP -MF .deps/c-ctype.Tpo -c -o c-ctype.o c-ctype.c
+mv -f .deps/c-ctype.Tpo .deps/c-ctype.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT c-strcasecmp.o -MD -MP -MF .deps/c-strcasecmp.Tpo -c -o c-strcasecmp.o c-strcasecmp.c
+mv -f .deps/c-strcasecmp.Tpo .deps/c-strcasecmp.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT c-strncasecmp.o -MD -MP -MF .deps/c-strncasecmp.Tpo -c -o c-strncasecmp.o c-strncasecmp.c
+mv -f .deps/c-strncasecmp.Tpo .deps/c-strncasecmp.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT careadlinkat.o -MD -MP -MF .deps/careadlinkat.Tpo -c -o careadlinkat.o careadlinkat.c
+mv -f .deps/careadlinkat.Tpo .deps/careadlinkat.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT md5.o -MD -MP -MF .deps/md5.Tpo -c -o md5.o md5.c
+In file included from md5.c:26:
+./stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ../src/conf_post.h:189,
+                 from ../src/config.h:1668,
+                 from md5.c:22:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from md5.c:26:
+./stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ../src/conf_post.h:189,
+                 from ../src/config.h:1668,
+                 from md5.c:22:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+mv -f .deps/md5.Tpo .deps/md5.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT sha1.o -MD -MP -MF .deps/sha1.Tpo -c -o sha1.o sha1.c
+In file included from sha1.c:28:
+./stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ../src/conf_post.h:189,
+                 from ../src/config.h:1668,
+                 from sha1.c:24:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from sha1.c:28:
+./stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ../src/conf_post.h:189,
+                 from ../src/config.h:1668,
+                 from sha1.c:24:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+mv -f .deps/sha1.Tpo .deps/sha1.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT sha256.o -MD -MP -MF .deps/sha256.Tpo -c -o sha256.o sha256.c
+In file included from sha256.c:27:
+./stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ../src/conf_post.h:189,
+                 from ../src/config.h:1668,
+                 from sha256.c:23:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from sha256.c:27:
+./stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ../src/conf_post.h:189,
+                 from ../src/config.h:1668,
+                 from sha256.c:23:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+mv -f .deps/sha256.Tpo .deps/sha256.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT sha512.o -MD -MP -MF .deps/sha512.Tpo -c -o sha512.o sha512.c
+In file included from sha512.c:27:
+./stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ../src/conf_post.h:189,
+                 from ../src/config.h:1668,
+                 from sha512.c:23:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from sha512.c:27:
+./stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ../src/conf_post.h:189,
+                 from ../src/config.h:1668,
+                 from sha512.c:23:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+mv -f .deps/sha512.Tpo .deps/sha512.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT dtoastr.o -MD -MP -MF .deps/dtoastr.Tpo -c -o dtoastr.o dtoastr.c
+mv -f .deps/dtoastr.Tpo .deps/dtoastr.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT dtotimespec.o -MD -MP -MF .deps/dtotimespec.Tpo -c -o dtotimespec.o dtotimespec.c
+mv -f .deps/dtotimespec.Tpo .deps/dtotimespec.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT filemode.o -MD -MP -MF .deps/filemode.Tpo -c -o filemode.o filemode.c
+mv -f .deps/filemode.Tpo .deps/filemode.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT gettime.o -MD -MP -MF .deps/gettime.Tpo -c -o gettime.o gettime.c
+mv -f .deps/gettime.Tpo .deps/gettime.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT stat-time.o -MD -MP -MF .deps/stat-time.Tpo -c -o stat-time.o stat-time.c
+mv -f .deps/stat-time.Tpo .deps/stat-time.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT strftime.o -MD -MP -MF .deps/strftime.Tpo -c -o strftime.o strftime.c
+mv -f .deps/strftime.Tpo .deps/strftime.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT timespec.o -MD -MP -MF .deps/timespec.Tpo -c -o timespec.o timespec.c
+mv -f .deps/timespec.Tpo .deps/timespec.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT timespec-add.o -MD -MP -MF .deps/timespec-add.Tpo -c -o timespec-add.o timespec-add.c
+mv -f .deps/timespec-add.Tpo .deps/timespec-add.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT timespec-sub.o -MD -MP -MF .deps/timespec-sub.Tpo -c -o timespec-sub.o timespec-sub.c
+mv -f .deps/timespec-sub.Tpo .deps/timespec-sub.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT u64.o -MD -MP -MF .deps/u64.Tpo -c -o u64.o u64.c
+mv -f .deps/u64.Tpo .deps/u64.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT utimens.o -MD -MP -MF .deps/utimens.Tpo -c -o utimens.o utimens.c
+mv -f .deps/utimens.Tpo .deps/utimens.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT execinfo.o -MD -MP -MF .deps/execinfo.Tpo -c -o execinfo.o execinfo.c
+mv -f .deps/execinfo.Tpo .deps/execinfo.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT getopt.o -MD -MP -MF .deps/getopt.Tpo -c -o getopt.o getopt.c
+mv -f .deps/getopt.Tpo .deps/getopt.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT getopt1.o -MD -MP -MF .deps/getopt1.Tpo -c -o getopt1.o getopt1.c
+mv -f .deps/getopt1.Tpo .deps/getopt1.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT mktime.o -MD -MP -MF .deps/mktime.Tpo -c -o mktime.o mktime.c
+mv -f .deps/mktime.Tpo .deps/mktime.Po
+gcc -std=gnu99 -DHAVE_CONFIG_H -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib -I../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src       -g3 -O2 -MT pthread_sigmask.o -MD -MP -MF .deps/pthread_sigmask.Tpo -c -o pthread_sigmask.o pthread_sigmask.c
+mv -f .deps/pthread_sigmask.Tpo .deps/pthread_sigmask.Po
+rm -f libgnu.a
+ar cru libgnu.a allocator.o c-ctype.o  c-strcasecmp.o c-strncasecmp.o  careadlinkat.o md5.o sha1.o  sha256.o sha512.o dtoastr.o  dtotimespec.o filemode.o   gettime.o stat-time.o strftime.o  timespec.o timespec-add.o  timespec-sub.o u64.o utimens.o execinfo.o getopt.o getopt1.o mktime.o pthread_sigmask.o
+ranlib libgnu.a
+cd lib-src && make all                           CC='gcc -std=gnu99' CFLAGS='-g3 -O2' CPPFLAGS=''  LDFLAGS='-Wl,-znocombreloc' MAKE='make'
+gcc -std=gnu99 -c       -I. -I../src -I../lib  -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../lib   -g3 -O2 -DCONFIG_BROKETS -DINHIBIT_STRING_HEADER  /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../src/regex.c
+gcc -std=gnu99       -I. -I../src -I../lib  -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../lib  -Wl,-znocombreloc  -g3 -O2 -DEMACS_NAME="\"GNU Emacs\""  -DVERSION="\"24.3\"" /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/etags.c  regex.o ../lib/libgnu.a -lutil -o etags
+gcc -std=gnu99       -I. -I../src -I../lib  -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../lib  -Wl,-znocombreloc  -g3 -O2 -DCTAGS -DEMACS_NAME="\"GNU Emacs\""  -DVERSION="\"24.3\"" /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/etags.c  regex.o ../lib/libgnu.a -lutil -o ctags
+gcc -std=gnu99       -I. -I../src -I../lib  -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../lib  -Wl,-znocombreloc  -g3 -O2 /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/emacsclient.c  -DVERSION="\"24.3\""  ../lib/libgnu.a -lutil -o emacsclient
+gcc -std=gnu99       -I. -I../src -I../lib  -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../lib  -Wl,-znocombreloc  -g3 -O2 -DVERSION="\"24.3\""  /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/ebrowse.c ../lib/libgnu.a -lutil -o ebrowse
+gcc -std=gnu99       -I. -I../src -I../lib  -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../lib  -Wl,-znocombreloc  -g3 -O2 /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/profile.c  ../lib/libgnu.a -lutil  -o profile
+gcc -std=gnu99 -c       -I. -I../src -I../lib  -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../lib   -g3 -O2  /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/pop.c
+gcc -std=gnu99       -I. -I../src -I../lib  -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../lib  -Wl,-znocombreloc  -g3 -O2  /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/movemail.c pop.o  ../lib/libgnu.a -lutil          -o movemail
+gcc -std=gnu99       -I. -I../src -I../lib  -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../lib  -Wl,-znocombreloc  -g3 -O2 /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/hexl.c ../lib/libgnu.a -lutil -o hexl
+gcc -std=gnu99       -I. -I../src -I../lib  -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../lib  -Wl,-znocombreloc  -g3 -O2 -DHAVE_SHARED_GAME_DIR="\"/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/../install/var/games/emacs\""  /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/update-game-score.c ../lib/libgnu.a -lutil -o update-game-score
+gcc -std=gnu99       -I. -I../src -I../lib  -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../lib  -Wl,-znocombreloc  -g3 -O2 -o test-distrib /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/test-distrib.c
+./test-distrib /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/testfile
+gcc -std=gnu99       -I. -I../src -I../lib  -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../src -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/../lib  -Wl,-znocombreloc  -g3 -O2 /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lib-src/make-docfile.c ../lib/libgnu.a -lutil  -o make-docfile
+boot=bootstrap-emacs;                          if [ ! -x "src/$boot" ]; then                                      cd src; make all                                     CC='gcc -std=gnu99' CFLAGS='-g3 -O2' CPPFLAGS=''          LDFLAGS='-Wl,-znocombreloc' MAKE='make' BOOTSTRAPEMACS="$boot";  fi;
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 pre-crt0.c
+touch stamp-oldxmenu
+../lib-src/make-docfile -d /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src -g dispnew.o frame.o scroll.o xdisp.o menu.o  window.o  charset.o coding.o category.o ccl.o character.o chartab.o bidi.o  cm.o term.o terminal.o xfaces.o     emacs.o keyboard.o macros.o keymap.o sysdep.o  buffer.o filelock.o insdel.o marker.o  minibuf.o fileio.o dired.o  cmds.o casetab.o casefiddle.o indent.o search.o regex.o undo.o  alloc.o data.o doc.o editfns.o callint.o  eval.o floatfns.o fns.o font.o print.o lread.o  syntax.o unexelf.o bytecode.o  process.o gnutls.o callproc.o  region-cache.o sound.o atimer.o  doprnt.o intervals.o textprop.o composite.o xml.o  profiler.o           > gl-tmp
+/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../build-aux/move-if-change gl-tmp globals.h
+echo timestamp > gl-stamp
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 dispnew.c
+In file included from lisp.h:25,
+                 from dispnew.c:28:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from dispnew.c:21:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from dispnew.c:28:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from dispnew.c:21:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 frame.c
+In file included from lisp.h:25,
+                 from frame.c:30:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from frame.c:20:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from frame.c:30:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from frame.c:20:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 scroll.c
+In file included from lisp.h:25,
+                 from scroll.c:25:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from scroll.c:22:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from scroll.c:25:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from scroll.c:22:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 xdisp.c
+In file included from lisp.h:25,
+                 from xdisp.c:278:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from xdisp.c:274:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from xdisp.c:278:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from xdisp.c:274:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 menu.c
+In file included from lisp.h:25,
+                 from menu.c:25:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from menu.c:21:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from menu.c:25:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from menu.c:21:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 window.c
+In file included from lisp.h:25,
+                 from window.c:27:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from window.c:21:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from window.c:27:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from window.c:21:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 charset.c
+In file included from lisp.h:25,
+                 from charset.c:36:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from charset.c:27:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from charset.c:36:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from charset.c:27:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+charset.c: In function 'Fdefine_charset_internal':
+charset.c:878: warning: comparison is always false due to limited range of data type
+charset.c:936: warning: comparison is always true due to limited range of data type
+charset.c:936: warning: comparison is always true due to limited range of data type
+charset.c:937: warning: comparison is always true due to limited range of data type
+charset.c:937: warning: comparison is always true due to limited range of data type
+charset.c:949: warning: comparison is always true due to limited range of data type
+charset.c:949: warning: comparison is always true due to limited range of data type
+charset.c:950: warning: comparison is always true due to limited range of data type
+charset.c:950: warning: comparison is always true due to limited range of data type
+charset.c: In function 'Fencode_char':
+charset.c:1893: warning: comparison is always true due to limited range of data type
+charset.c:1893: warning: comparison is always true due to limited range of data type
+charset.c:1893: warning: comparison is always true due to limited range of data type
+charset.c:1893: warning: comparison is always true due to limited range of data type
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 coding.c
+In file included from lisp.h:25,
+                 from coding.c:289:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from coding.c:286:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from coding.c:289:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from coding.c:286:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 category.c
+In file included from lisp.h:25,
+                 from category.c:35:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from category.c:31:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from category.c:35:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from category.c:31:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 ccl.c
+In file included from lisp.h:25,
+                 from ccl.c:31:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from ccl.c:26:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from ccl.c:31:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from ccl.c:26:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 character.c
+In file included from lisp.h:25,
+                 from character.c:40:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from character.c:29:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from character.c:40:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from character.c:29:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 chartab.c
+In file included from lisp.h:25,
+                 from chartab.c:23:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from chartab.c:21:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from chartab.c:23:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from chartab.c:21:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 bidi.c
+In file included from lisp.h:25,
+                 from bidi.c:60:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from bidi.c:57:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from bidi.c:60:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from bidi.c:57:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 cm.c
+In file included from lisp.h:25,
+                 from cm.c:24:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from cm.c:21:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from cm.c:24:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from cm.c:21:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 term.c
+In file included from lisp.h:25,
+                 from term.c:29:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from term.c:22:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from term.c:29:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from term.c:22:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 terminal.c
+In file included from lisp.h:25,
+                 from terminal.c:25:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from terminal.c:19:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from terminal.c:25:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from terminal.c:19:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 xfaces.c
+In file included from lisp.h:25,
+                 from xfaces.c:208:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from xfaces.c:202:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from xfaces.c:208:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from xfaces.c:202:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 emacs.c
+In file included from lisp.h:25,
+                 from emacs.c:32:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from emacs.c:22:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from emacs.c:32:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from emacs.c:22:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 keyboard.c
+In file included from lisp.h:25,
+                 from keyboard.c:28:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from keyboard.c:21:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from keyboard.c:28:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from keyboard.c:21:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 macros.c
+In file included from lisp.h:25,
+                 from macros.c:23:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from macros.c:21:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from macros.c:23:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from macros.c:21:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 keymap.c
+In file included from lisp.h:25,
+                 from keymap.c:45:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from keymap.c:42:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from keymap.c:45:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from keymap.c:42:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 sysdep.c
+In file included from lisp.h:25,
+                 from sysdep.c:39:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from sysdep.c:20:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from sysdep.c:39:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from sysdep.c:20:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+sysdep.c: In function 'list_system_processes':
+sysdep.c:2684: warning: comparison is always true due to limited range of data type
+sysdep.c:2684: warning: comparison is always true due to limited range of data type
+sysdep.c: In function 'system_process_attributes':
+sysdep.c:3264: warning: comparison is always true due to limited range of data type
+sysdep.c:3264: warning: comparison is always true due to limited range of data type
+sysdep.c:3272: warning: comparison is always true due to limited range of data type
+sysdep.c:3272: warning: comparison is always true due to limited range of data type
+sysdep.c:3312: warning: comparison is always true due to limited range of data type
+sysdep.c:3312: warning: comparison is always true due to limited range of data type
+sysdep.c:3313: warning: comparison is always true due to limited range of data type
+sysdep.c:3313: warning: comparison is always true due to limited range of data type
+sysdep.c:3314: warning: comparison is always true due to limited range of data type
+sysdep.c:3314: warning: comparison is always true due to limited range of data type
+sysdep.c:3322: warning: comparison is always true due to limited range of data type
+sysdep.c:3322: warning: comparison is always true due to limited range of data type
+sysdep.c:3346: warning: comparison is always true due to limited range of data type
+sysdep.c:3346: warning: comparison is always true due to limited range of data type
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 buffer.c
+In file included from lisp.h:25,
+                 from buffer.c:34:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from buffer.c:21:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from buffer.c:34:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from buffer.c:21:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 filelock.c
+In file included from lisp.h:25,
+                 from filelock.c:41:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from filelock.c:21:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from filelock.c:41:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from filelock.c:21:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 insdel.c
+In file included from lisp.h:25,
+                 from insdel.c:25:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from insdel.c:21:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from insdel.c:25:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from insdel.c:21:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 marker.c
+In file included from lisp.h:25,
+                 from marker.c:23:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from marker.c:21:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from marker.c:23:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from marker.c:21:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 minibuf.c
+In file included from lisp.h:25,
+                 from minibuf.c:25:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from minibuf.c:21:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from minibuf.c:25:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from minibuf.c:21:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 fileio.c
+In file included from lisp.h:25,
+                 from fileio.c:41:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from fileio.c:20:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from fileio.c:41:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from fileio.c:20:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 dired.c
+In file included from lisp.h:25,
+                 from dired.c:73:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from dired.c:21:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from dired.c:73:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from dired.c:21:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+dired.c: In function 'Ffile_attributes':
+dired.c:974: warning: comparison is always true due to limited range of data type
+dired.c:974: warning: comparison is always true due to limited range of data type
+dired.c:978: warning: comparison is always true due to limited range of data type
+dired.c:978: warning: comparison is always true due to limited range of data type
+dired.c:1005: warning: comparison is always true due to limited range of data type
+dired.c:1005: warning: comparison is always true due to limited range of data type
+dired.c:1005: warning: comparison is always true due to limited range of data type
+dired.c:1005: warning: comparison is always true due to limited range of data type
+dired.c:1006: warning: comparison is always true due to limited range of data type
+dired.c:1006: warning: comparison is always true due to limited range of data type
+dired.c:1006: warning: comparison is always true due to limited range of data type
+dired.c:1006: warning: comparison is always true due to limited range of data type
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 cmds.c
+In file included from lisp.h:25,
+                 from cmds.c:23:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from cmds.c:21:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from cmds.c:23:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from cmds.c:21:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 casetab.c
+In file included from lisp.h:25,
+                 from casetab.c:23:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from casetab.c:21:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from casetab.c:23:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from casetab.c:21:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 casefiddle.c
+In file included from lisp.h:25,
+                 from casefiddle.c:24:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from casefiddle.c:22:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from casefiddle.c:24:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from casefiddle.c:22:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 indent.c
+In file included from lisp.h:25,
+                 from indent.c:23:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from indent.c:20:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from indent.c:23:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from indent.c:20:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 search.c
+In file included from lisp.h:25,
+                 from search.c:24:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from search.c:22:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from search.c:24:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from search.c:22:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 regex.c
+In file included from lisp.h:25,
+                 from regex.c:127:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from regex.c:47:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from regex.c:127:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from regex.c:47:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 undo.c
+In file included from lisp.h:25,
+                 from undo.c:23:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from undo.c:21:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from undo.c:23:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from undo.c:21:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 alloc.c
+In file included from lisp.h:25,
+                 from alloc.c:36:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from alloc.c:21:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from alloc.c:36:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from alloc.c:21:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 data.c
+In file included from lisp.h:25,
+                 from data.c:26:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from data.c:21:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from data.c:26:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from data.c:21:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+echo "#define BUILDOBJ \"dispnew.o frame.o scroll.o xdisp.o menu.o  window.o  charset.o coding.o category.o ccl.o character.o chartab.o bidi.o  cm.o term.o terminal.o xfaces.o     emacs.o keyboard.o macros.o keymap.o sysdep.o  buffer.o filelock.o insdel.o marker.o  minibuf.o fileio.o dired.o  cmds.o casetab.o casefiddle.o indent.o search.o regex.o undo.o  alloc.o data.o doc.o editfns.o callint.o  eval.o floatfns.o fns.o font.o print.o lread.o  syntax.o unexelf.o bytecode.o  process.o gnutls.o callproc.o  region-cache.o sound.o atimer.o  doprnt.o intervals.o textprop.o composite.o xml.o  profiler.o           terminfo.o lastfile.o gmalloc.o    vm-limit.o   " "\"" > buildobj.h
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 doc.c
+In file included from lisp.h:25,
+                 from doc.c:31:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from doc.c:22:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from doc.c:31:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from doc.c:22:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 editfns.c
+In file included from lisp.h:25,
+                 from editfns.c:35:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from editfns.c:21:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from editfns.c:35:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from editfns.c:21:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+editfns.c: In function 'init_editfns':
+editfns.c:133: warning: comparison is always true due to limited range of data type
+editfns.c:133: warning: comparison is always true due to limited range of data type
+editfns.c: In function 'Fuser_uid':
+editfns.c:1258: warning: comparison is always true due to limited range of data type
+editfns.c:1258: warning: comparison is always true due to limited range of data type
+editfns.c: In function 'Fuser_real_uid':
+editfns.c:1267: warning: comparison is always true due to limited range of data type
+editfns.c:1267: warning: comparison is always true due to limited range of data type
+editfns.c: In function 'Femacs_pid':
+editfns.c:1347: warning: comparison is always true due to limited range of data type
+editfns.c:1347: warning: comparison is always true due to limited range of data type
+editfns.c: In function 'Fdecode_time':
+editfns.c:1827: warning: comparison is always true due to limited range of data type
+editfns.c:1827: warning: comparison is always true due to limited range of data type
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 callint.c
+In file included from lisp.h:25,
+                 from callint.c:23:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from callint.c:21:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from callint.c:23:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from callint.c:21:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 eval.c
+In file included from lisp.h:25,
+                 from eval.c:24:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from eval.c:21:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from eval.c:24:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from eval.c:21:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 floatfns.c
+In file included from lisp.h:25,
+                 from floatfns.c:33:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from floatfns.c:31:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from floatfns.c:33:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from floatfns.c:31:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 fns.c
+In file included from lisp.h:25,
+                 from fns.c:27:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from fns.c:20:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from fns.c:27:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from fns.c:20:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 font.c
+In file included from lisp.h:25,
+                 from font.c:29:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from font.c:23:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from font.c:29:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from font.c:23:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+font.c: In function 'font_fill_lglyph_metrics':
+font.c:4283: warning: comparison is always true due to limited range of data type
+font.c:4283: warning: comparison is always true due to limited range of data type
+font.c:4283: warning: comparison is always true due to limited range of data type
+font.c:4283: warning: comparison is always true due to limited range of data type
+font.c: In function 'Ffont_variation_glyphs':
+font.c:4400: warning: comparison is always true due to limited range of data type
+font.c:4400: warning: comparison is always true due to limited range of data type
+font.c:4400: warning: comparison is always true due to limited range of data type
+font.c:4400: warning: comparison is always true due to limited range of data type
+font.c: In function 'Ffont_get_glyphs':
+font.c:4735: warning: comparison is always true due to limited range of data type
+font.c:4735: warning: comparison is always true due to limited range of data type
+font.c:4735: warning: comparison is always true due to limited range of data type
+font.c:4735: warning: comparison is always true due to limited range of data type
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 print.c
+In file included from lisp.h:25,
+                 from print.c:25:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from print.c:22:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from print.c:25:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from print.c:22:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 lread.c
+In file included from lisp.h:25,
+                 from lread.c:30:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from lread.c:22:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from lread.c:30:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from lread.c:22:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 syntax.c
+In file included from lisp.h:25,
+                 from syntax.c:25:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from syntax.c:21:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from syntax.c:25:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from syntax.c:21:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 unexelf.c
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 bytecode.c
+In file included from lisp.h:25,
+                 from bytecode.c:38:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from bytecode.c:36:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from bytecode.c:38:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from bytecode.c:36:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 process.c
+In file included from lisp.h:25,
+                 from process.c:34:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from process.c:22:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from process.c:34:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from process.c:22:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+process.c: In function 'Fdelete_process':
+process.c:830: warning: comparison is always true due to limited range of data type
+process.c:830: warning: comparison is always true due to limited range of data type
+process.c:841: warning: comparison is always true due to limited range of data type
+process.c:841: warning: comparison is always true due to limited range of data type
+process.c: In function 'Fprocess_id':
+process.c:928: warning: comparison is always true due to limited range of data type
+process.c:928: warning: comparison is always true due to limited range of data type
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 gnutls.c
+In file included from lisp.h:25,
+                 from gnutls.c:22:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from gnutls.c:19:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from gnutls.c:22:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from gnutls.c:19:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 callproc.c
+In file included from lisp.h:25,
+                 from callproc.c:30:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from callproc.c:21:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from callproc.c:30:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from callproc.c:21:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+callproc.c: In function 'Fcall_process':
+callproc.c:675: warning: comparison is always true due to limited range of data type
+callproc.c:675: warning: comparison is always true due to limited range of data type
+callproc.c:675: warning: comparison is always true due to limited range of data type
+callproc.c:675: warning: comparison is always true due to limited range of data type
+callproc.c:675: warning: comparison is always true due to limited range of data type
+callproc.c:675: warning: comparison is always true due to limited range of data type
+callproc.c:679: warning: comparison is always true due to limited range of data type
+callproc.c:679: warning: comparison is always true due to limited range of data type
+callproc.c:679: warning: comparison is always true due to limited range of data type
+callproc.c:679: warning: comparison is always true due to limited range of data type
+callproc.c:679: warning: comparison is always true due to limited range of data type
+callproc.c:679: warning: comparison is always true due to limited range of data type
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 region-cache.c
+In file included from lisp.h:25,
+                 from region-cache.c:25:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from region-cache.c:22:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from region-cache.c:25:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from region-cache.c:22:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 sound.c
+In file included from lisp.h:25,
+                 from sound.c:48:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from sound.c:38:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from sound.c:48:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from sound.c:38:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 atimer.c
+In file included from lisp.h:25,
+                 from atimer.c:22:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from atimer.c:19:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from atimer.c:22:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from atimer.c:19:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 doprnt.c
+In file included from lisp.h:25,
+                 from doprnt.c:109:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from doprnt.c:103:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from doprnt.c:109:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from doprnt.c:103:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 intervals.c
+In file included from lisp.h:25,
+                 from intervals.c:46:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from intervals.c:41:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from intervals.c:46:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from intervals.c:41:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 textprop.c
+In file included from lisp.h:25,
+                 from textprop.c:22:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from textprop.c:20:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from textprop.c:22:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from textprop.c:20:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 composite.c
+In file included from lisp.h:25,
+                 from composite.c:29:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from composite.c:25:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from composite.c:29:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from composite.c:25:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+composite.c: In function 'fill_gstring_body':
+composite.c:886: warning: comparison is always true due to limited range of data type
+composite.c:886: warning: comparison is always true due to limited range of data type
+composite.c:886: warning: comparison is always true due to limited range of data type
+composite.c:886: warning: comparison is always true due to limited range of data type
+composite.c:886: warning: comparison is always true due to limited range of data type
+composite.c:886: warning: comparison is always true due to limited range of data type
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 xml.c
+In file included from lisp.h:25,
+                 from xml.c:27:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from xml.c:19:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from xml.c:27:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from xml.c:19:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 profiler.c
+In file included from lisp.h:25,
+                 from profiler.c:21:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from profiler.c:20:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from profiler.c:21:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from profiler.c:20:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 terminfo.c
+In file included from lisp.h:25,
+                 from terminfo.c:22:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from terminfo.c:19:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from terminfo.c:22:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from terminfo.c:19:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 lastfile.c
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 gmalloc.c
+gcc -std=gnu99 -c  -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2 vm-limit.c
+In file included from lisp.h:25,
+                 from vm-limit.c:21:
+../lib/stdalign.h:51:1: warning: "_Alignof" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from vm-limit.c:19:
+/usr/include/sys/cdefs.h:247:1: warning: this is the location of the previous definition
+In file included from lisp.h:25,
+                 from vm-limit.c:21:
+../lib/stdalign.h:82:1: warning: "_Alignas" redefined
+In file included from /usr/include/string.h:36,
+                 from ./conf_post.h:189,
+                 from ./config.h:1668,
+                 from vm-limit.c:19:
+/usr/include/sys/cdefs.h:246:1: warning: this is the location of the previous definition
+gcc -std=gnu99 -nostdlib -Demacs  -I. -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src  -I../lib -I/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lib           -I/usr/local/include/libxml2 -I/usr/local/include            -I/usr/local/include -I/usr/local/include/p11-kit-1    -g3 -O2   -Wl,-znocombreloc  -o temacs pre-crt0.o /usr/lib/crt1.o /usr/lib/crti.o dispnew.o frame.o scroll.o xdisp.o menu.o  window.o  charset.o coding.o category.o ccl.o character.o chartab.o bidi.o  cm.o term.o terminal.o xfaces.o     emacs.o keyboard.o macros.o keymap.o sysdep.o  buffer.o filelock.o insdel.o marker.o  minibuf.o fileio.o dired.o  cmds.o casetab.o casefiddle.o indent.o search.o regex.o undo.o  alloc.o data.o doc.o editfns.o callint.o  eval.o floatfns.o fns.o font.o print.o lread.o  syntax.o unexelf.o bytecode.o  process.o gnutls.o callproc.o  region-cache.o sound.o atimer.o  doprnt.o intervals.o textprop.o composite.o xml.o  profiler.o           terminfo.o lastfile.o gmalloc.o    vm-limit.o   ../lib/libgnu.a               -lrt     -L/usr/local/lib -lxml2   -lutil  -lncurses          -L/usr/local/lib -lgnutls -lpthread    -lm -lgcc -lc -lgcc /usr/lib/crtn.o 
+test "no" = "yes" ||  test "X" = X ||  -r temacs
+cd ../lisp; make  update-subdirs
+cd /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp; subdirs=`find . -type d -print`;  for file in $subdirs; do  case $file in */.* | */.*/* | */=* | */cedet* ) ;;  *) wins="$wins $file" ;;  esac;  done;  for file in $wins; do  /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/build-aux/update-subdirs $file;  done;
+if test "no" = "yes"; then  rm -f bootstrap-emacs;  ln temacs bootstrap-emacs;  else  `/bin/pwd`/temacs --batch --load loadup bootstrap || exit 1;  test "X" = X ||  -zex emacs;  mv -f emacs bootstrap-emacs;  fi
+Loading loadup.el (source)...
+Using load-path (/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/emacs-lisp /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/international /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/textmodes)
+Loading emacs-lisp/byte-run...
+Loading emacs-lisp/backquote...
+Loading subr...
+Loading version...
+Loading widget...
+Loading custom...
+Loading emacs-lisp/map-ynp...
+Loading international/mule...
+Loading international/mule-conf...
+Loading env...
+Loading format...
+Loading bindings...
+Loading cus-start...
+Loading window...
+Loading files...
+Loading emacs-lisp/macroexp...
+Loading cus-face...
+Loading faces...
+Loading button...
+Loading startup...
+Loading /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/loaddefs.el (source)...
+Loading minibuffer...
+Loading abbrev...
+Loading simple...
+Loading help...
+Loading jka-cmpr-hook...
+Loading epa-hook...
+Loading international/mule-cmds...
+Loading case-table...
+Loading /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/international/charprop.el (source)...
+Loading international/characters...
+Loading composite...
+Loading language/chinese...
+Loading language/cyrillic...
+Loading language/indian...
+Loading language/sinhala...
+Loading language/english...
+Loading language/ethiopic...
+Loading language/european...
+Loading language/czech...
+Loading language/slovak...
+Loading language/romanian...
+Loading language/greek...
+Loading language/hebrew...
+Loading language/japanese...
+Loading /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/international/cp51932.el (source)...
+Loading /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/international/eucjp-ms.el (source)...
+Loading language/korean...
+Loading language/lao...
+Loading language/tai-viet...
+Loading language/thai...
+Loading language/tibetan...
+Loading language/vietnamese...
+Loading language/misc-lang...
+Loading language/utf-8-lang...
+Loading language/georgian...
+Loading language/khmer...
+Loading language/burmese...
+Loading language/cham...
+Loading indent...
+Loading frame...
+Loading term/tty-colors...
+Loading font-core...
+Loading facemenu...
+Loading emacs-lisp/syntax...
+Loading font-lock...
+Loading jit-lock...
+Loading emacs-lisp/timer...
+Loading isearch...
+Loading rfn-eshadow...
+Loading menu-bar...
+Loading emacs-lisp/lisp...
+Loading textmodes/page...
+Loading register...
+Loading textmodes/paragraphs...
+Loading emacs-lisp/lisp-mode...
+Loading textmodes/text-mode...
+Loading textmodes/fill...
+Loading newcomment...
+Loading replace...
+Loading emacs-lisp/tabulated-list...
+Loading buff-menu...
+Loading emacs-lisp/float-sup...
+Loading vc/vc-hooks...
+Loading vc/ediff-hook...
+Finding pointers to doc strings...
+Finding pointers to doc strings...done
+Dumping under the name emacs
+78738 pure bytes used
+cd ../lisp; make  compile-first EMACS=/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/bootstrap-emacs
+cd ../lisp; make  autoloads EMACS=/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/bootstrap-emacs
+cd /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp && chmod +w ps-print.el  emulation/tpu-edt.el  emacs-lisp/cl-loaddefs.el  mail/rmail.el  dired.el  ibuffer.el  htmlfontify.el  emacs-lisp/eieio.el
+cd /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp; subdirs=`find . -type d -print`;  for file in $subdirs; do  case $file in */.* | */.*/* | */=* | */obsolete | */term ) ;;  *) wins="$wins $file" ;;  esac;  done;  echo Directories: $wins;  EMACSLOADPATH=/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp LC_ALL=C /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/bootstrap-emacs -batch --no-site-file --no-site-lisp -l autoload --eval '(setq generated-autoload-file "/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/loaddefs.el")' -f batch-update-autoloads $wins
+Directories: . ./progmodes ./international ./mail ./org ./vc ./emacs-lisp ./mh-e ./emulation ./calc ./erc ./textmodes ./net ./language ./calendar ./nxml ./url ./eshell ./play ./gnus ./cedet ./cedet/semantic ./cedet/semantic/analyze ./cedet/semantic/bovine ./cedet/semantic/decorate ./cedet/semantic/wisent ./cedet/semantic/symref ./cedet/srecode ./cedet/ede
+Loading vc-git...
+Saving file /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/loaddefs.el...
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/loaddefs.el
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/emacs-lisp/byte-run.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/emacs-lisp/byte-run.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/emacs-lisp/backquote.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/emacs-lisp/backquote.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/subr.el
+
+In declare-function:
+subr.el:42:11:Warning: macro declare-function used to take 2+ arguments, now
+    takes 2-4
+
+In end of data:
+subr.el:4417:1:Warning: the function `x-popup-dialog' is not known to be
+    defined.
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/subr.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/version.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/version.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/widget.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/widget.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/custom.el
+
+In end of data:
+custom.el:1463:1:Warning: the function `x-get-resource' is not known to be
+    defined.
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/custom.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/emacs-lisp/map-ynp.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/emacs-lisp/map-ynp.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/cus-start.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/cus-start.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/international/mule.el
+
+In set-selection-coding-system:
+international/mule.el:1429:9:Warning: assignment to free variable
+    `selection-coding-system'
+
+In set-next-selection-coding-system:
+international/mule.el:1450:9:Warning: assignment to free variable
+    `next-selection-coding-system'
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/international/mule.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/international/mule-conf.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/international/mule-conf.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/env.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/env.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/format.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/format.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/bindings.el
+
+In end of data:
+bindings.el:1256:1:Warning: the function `mouse-menu-major-mode-map' is not
+    known to be defined.
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/bindings.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/files.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/files.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/emacs-lisp/macroexp.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/emacs-lisp/macroexp.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/cus-face.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/cus-face.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/faces.el
+
+In end of data:
+faces.el:2614:1:Warning: the following functions are not known to be defined:
+    x-display-list, x-open-connection, x-get-resource
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/faces.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/button.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/button.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/startup.el
+
+In toplevel form:
+startup.el:115:1:Warning: global/dynamic var `argi' lacks a prefix
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/startup.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/minibuffer.el
+
+In toplevel form:
+minibuffer.el:521:1:Warning: Unused lexical argument `unquote'
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/minibuffer.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/abbrev.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/abbrev.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/simple.el
+
+In end of data:
+simple.el:7091:1:Warning: the following functions are not known to be defined:
+    x-set-selection, x-selection-owner-p, x-selection-exists-p
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/simple.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/help.el
+
+In describe-key:
+help.el:727:31:Warning: reference to free variable
+    `mouse-1-click-follows-link'
+
+In end of data:
+help.el:1194:1:Warning: the function `mouse-on-link-p' is not known to be
+    defined.
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/help.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/jka-cmpr-hook.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/jka-cmpr-hook.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/epa-hook.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/epa-hook.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/international/mule-cmds.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/international/mule-cmds.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/case-table.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/case-table.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/international/characters.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/international/characters.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/composite.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/composite.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/chinese.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/chinese.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/cyrillic.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/cyrillic.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/indian.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/indian.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/sinhala.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/sinhala.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/english.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/english.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/ethiopic.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/ethiopic.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/european.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/european.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/czech.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/czech.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/slovak.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/slovak.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/romanian.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/romanian.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/greek.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/greek.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/hebrew.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/hebrew.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/japanese.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/japanese.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/korean.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/korean.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/lao.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/lao.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/tai-viet.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/tai-viet.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/thai.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/thai.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/tibetan.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/tibetan.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/vietnamese.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/vietnamese.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/misc-lang.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/misc-lang.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/utf-8-lang.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/utf-8-lang.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/georgian.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/georgian.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/khmer.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/khmer.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/burmese.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/burmese.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/language/cham.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/language/cham.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/indent.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/indent.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/window.el
+
+In end of data:
+window.el:6737:1:Warning: the following functions are not known to be defined:
+    x-display-pixel-height, tool-bar-lines-needed, menu-or-popup-active-p
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/window.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/frame.el
+
+In make-frame:
+frame.el:659:15:Warning: reference to free variable `x-display-name'
+frame.el:659:15:Warning: assignment to free variable `x-display-name'
+
+In end of data:
+frame.el:1680:1:Warning: the function `x-display-grayscale-p' is not known to
+    be defined.
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/frame.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/term/tty-colors.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/term/tty-colors.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/font-core.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/font-core.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/facemenu.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/facemenu.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/emacs-lisp/syntax.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/emacs-lisp/syntax.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/font-lock.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/font-lock.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/jit-lock.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/jit-lock.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/mouse.el
+
+In font-menu-add-default:
+mouse.el:1757:22:Warning: reference to free variable `x-fixed-font-alist'
+
+In end of data:
+mouse.el:2016:1:Warning: the following functions are not known to be defined:
+    x-get-selection, x-get-selection-value, x-set-selection
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/mouse.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/scroll-bar.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/scroll-bar.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/select.el
+
+In xselect-convert-to-targets:
+select.el:313:40:Warning: reference to free variable
+    `selection-converter-alist'
+select.el:395:7:Warning: assignment to free variable
+    `selection-converter-alist'
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/select.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/emacs-lisp/timer.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/emacs-lisp/timer.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/isearch.el
+
+In end of data:
+isearch.el:3087:1:Warning: the function `x-get-selection' is not known to be
+    defined.
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/isearch.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/rfn-eshadow.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/rfn-eshadow.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/menu-bar.el
+
+In end of data:
+menu-bar.el:2228:1:Warning: the function `mouse-select-font' is not known to
+    be defined.
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/menu-bar.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/emacs-lisp/lisp.el
+
+In beginning-of-defun-raw:
+emacs-lisp/lisp.el:292:27:Warning: `font-lock-beginning-of-syntax-function' is
+    an obsolete variable (as of 23.3); use `syntax-begin-function' instead.
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/emacs-lisp/lisp.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/textmodes/page.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/textmodes/page.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/register.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/register.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/textmodes/paragraphs.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/textmodes/paragraphs.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/emacs-lisp/lisp-mode.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/emacs-lisp/lisp-mode.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/textmodes/text-mode.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/textmodes/text-mode.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/textmodes/fill.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/textmodes/fill.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/newcomment.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/newcomment.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/replace.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/replace.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/emacs-lisp/tabulated-list.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/emacs-lisp/tabulated-list.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/buff-menu.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/buff-menu.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/fringe.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/fringe.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/emacs-lisp/regexp-opt.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/emacs-lisp/regexp-opt.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/image.el
+
+In image-type-from-buffer:
+image.el:286:21:Warning: reference to free variable `image-types'
+
+In end of data:
+image.el:832:1:Warning: the function `image-metadata' is not known to be
+    defined.
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/image.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/international/fontset.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/international/fontset.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/dnd.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/dnd.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/tool-bar.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/tool-bar.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/dynamic-setting.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/dynamic-setting.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/x-dnd.el
+
+In x-dnd-drop-data:
+x-dnd.el:326:24:Warning: reference to free variable `mouse-yank-at-point'
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/x-dnd.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/term/common-win.el
+
+In x-select-text:
+term/common-win.el:72:18:Warning: reference to free variable
+    `x-select-enable-primary'
+term/common-win.el:74:20:Warning: assignment to free variable
+    `x-last-selected-text-primary'
+term/common-win.el:77:20:Warning: assignment to free variable
+    `x-last-selected-text-clipboard'
+
+In end of data:
+term/common-win.el:477:1:Warning: the function `x-set-selection' is not known
+    to be defined.
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/term/common-win.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/term/x-win.el
+
+In x-selection-value:
+term/x-win.el:1226:13:Warning: reference to free variable
+    `x-select-enable-clipboard'
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/term/x-win.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/w32-vars.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/w32-vars.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/term/w32-win.el
+
+In end of data:
+term/w32-win.el:338:1:Warning: the function `create-default-fontset' is not
+    known to be defined.
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/term/w32-win.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/ls-lisp.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/ls-lisp.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/disp-table.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/disp-table.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/dos-w32.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/dos-w32.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/w32-fns.el
+
+In w32-add-charset-info:
+w32-fns.el:263:17:Warning: assignment to free variable
+    `w32-charset-info-alist'
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/w32-fns.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/dos-fns.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/dos-fns.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/dos-vars.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/dos-vars.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/term/pc-win.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/term/pc-win.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/term/internal.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/term/internal.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/term/ns-win.el
+
+In toplevel form:
+term/ns-win.el:561:1:Warning: global/dynamic var `parameters' lacks a prefix
+
+In end of data:
+term/ns-win.el:949:1:Warning: the function `x-handle-args' is not known to be
+    defined.
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/term/ns-win.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/mwheel.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/mwheel.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/emacs-lisp/float-sup.el
+
+In toplevel form:
+emacs-lisp/float-sup.el:31:1:Warning: global/dynamic var `pi' lacks a prefix
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/emacs-lisp/float-sup.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/vc/vc-hooks.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/vc/vc-hooks.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/vc/ediff-hook.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/vc/ediff-hook.elc
+Compiling /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp/tooltip.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp/tooltip.elc
+rm -f ../etc/DOC
+../lib-src/make-docfile -d /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src dosfns.o msdos.o  xterm.o xfns.o xmenu.o xselect.o xrdb.o xsmfns.o fringe.o image.o  fontset.o dbusbind.o cygw32.o  nsterm.o nsfns.o nsmenu.o nsselect.o nsimage.o nsfont.o  w32.o w32console.o w32fns.o w32heap.o w32inevt.o  w32menu.o w32proc.o w32reg.o w32select.o w32term.o w32xfns.o  w16select.o widget.o xfont.o ftfont.o xftfont.o ftxfont.o gtkutil.o  xsettings.o xgselect.o termcap.o dispnew.o frame.o scroll.o xdisp.o menu.o  window.o  charset.o coding.o category.o ccl.o character.o chartab.o bidi.o  cm.o term.o terminal.o xfaces.o     emacs.o keyboard.o macros.o keymap.o sysdep.o  buffer.o filelock.o insdel.o marker.o  minibuf.o fileio.o dired.o  cmds.o casetab.o casefiddle.o indent.o search.o regex.o undo.o  alloc.o data.o doc.o editfns.o callint.o  eval.o floatfns.o fns.o font.o print.o lread.o  syntax.o unexelf.o bytecode.o  process.o gnutls.o callproc.o  region-cache.o sound.o atimer.o  doprnt.o intervals.o textprop.o composite.o xml.o  profiler.o           > ../etc/DOC
+../lib-src/make-docfile -a ../etc/DOC -d /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/../lisp `sed -n -e 's| \\\\||' -e 's|^[ 	]*$(lispsource)/||p' /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/lisp.mk`
+cd ../leim && make  leim-list.el EMACS=/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/bootstrap-emacs
+EMACSLOADPATH=/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/../lisp LC_ALL=C  /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/bootstrap-emacs -batch --no-site-file --no-site-lisp -l /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/../lisp/international/titdic-cnv  -f batch-titdic-convert -dir quail /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/CXTERM-DIC;  echo "changed" > changed.tit
+Converting all tit files in the directory /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/CXTERM-DIC
+Converting /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/CXTERM-DIC/4Corner.tit to quail-package...
+Decoding with coding system cn-big5...
+Processing header part...
+Formatting translation rules...
+Converting /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/CXTERM-DIC/ARRAY30.tit to quail-package...
+Decoding with coding system cn-big5...
+Processing header part...
+Formatting translation rules...
+Converting /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/CXTERM-DIC/CCDOSPY.tit to quail-package...
+Decoding with coding system euc-china...
+Processing header part...
+Formatting translation rules...
+Converting /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/CXTERM-DIC/ECDICT.tit to quail-package...
+Decoding with coding system cn-big5...
+Processing header part...
+Formatting translation rules...
+Converting /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/CXTERM-DIC/ETZY.tit to quail-package...
+Decoding with coding system cn-big5...
+Processing header part...
+Formatting translation rules...
+Converting /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/CXTERM-DIC/PY-b5.tit to quail-package...
+Decoding with coding system cn-big5...
+Processing header part...
+Formatting translation rules...
+Converting /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/CXTERM-DIC/Punct-b5.tit to quail-package...
+Decoding with coding system cn-big5...
+Processing header part...
+Formatting translation rules...
+Converting /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/CXTERM-DIC/Punct.tit to quail-package...
+Decoding with coding system euc-china...
+Processing header part...
+Formatting translation rules...
+Converting /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/CXTERM-DIC/QJ-b5.tit to quail-package...
+Decoding with coding system cn-big5...
+Processing header part...
+Formatting translation rules...
+Converting /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/CXTERM-DIC/QJ.tit to quail-package...
+Decoding with coding system euc-china...
+Processing header part...
+Formatting translation rules...
+Converting /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/CXTERM-DIC/SW.tit to quail-package...
+Decoding with coding system euc-china...
+Processing header part...
+Formatting translation rules...
+Converting /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/CXTERM-DIC/TONEPY.tit to quail-package...
+Decoding with coding system euc-china...
+Processing header part...
+Formatting translation rules...
+Converting /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/CXTERM-DIC/ZOZY.tit to quail-package...
+Decoding with coding system cn-big5...
+Processing header part...
+Formatting translation rules...
+Byte-compile the created files by:
+  % emacs -batch -f batch-byte-compile XXX.el
+EMACSLOADPATH=/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/../lisp LC_ALL=C  /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/bootstrap-emacs -batch --no-site-file --no-site-lisp -l /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/../lisp/international/titdic-cnv  -f batch-miscdic-convert -dir quail /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/MISC-DIC;  echo "changed" > changed.misc
+Converting pinyin.map to PY.el...
+Loading vc-git...
+Converting pinyin.map to PY.el...done
+Converting cangjie-table.b5 to tsang-b5.el...
+Converting cangjie-table.b5 to tsang-b5.el...done
+Converting cangjie-table.b5 to quick-b5.el...
+Converting cangjie-table.b5 to quick-b5.el...done
+Converting ziranma.cin to ZIRANMA.el...
+Converting ziranma.cin to ZIRANMA.el...done
+Converting CTLau-b5.html to CTLau-b5.el...
+Converting CTLau-b5.html to CTLau-b5.el...done
+Converting cangjie-table.cns to tsang-cns.el...
+Converting cangjie-table.cns to tsang-cns.el...done
+Converting cangjie-table.cns to quick-cns.el...
+Converting cangjie-table.cns to quick-cns.el...done
+Converting CTLau.html to CTLau.el...
+Converting CTLau.html to CTLau.el...done
+rm -f leim-list.el
+if [ x`cd /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim && /bin/pwd` = x`/bin/pwd` ] ; then  EMACSLOADPATH=/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/../lisp LC_ALL=C  /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/bootstrap-emacs -batch --no-site-file --no-site-lisp -l /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/../lisp/international/quail  --eval "(update-leim-list-file \".\")" ;  else  EMACSLOADPATH=/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/../lisp LC_ALL=C  /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/bootstrap-emacs -batch --no-site-file --no-site-lisp -l /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/../lisp/international/quail  --eval "(update-leim-list-file \".\" \"/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim\")" ;  fi
+Updating /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/leim-list.el ...
+Loading vc-git...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/quick-cns.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/CTLau.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/tsang-cns.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/CTLau-b5.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/ZIRANMA.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/quick-b5.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/tsang-b5.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/PY.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/ZOZY.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/TONEPY.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/SW.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/QJ.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/QJ-b5.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/Punct.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/Punct-b5.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/PY-b5.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/ETZY.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/ECDICT.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/CCDOSPY.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/ARRAY30.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/4Corner.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/greek.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/hanja-jis.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/lrt.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/viqr.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/sgml-input.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/cyril-jis.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/ipa.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/welsh.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/ipa-praat.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/hebrew.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/japanese.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/tibetan.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/latin-alt.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/hanja3.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/latin-ltx.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/slovak.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/latin-pre.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/thai.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/croatian.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/hangul.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/czech.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/rfc1345.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/cyrillic.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/uni-input.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/py-punct.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/symbol-ksc.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/georgian.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/ethiopic.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/arabic.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/vnvni.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/vntelex.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/hanja.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/indian.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/pypunct-b5.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/sisheng.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/lao.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/latin-post.el ...
+Checking /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/persian.el ...
+Saving file /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/leim-list.el...
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/leim-list.el
+Updating /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/leim-list.el ... done
+sed -n '/^[^;]/ p' < /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/leim-ext.el >> leim-list.el
+if test "no" = "yes"; then  rm -f emacs;  ln temacs emacs;  else  LC_ALL=C `/bin/pwd`/temacs -batch -l loadup dump || exit 1;  test "X" = X ||  -zex emacs;  rm -f bootstrap-emacs;  ln emacs bootstrap-emacs;  fi
+Loading loadup.el (source)...
+Using load-path (/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/lisp)
+Loading emacs-lisp/byte-run...
+Loading emacs-lisp/backquote...
+Loading subr...
+Loading version...
+Loading widget...
+Loading custom...
+Loading emacs-lisp/map-ynp...
+Loading international/mule...
+Loading international/mule-conf...
+Loading env...
+Loading format...
+Loading bindings...
+Loading cus-start...
+Loading window...
+Loading files...
+Loading emacs-lisp/macroexp...
+Loading cus-face...
+Loading faces...
+Loading button...
+Loading startup...
+Loading loaddefs.el (source)...
+Loading minibuffer...
+Loading abbrev...
+Loading simple...
+Loading help...
+Loading jka-cmpr-hook...
+Loading epa-hook...
+Loading international/mule-cmds...
+Loading case-table...
+Loading international/charprop.el (source)...
+Loading international/characters...
+Loading composite...
+Loading language/chinese...
+Loading language/cyrillic...
+Loading language/indian...
+Loading language/sinhala...
+Loading language/english...
+Loading language/ethiopic...
+Loading language/european...
+Loading language/czech...
+Loading language/slovak...
+Loading language/romanian...
+Loading language/greek...
+Loading language/hebrew...
+Loading language/japanese...
+Loading international/cp51932.el (source)...
+Loading international/eucjp-ms.el (source)...
+Loading language/korean...
+Loading language/lao...
+Loading language/tai-viet...
+Loading language/thai...
+Loading language/tibetan...
+Loading language/vietnamese...
+Loading language/misc-lang...
+Loading language/utf-8-lang...
+Loading language/georgian...
+Loading language/khmer...
+Loading language/burmese...
+Loading language/cham...
+Loading indent...
+Loading frame...
+Loading term/tty-colors...
+Loading font-core...
+Loading facemenu...
+Loading emacs-lisp/syntax...
+Loading font-lock...
+Loading jit-lock...
+Loading emacs-lisp/timer...
+Loading isearch...
+Loading rfn-eshadow...
+Loading menu-bar...
+Loading emacs-lisp/lisp...
+Loading textmodes/page...
+Loading register...
+Loading textmodes/paragraphs...
+Loading emacs-lisp/lisp-mode...
+Loading textmodes/text-mode...
+Loading textmodes/fill...
+Loading newcomment...
+Loading replace...
+Loading emacs-lisp/tabulated-list...
+Loading buff-menu...
+Loading emacs-lisp/float-sup...
+Loading vc/vc-hooks...
+Loading vc/ediff-hook...
+Finding pointers to doc strings...
+Finding pointers to doc strings...done
+Pure-hashed: 20123 strings, 2783 vectors, 32268 conses, 2528 bytecodes, 78 others
+Dumping under the name emacs
+2294258 pure bytes used
+Adding name emacs-24.3.1
+if [ -r .bzr/checkout/dirstate ]; then 			 vcswitness="`pwd`/.bzr/checkout/dirstate"; 	 fi; 							 cd src; make all                             CC='gcc -std=gnu99' CFLAGS='-g3 -O2' CPPFLAGS=''  LDFLAGS='-Wl,-znocombreloc' MAKE='make' BOOTSTRAPEMACS=""	 VCSWITNESS="$vcswitness"
+cd ../leim && make  leim-list.el EMACS=/home/sdmoore/shill/examples/packages/emacs/emacs-24.3/src/bootstrap-emacs
+`leim-list.el' is up to date.
+cd lisp && make all                           CC='gcc -std=gnu99' CFLAGS='-g3 -O2' CPPFLAGS=''  LDFLAGS='-Wl,-znocombreloc' MAKE='make'
+cd leim && make all                           CC='gcc -std=gnu99' CFLAGS='-g3 -O2' CPPFLAGS=''  LDFLAGS='-Wl,-znocombreloc' MAKE='make'
+Compiling quail/4Corner.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/4Corner.elc
+Compiling quail/ARRAY30.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/ARRAY30.elc
+Compiling quail/CCDOSPY.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/CCDOSPY.elc
+Compiling quail/CTLau-b5.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/CTLau-b5.elc
+Compiling quail/CTLau.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/CTLau.elc
+Compiling quail/ECDICT.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/ECDICT.elc
+Compiling quail/ETZY.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/ETZY.elc
+Compiling quail/PY-b5.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/PY-b5.elc
+Compiling quail/PY.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/PY.elc
+Compiling quail/Punct-b5.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/Punct-b5.elc
+Compiling quail/Punct.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/Punct.elc
+Compiling quail/QJ-b5.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/QJ-b5.elc
+Compiling quail/QJ.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/QJ.elc
+Compiling quail/SW.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/SW.elc
+Compiling quail/TONEPY.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/TONEPY.elc
+Compiling quail/ZIRANMA.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/ZIRANMA.elc
+Compiling quail/ZOZY.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/ZOZY.elc
+Compiling quail/quick-b5.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/quick-b5.elc
+Compiling quail/quick-cns.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/quick-cns.elc
+Compiling quail/tsang-b5.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/tsang-b5.elc
+Compiling quail/tsang-cns.el
+Wrote /home/sdmoore/shill/examples/packages/emacs/emacs-24.3/leim/quail/tsang-cns.elc
+Preprocessing complete.
+Postprocessing....
+~/tests
+Postprocessing complete....
