@@ -53,9 +53,7 @@ int main(int argc, char** argv) {
 
   fclose(f);
 
-  printf("fopen: %ld\n", fopen_time);
-  printf("fread: %ld\n", fread_time);
-  printf("fwrite: %ld\n", fwrite_time);
+  printf("%ld %ld %ld\n", fopen_time, fread_time, fwrite_time);
 
   return 0;
 }
