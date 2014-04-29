@@ -3,12 +3,14 @@
 #include <sys/time.h>
 #include <unistd.h>
 
+#define CONTAINING_DIRECTORY "/usr/home/danking/tests/individual-system-call-tests/"
+
 int main(int argc, char** argv) {
   struct timeval start, end;
   long fopen_time, fread_time, fwrite_time, secs, usecs;
 
   gettimeofday(&start, NULL);
-  FILE * f = fopen("/home/danking/tests/individual-system-call-tests/test-file", "w");
+  FILE * f = fopen(CONTAINING_DIRECTORY "test-file", "w");
   gettimeofday(&end, NULL);
   secs  = end.tv_sec  - start.tv_sec;
   usecs = end.tv_usec - start.tv_usec;
@@ -34,7 +36,7 @@ int main(int argc, char** argv) {
   }
 
   fclose(f);
-  f = fopen("/home/danking/tests/individual-system-call-tests/test-file", "r");
+  f = fopen(CONTAINING_DIRECTORY "test-file", "r");
 
   char buf[length];
 
