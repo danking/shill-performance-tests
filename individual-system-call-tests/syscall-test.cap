@@ -1,0 +1,19 @@
+#lang shill/cap
+
+provide [syscall-test :
+          [wallet : native-wallet?]
+          [out : writeable?]
+          [rt : dir/c(+lookup, +write, +read, +stat, +append, +read-symlink)]
+          [cwd : dir/c(+chdir, +lookup, +path)]
+          [dir : dir/c(+lookup, +write, +read, +stat, +append)]
+          [libc : file/c(+read, +stat, +exec)]
+           -> integer?];
+
+require shill/native;
+require shill/contracts;
+require shill/io;
+
+val syscall-test = fun (wallet,out,rt,cwd,dir,libc) {
+    find = pkg-native("a.out",wallet);
+    find([],stdout = out, stderr = out, extra = [rt, cwd, dir, libc]);
+}
