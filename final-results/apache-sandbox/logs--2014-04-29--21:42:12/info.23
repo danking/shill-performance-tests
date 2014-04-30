@@ -1,0 +1,18 @@
+security.mac.shill.cap_count: 27
+security.mac.shill.label_count: 127
+security.mac.shill.list_count: 5698
+security.mac.shill.session_count: 1
+security.mac.shill.shill_debug: 0
+security.mac.shill.network_cap_count: 4760
+security.mac.shill.network_cap_list_count: 4617
+vfs.freevnodes: 870
+vfs.wantfreevnodes: 45026
+vfs.numvnodes: 5694
+Preprocessing....
+~/shill/examples/apache ~/tests
+[Tue Apr 29 22:06:26 2014] [warn] (2)No such file or directory: Failed to enable the 'httpready' Accept Filter
+0
+Preprocessing complete.
+Postprocessing....
+~/tests
+Postprocessing complete....
