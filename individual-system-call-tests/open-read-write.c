@@ -3,7 +3,7 @@
 #include <sys/time.h>
 #include <unistd.h>
 
-#define CONTAINING_DIRECTORY "/usr/home/danking/tests/individual-system-call-tests/"
+#define CONTAINING_DIRECTORY "./" 
 
 int main(int argc, char** argv) {
   struct timeval start, end;
