@@ -1,0 +1,1 @@
+{ sum1 += $1 ; sum2 += $2 ; sum3 += $3 } END { print sum1 / NR, sum2 / NR, sum3 / NR }
