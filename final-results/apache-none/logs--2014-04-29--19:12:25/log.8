@@ -1,0 +1,54 @@
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient)
+Completed 500 requests
+Completed 1000 requests
+Completed 1500 requests
+Completed 2000 requests
+Completed 2500 requests
+Completed 3000 requests
+Completed 3500 requests
+Completed 4000 requests
+Completed 4500 requests
+Completed 5000 requests
+Finished 5000 requests
+
+
+Server Software:        Apache/2.2.27
+Server Hostname:        127.0.0.1
+Server Port:            80
+
+Document Path:          /emacs-24.3.tar.gz
+Document Length:        52543898 bytes
+
+Concurrency Level:      100
+Time taken for tests:   66.340 seconds
+Complete requests:      5000
+Failed requests:        0
+Write errors:           0
+Total transferred:      262721045000 bytes
+HTML transferred:       262719490000 bytes
+Requests per second:    75.37 [#/sec] (mean)
+Time per request:       1326.806 [ms] (mean)
+Time per request:       13.268 [ms] (mean, across all concurrent requests)
+Transfer rate:          3867386.35 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.1      0       1
+Processing:   615 1323 145.3   1362    2156
+Waiting:        0  130 336.7      0    2100
+Total:        615 1323 145.4   1362    2157
+
+Percentage of the requests served within a certain time (ms)
+  50%   1362
+  66%   1366
+  75%   1370
+  80%   1375
+  90%   1378
+  95%   1399
+  98%   1620
+  99%   1729
+ 100%   2157 (longest request)

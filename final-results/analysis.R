@@ -1,4 +1,4 @@
-results <- read.csv("~/Documents/research/tmp/results-all/results.csv", header=F)
+results <- read.csv("~/Documents/research/tmp/shill-performance-tests/final-results/results.csv", header=F)
 means <- data.frame("experiment" = results[,1],"mean" = rowMeans(results[,2:51]),"sd" = apply(results[,2:51],1,sd))
 means$ci <- means$sd * qnorm(0.975)
 
@@ -52,6 +52,8 @@ rbind(fourup("grading-none", "grading-bash","grading-sandbox","grading-shill"),
       threeup("make-none", "make-bash", "make-sandbox"),
       threeup("install-none", "install-bash", "install-sandbox"),
       threeup("uninstall-none", "uninstall-bash", "uninstall-sandbox"),
-      fourup("find-none", "find-no-sandbox", "find-exec-sandbox", "find-exec-shill-yes-spawn"))
+      threeup("apache-none", "apache-native", "apache-sandbox"),
+      fourup("find-none", "find-no-sandbox", "find-exec-sandbox", "find-exec-shill-yes-spawn"),
+      fourup("find-exec-xargs-none", "find-exec-xargs-native", "find-exec-xargs-sandbox", "find-exec-xargs-shill"))
 
 print(table,digits=2)
