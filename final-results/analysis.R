@@ -53,6 +53,7 @@ rbind(fourup("grading-none", "grading-bash","grading-sandbox","grading-shill"),
       threeup("install-none", "install-bash", "install-sandbox"),
       threeup("uninstall-none", "uninstall-bash", "uninstall-sandbox"),
       threeup("apache-none", "apache-native", "apache-sandbox"),
-      fourup("find-none", "find-no-sandbox", "find-exec-sandbox", "find-exec-shill-yes-spawn"))
+      fourup("find-none", "find-no-sandbox", "find-exec-sandbox", "find-exec-shill-yes-spawn"),
+      fourup("find-exec-xargs-none", "find-exec-xargs-native", "find-exec-xargs-sandbox", "find-exec-xargs-shill"))
 
 print(table,digits=2)
