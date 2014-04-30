@@ -8,8 +8,10 @@ mkdir -p results
 LOG_FILE=$(date "+sandboxed-log--%Y-%m-%d--%H:%M:%S")
 touch results/${LOG_FILE} || die "Couldn't touch results/${LOG_FILE}"
 
-rm -f test-file
-touch test-file
+TEST_FILE=test-file
+
+rm -f $TEST_FILE
+touch $TEST_FILE
 
 echo "fopen fread fwrite" > results/${LOG_FILE}
 
@@ -22,8 +24,8 @@ done
 LOG_FILE=$(date "+nosandbox-log--%Y-%m-%d--%H:%M:%S")
 touch results/${LOG_FILE}
 
-rm -f test-file
-touch test-file
+rm -f $TEST_FILE
+touch $TEST_FILE
 
 echo "fopen fread fwrite" > results/${LOG_FILE}
 
