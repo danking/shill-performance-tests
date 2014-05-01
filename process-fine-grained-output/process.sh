@@ -6,6 +6,7 @@ RESULTS_DIR="results"
 mkdir -p $RESULTS_DIR
 
 [ ! -e $RESULTS_DIR/summary ] || die "Ensure that ${RESULTS_DIR}/summary does not exist"
+echo vm_startup ambient pkg_native shill_sandbox c_sandbox exec grepfun > $RESULTS_DIR/summary
 
 for file in info.*
 do
