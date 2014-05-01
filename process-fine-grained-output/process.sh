@@ -2,21 +2,22 @@
 
 function die() { echo "process.sh: $@" 1>&2 ; exit 1; }
 
-RESULTS_DIR="results"
-mkdir -p $RESULTS_DIR
+TARGET_DIR=$1
 
-[ ! -e $RESULTS_DIR/summary ] || die "Ensure that ${RESULTS_DIR}/summary does not exist"
-echo vm_startup ambient pkg_native shill_sandbox c_sandbox exec grepfun > $RESULTS_DIR/summary
+[ "$#" -eq 1 ] || die "1 argument required"
 
-for file in info.*
+[ ! -e ${TARGET_DIR}/summary ] || die "Ensure that ${TARGET_DIR}/summary does not exist"
+echo vm_startup ambient pkg_native shill_sandbox c_sandbox exec grepfun > ${TARGET_DIR}/summary
+
+for file in ${TARGET_DIR}/info.*
 do
-    [[ "$file" =~ info\.(.*) ]] || die "$file is not of the form info.(.*)"
+    [[ "$file" =~ .*info\.(.*) ]] || die "$file is not of the form info.(.*)"
     i="${BASH_REMATCH[1]}"
 
     INFO_FILE=$file
-    LOG_FILE=log.$i
+    LOG_FILE=${TARGET_DIR}/log.$i
 
-    [ -e log.$i ] || die "Ensure that log.$i exists"
+    [ -e "${LOG_FILE}" ] || die "Ensure that log.$i exists"
 
-    cat $INFO_FILE $LOG_FILE | awk -f extract-stats.awk >> $RESULTS_DIR/summary
+    cat $INFO_FILE $LOG_FILE | awk -f extract-stats.awk >> ${TARGET_DIR}/summary
 done
