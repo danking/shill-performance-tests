@@ -8,6 +8,7 @@ SCRIPTS+=(grading-sandbox.sh grading-shill.sh)
 SCRIPTS+=(emacs-sandbox.sh emacs-shill.sh)
 SCRIPTS+=(curl-sandbox.sh untar-sandbox.sh configure-sandbox.sh make-sandbox.sh install-sandbox.sh uninstall-sandbox.sh)
 SCRIPTS+=(find-exec-shill-yes-spawn-fine-grained-timing.sh)
+SCRIPTS+=(find-exec-shill-yes-spawn-fine-grained-timing-no-contracts.sh)
 
 echo "Starting evaluation for:"
 echo "${SCRIPTS[*]}"
