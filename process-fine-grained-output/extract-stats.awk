@@ -1,4 +1,7 @@
 BEGIN { shill_sandbox = 0 ; c_sandbox = 0 ; exec = 0 ; grepfun = 0 }
+/^total-real-time:.*/ { total_real_time = $2 }
+/^total-user-time:.*/ { total_user_time = $2 }
+/^total-sys-time:.*/ { total_sys_time = $2 }
 /^shill-sandbox:.*/ { shill_sandbox += $2 }
 /^c-sandbox:.*/ { c_sandbox += $2 }
 /^exec:.*/ { exec += $2 }
@@ -14,5 +17,5 @@ BEGIN { shill_sandbox = 0 ; c_sandbox = 0 ; exec = 0 ; grepfun = 0 }
 }
 /^pkg-native.*/ { pkg_native = $2 }
 END {
-  print vm_startup, ambient, pkg_native, shill_sandbox, c_sandbox, exec, grepfun
+  print vm_startup, ambient, pkg_native, shill_sandbox, exec, c_sandbox, total_real_time, total_user_time, total_sys_time
 }
