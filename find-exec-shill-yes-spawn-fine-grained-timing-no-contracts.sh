@@ -13,7 +13,14 @@ function die() { echo "find-exec-shill-yes-spawn-fine-grained-timing-no-contract
 TEST_NAME=find-exec-shill-yes-spawn-fine-grained-timing-no-contracts
 COMMAND="racket"
 ARGS=(find-exec-spawn.amb)
-BEFORE="cc nanoseconds.c ; ./a.out "
-AFTER=""
+BEFORE="cc nanoseconds.c ; ./a.out ; \
+pushd ${PATH_TO_TESTS}/../ ; \
+racket sed.rkt --off shill/ ; \
+popd
+"
+AFTER="pushd ${PATH_TO_TESTS}/../ ; \
+racket sed.rkt --on shill/ ; \
+popd
+"
 
 bash generic-test.sh $TEST_NAME $COMMAND "${ARGS[*]}" $RUNS $PATH_TO_TEST_LOGS $PATH_TO_SHILL "$BEFORE" "$AFTER"
