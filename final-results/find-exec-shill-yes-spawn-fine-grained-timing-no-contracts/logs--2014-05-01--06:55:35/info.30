@@ -1,0 +1,19 @@
+security.mac.shill.cap_count: 0
+security.mac.shill.label_count: 0
+security.mac.shill.list_count: 119352
+security.mac.shill.session_count: 0
+security.mac.shill.shill_debug: 0
+security.mac.shill.network_cap_count: 0
+security.mac.shill.network_cap_list_count: 14
+vfs.freevnodes: 44755
+vfs.wantfreevnodes: 45026
+vfs.numvnodes: 119351
+Preprocessing....
+before_everything 1398943835979329 usecs
+~ ~/tests
+(define-for-syntax WITH-CONTRACTS #f)~/tests
+Preprocessing complete.
+Postprocessing....
+~ ~/tests
+(define-for-syntax WITH-CONTRACTS #t)~/tests
+Postprocessing complete....

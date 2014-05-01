@@ -1,0 +1,17 @@
+security.mac.shill.cap_count: 0
+security.mac.shill.label_count: 0
+security.mac.shill.list_count: 119739
+security.mac.shill.session_count: 0
+security.mac.shill.shill_debug: 0
+security.mac.shill.network_cap_count: 0
+security.mac.shill.network_cap_list_count: 14
+vfs.freevnodes: 45022
+vfs.wantfreevnodes: 45026
+vfs.numvnodes: 119738
+Preprocessing....
+~/shill/examples/grading ~/tests
+before_everything 1398950248292688 usecs
+Preprocessing complete.
+Postprocessing....
+~/tests
+Postprocessing complete....
