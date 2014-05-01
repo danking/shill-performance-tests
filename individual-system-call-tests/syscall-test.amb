@@ -6,7 +6,7 @@ require "syscall-test.cap";
 val wallet = create-wallet();
 populate-native-wallet(wallet
                       ,open-dir("/")
-                      ,"/usr/bin:/bin:/usr/home/danking/tests/individual-system-call-tests"
+                      ,"/usr/bin:/bin:/home/danking/tests/individual-system-call-tests"
                       ,"/libexec:/lib:/usr/lib"
                       ,pipe-factory
                       ,lookups = [open-dir("/home"), open-dir("/dev")]);
@@ -15,6 +15,6 @@ syscall-test( wallet
             , stdout
             , open-dir("/")
             , cwd
-            , open-dir("/usr/home/danking/tests/individual-system-call-tests")
+            , open-dir("/home/danking/tests/individual-system-call-tests")
             , open-file("/lib/libc.so.7")
             );
