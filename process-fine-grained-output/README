@@ -1,0 +1,9 @@
+You should copy these scripts into the directory containing the data
+and then run them there. They expect their depedent scripts to be
+located in the `$CWD`.
+
+If you have `info.i` and `log.i` files then calling `bash process.sh`
+will produce a `results` folder containing `summary.i` and `result.i`
+files. The summary contains values generated once a run, like vm start
+up time. The result contains the exec, grepfun, and shill-sandbox
+statistics.
