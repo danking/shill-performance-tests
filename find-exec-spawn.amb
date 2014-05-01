@@ -1,7 +1,9 @@
 #lang shill/ambient
 
-printf("vm startup + macro expasnsion (absolute): ~a\n",
+printf("vm startup + macro expasnsion done (absolute): ~a\n",
        current-inexact-milliseconds());
+
+val begin-ambient = current-inexact-milliseconds();
 
 require "find-exec-spawn.cap",
         shill/native;
@@ -16,8 +18,12 @@ populate-native-wallet( wallet
                       , pipe-factory
                       );
 
+
+printf("ambient done (absolute): ~a\n",
+       current-inexact-milliseconds());
+
 find(src,
-     name(".*\\.c"),
+     name(".*\\.c$"),
      grep("mac_",
           dev-null,
           src,
