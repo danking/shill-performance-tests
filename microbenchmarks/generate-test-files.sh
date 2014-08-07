@@ -1,6 +1,6 @@
 #!/usr/local/bin/bash
 
-function die() { echo "generic-test.sh: $@" 1>&2 ; exit 1; }
+function die() { echo "$(basename ${0}): $@" 1>&2 ; exit 1; }
 
 # arguments
 
