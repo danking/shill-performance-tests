@@ -22,7 +22,6 @@ ALL_CAPS="+exec
 +stat
 +lookup
 +read
-+stat
 +write
 +append"
 
