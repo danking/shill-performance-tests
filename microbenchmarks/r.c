@@ -8,6 +8,8 @@
 #include <errno.h>     /* errno */
 #include <sys/time.h>  /* gettimeofday, struct timeval */
 
+#define REPETITIONS 100
+
 int main(int argc, char *argv[]) {
   int err;
   int fd;
@@ -16,9 +18,10 @@ int main(int argc, char *argv[]) {
   char * buf;
   struct timeval time_now;
   int time_start, time_end;
+  int i;
 
   if (argc != 3) {
-    printf("orc accepts exactly two arguments, a byte count and a path\n");
+    printf("r accepts exactly two arguments, a byte count and a path\n");
     exit(1);
   }
 
@@ -51,11 +54,13 @@ int main(int argc, char *argv[]) {
   /****************************************************************************/
   /* BEGIN TIMED */
 
-  err = read(fd, (void*)buf, bytes);
-  if (err == -1) {
-    printf("failed to read %d bytes\n", bytes);
-    printf("  real error num %d\n", errno);
-    perror("  read");
+  for (i=0; i<REPETITIONS; ++i) {
+    err = read(fd, (void*)buf, bytes);
+    if (err == -1) {
+      printf("failed to read %d bytes\n", bytes);
+      printf("  real error num %d\n", errno);
+      perror("  read");
+    }
   }
 
   /* END TIMED */
@@ -64,7 +69,7 @@ int main(int argc, char *argv[]) {
   gettimeofday(&time_now,NULL);
   time_end = time_now.tv_sec * 1000000 + time_now.tv_usec;
 
-  printf("%d", time_end - time_start);
+  printf("%d\n", (time_end - time_start)/((float)REPETITIONS));
 
   err = close(fd);
   if (err == -1) {

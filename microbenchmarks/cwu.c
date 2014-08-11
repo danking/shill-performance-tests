@@ -8,6 +8,8 @@
 #include <errno.h>     /* errno */
 #include <sys/time.h>  /* gettimeofday, struct timeval */
 
+#define REPETITIONS 100
+
 int main(int argc, char *argv[]) {
   int err;
   int fd;
@@ -16,9 +18,10 @@ int main(int argc, char *argv[]) {
   char * buf;
   struct timeval time_now;
   int time_start, time_end;
+  int i;
 
   if (argc != 3) {
-    printf("orc accepts exactly two arguments, a byte count and a path\n");
+    printf("cwu accepts exactly two arguments, a byte count and a path\n");
     exit(1);
   }
 
@@ -44,25 +47,29 @@ int main(int argc, char *argv[]) {
   /****************************************************************************/
   /* BEGIN TIMED */
 
-  fd = open(path, O_WRONLY | O_CREAT);
-  if (fd == -1) {
-    printf("failed to open %s\n", path);
-    printf("  real error num %d\n", errno);
-    perror("  open");
-  }
+  for (i=0; i<REPETITIONS; ++i) {
 
-  err = write(fd, (void*)buf, bytes);
-  if (err == -1) {
-    printf("failed to write %d bytes\n", bytes);
-    printf("  real error num %d\n", errno);
-    perror("  write");
-  }
+    fd = open(path, O_WRONLY | O_CREAT);
+    if (fd == -1) {
+      printf("failed to open (create) %s\n", path);
+      printf("  real error num %d\n", errno);
+      perror("  open");
+    }
 
-  err = close(fd);
-  if (err == -1) {
-    printf("failed to close the file descriptor\n");
-    printf("  real error num %d\n", errno);
-    perror("  close");
+    err = write(fd, (void*)buf, bytes);
+    if (err == -1) {
+      printf("failed to write %d bytes\n", bytes);
+      printf("  real error num %d\n", errno);
+      perror("  write");
+    }
+
+    err = unlink(path);
+    if (err == -1) {
+      printf("failed to unlink the path %s\n", path);
+      printf("  real error num %d\n", errno);
+      perror("  unlink");
+    }
+
   }
 
   /* END TIMED */
@@ -71,7 +78,7 @@ int main(int argc, char *argv[]) {
   gettimeofday(&time_now,NULL);
   time_end = time_now.tv_sec * 1000000 + time_now.tv_usec;
 
-  printf("%d", time_end - time_start);
+  printf("%d\n", (time_end - time_start)/((float)REPETITIONS));
 
   return 0;
 }
