@@ -6,6 +6,6 @@ for file in ${FILES[@]}
 do
     echo $file
     TEMPFILE=$(mktemp "$0.XXXXXX")
-    cat $file | sed 's/REPETITIONS ${1}/REPETITIONS ${2}/' > ${TEMPFILE}
+    cat $file | sed 's/REPETITIONS $1/REPETITIONS $2/' > ${TEMPFILE}
     mv ${TEMPFILE} ${file}
 done
