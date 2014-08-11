@@ -1,5 +1,7 @@
 #!/usr/local/bin/bash
 
+set -m
+
 function die() { echo "$(basename ${0}): $@" 1>&2 ; exit 1; }
 function create_test_results_dirs() {
     for TEST in "$@"
@@ -38,38 +40,84 @@ mkdir "${RESULTS_DIR}" || die "Could not create ${RESULTS_DIR}"
 
 # executable portion
 
-SESSION_COUNTS=(1 10 100 1000)
-GLOBAL_CAP_COUNTS=(1 10 100 1000)
-LOCAL_CAP_COUNTS=(1 10 100 1000)
+SESSION_COUNTS=(1 10 100)
+GLOBAL_CAP_COUNTS=(1 10 100)
+LOCAL_CAP_COUNTS=(1 10 100)
 DATA_SIZES=(1 10 100 1000)
-PATHS=('foo' 'foo/bar' 'foo/bar/baz/qux/quux' 'foo/bar/baz/qux/quux/foo/bar/baz/qux/quux')
-SIZE_AND_EXTANT_PATH_TESTS=(./r ./w ./owc)
+TEST_PATHS_FOLDER=$(mktemp -d "$0.test.files.XXXXXX")
+PATHS=("${TEST_PATHS_FOLDER}/foo" "${TEST_PATHS_FOLDER}/foo/bar" "${TEST_PATHS_FOLDER}/foo/bar/baz/qux/quux" "${TEST_PATHS_FOLDER}/foo/bar/baz/qux/quux/foo/bar/baz/qux/quux")
+SIZE_AND_EXTANT_PATH_TESTS=(./r ./w ./owc ./orc)
 SIZE_AND_NONEXTANT_PATH_TESTS=(./cwu)
-JUST_EXTANT_PATH_TESTS=(./orc)
 JUST_NONEXTANT_PATH_TESTS=(./mkdir)
 
-REPETITIONS=$(seq 1 100)
+SANDBOX="../../shill/sandbox/sandbox"
 
-echo ${SESSION_COUNTS[@]}
+PAUSE_BETWEEN_SESSION_ALLOC_SECONDS="0.1"
+
+ACTIVE_GLOBAL_KIDS=()
+ACTIVE_LOCAL_KIDS=()
+
+POLICY_TO_RUN_SLEEP=$(cat <<EOF
+{ +lookup }
+/
+.
+
+{ +lookup, +read, +stat, +exec }
+./sleep
+
+{ +lookup, +stat }
+/etc
+/usr
+
+{ +read, +stat }
+/etc/libmap.conf
+
+{ +read }
+/var/run/ld-elf.so.hints
+
+{ +read, +exec }
+/libexec/ld-elf.so.1
+
+{ +read, +exec, +stat }
+/lib/libc.so.7
+/lib/libedit.so.7
+/lib/libncurses.so.8
+
+{ +write, +append, +stat }
+&stdout
+&stderr
+EOF
+)
 
 create_test_results_dirs ${SIZE_AND_EXTANT_PATH_TESTS[@]} \
                          ${SIZE_AND_NONEXTANT_PATH_TESTS[@]} \
-                         ${JUST_EXTANT_PATH_TESTS[@]} \
                          ${JUST_NONEXTANT_PATH_TESTS[@]}
 
 for SESSION_COUNT in ${SESSION_COUNTS[@]}
 do
-    echo ${SESSION_COUNT}
     for GLOBAL_CAP_COUNT in ${GLOBAL_CAP_COUNTS[@]}
     do
-        for LOCAL_CAP_COUNT in ${LOCAL_CAP_COUNTS[@]}
-        do
-            for TARGET_PATH in ${PATHS[@]}
-            do
-                mkdir -p $(dirname "${TARGET_PATH}")
+        GLOBAL_POLICY_FILE=$(mktemp "$0.global.policy.XXXXXX")
+        export SHUF="bash shuffle.sh" # for generate-global-policy.sh
+        bash generate-global-policy.sh ${GLOBAL_CAP_COUNT} > ${GLOBAL_POLICY_FILE}
+        echo -e "${POLICY_TO_RUN_SLEEP}" >> ${GLOBAL_POLICY_FILE}
 
-                SLASHES=$(echo ${TARGET_PATH} | sed 's:[^/]::g')"/"
-                PATH_LENGTH=${#SLASHES}
+        for TARGET_PATH in ${PATHS[@]}
+        do
+            mkdir -p $(dirname "${TARGET_PATH}")
+
+            SLASHES=$(echo ${TARGET_PATH} | sed 's:[^/]::g')
+            PATH_LENGTH=${#SLASHES}
+
+            for LOCAL_CAP_COUNT in ${LOCAL_CAP_COUNTS[@]}
+            do
+                # set up $SESSION_COUNT sessions each with $GLOBAL_CAP_COUNT caps on
+                # random files in /usr, they'll be killed below
+                for i in $(seq 1 ${SESSION_COUNT})
+                do
+                    ${SANDBOX} ${GLOBAL_POLICY_FILE} ./sleep >/dev/null &
+                    ACTIVE_GLOBAL_KIDS=("${ACTIVE_GLOBAL_KIDS[@]}" "$!")
+                done
 
                 for DATA_SIZE in ${DATA_SIZES[@]}
                 do
@@ -77,38 +125,51 @@ do
                     do
                         setup_output_file
                         echo_current_test
-                        for i in ${REPETITIONS[@]}
+
+                        rm -rf "${TARGET_PATH}" || die "Could not remove ${TARGET_PATH}"
+                        touch "${TARGET_PATH}" || die "Could not create ${TARGET_PATH}"
+                        dd if=/dev/zero of="${TARGET_PATH}" bs=${DATA_SIZE} count=1 2>/dev/null || die "Could not copy ${DATA_SIZE} bits into ${OUTPUT}"
+
+                        # Set up a policy file which well use to hang
+                        # capabilities off of the target path
+                        LOCAL_POLICY_FILE=$(mktemp "$0.local.policy.XXXXXX")
+                        echo -e "{ +stat, +lookup }\n${TARGET_PATH}" > ${LOCAL_POLICY_FILE}
+                        echo -e "${POLICY_TO_RUN_SLEEP}" >> ${LOCAL_POLICY_FILE}
+
+                        # set up $LOCAL_CAP_COUNT sessions each with one cap on
+                        # the target path
+                        for i in $(seq ${LOCAL_CAP_COUNT})
                         do
-                            rm -rf "${TARGET_PATH}"
-                            touch "${TARGET_PATH}"
-                            ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT}
-                            echo " " >> ${OUTPUT}
+                            ${SANDBOX} ${LOCAL_POLICY_FILE} ./sleep >/dev/null &
+                            ACTIVE_LOCAL_KIDS=("${ACTIVE_LOCAL_KIDS[@]}" "$!")
                         done
+                        sleep ${PAUSE_BETWEEN_SESSION_ALLOC_SECONDS}
+
+                        ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT}
                     done
 
                     for TEST in ${SIZE_AND_NONEXTANT_PATH_TESTS[@]}
                     do
                         setup_output_file
                         echo_current_test
-                        for i in ${REPETITIONS[@]}
-                        do
-                            rm -rf "${TARGET_PATH}"
-                            ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT}
-                            echo " " >> ${OUTPUT}
-                        done
-                    done
-                done
 
-                for TEST in ${JUST_EXTANT_PATH_TESTS[@]}
-                do
-                    setup_output_file
-                    echo_current_test
-                    for i in ${REPETITIONS[@]}
-                    do
                         rm -rf "${TARGET_PATH}"
-                        touch "${TARGET_PATH}"
-                        ${TEST} "${TARGET_PATH}" >> ${OUTPUT}
-                        echo " " >> ${OUTPUT}
+
+                        # Set up a policy file which well use to hang capabilities
+                        # off of the target paths parent directory
+                        LOCAL_POLICY_FILE=$(mktemp "$0.local.policy.XXXXXX")
+                        echo -e "{ +stat, +lookup }\n$(dirname ${TARGET_PATH})" > ${LOCAL_POLICY_FILE}
+                        echo -e "${POLICY_TO_RUN_SLEEP}" >> ${LOCAL_POLICY_FILE}
+
+                        # set up $LOCAL_CAP_COUNT sessions each with one cap on the
+                        # target files in /usr, theyll be killed below
+                        for i in $(seq ${LOCAL_CAP_COUNT})
+                        do
+                            ${SANDBOX} ${LOCAL_POLICY_FILE} ./sleep >/dev/null &
+                        done
+                        sleep ${PAUSE_BETWEEN_SESSION_ALLOC_SECONDS}
+
+                        ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT}
                     done
                 done
 
@@ -116,15 +177,38 @@ do
                 do
                     setup_output_file
                     echo_current_test
-                    for i in ${REPETITIONS[@]}
+
+                    rm -rf "${TARGET_PATH}"
+
+                    # Set up a policy file which well use to hang capabilities
+                    # off of the target paths parent directory
+                    LOCAL_POLICY_FILE=$(mktemp "$0.local.policy.XXXXXX")
+                    echo -e "{ +stat, +lookup }\n$(dirname ${TARGET_PATH})" > ${LOCAL_POLICY_FILE}
+                    echo -e "${POLICY_TO_RUN_SLEEP}" >> ${LOCAL_POLICY_FILE}
+
+                    # set up $LOCAL_CAP_COUNT sessions each with one cap on the
+                    # target files in /usr, theyll be killed below
+                    for i in $(seq ${LOCAL_CAP_COUNT})
                     do
-                        rm -rf "${TARGET_PATH}"
-                        ${TEST} "${TARGET_PATH}" >> ${OUTPUT}
-                        echo " " >> ${OUTPUT}
+                        ${SANDBOX} ${LOCAL_POLICY_FILE} ./sleep >/dev/null &
                     done
+                    sleep ${PAUSE_BETWEEN_SESSION_ALLOC_SECONDS}
+
+                    ${TEST} "${TARGET_PATH}" >> ${OUTPUT}
                 done
+                # ensure target path and local policy file are deleted
                 rm -rf "${TARGET_PATH}"
+                rm -rf "${LOCAL_POLICY_FILE}"
+                # kill all children
+                for PID in "${ACTIVE_LOCAL_KIDS[@]}" "${ACTIVE_GLOBAL_KIDS[@]}"
+                do
+                    kill -9 ${PID}
+                    wait ${PID}
+                done
+                ACTIVE_LOCAL_KIDS=()
+                ACTIVE_GLOBAL_KIDS=()
             done
         done
+        rm -rf "${GLOBAL_POLICY_FILE}"
     done
 done
