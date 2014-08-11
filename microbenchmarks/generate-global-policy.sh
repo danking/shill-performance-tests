@@ -17,7 +17,8 @@ N=$1
 
 # executable portion
 
-FILES=`find /usr -type f | head -n $(expr $N '*' 10) | ${SHUF} | head -n $N`
+FILES=$(find /usr -type f | head -n $(expr $N '*' 10) | ${SHUF} | head -n $N)
+
 ALL_CAPS="+exec
 +stat
 +lookup
@@ -29,8 +30,8 @@ POLICY=""
 for FILE in ${FILES}
 do
     CAP=$(echo "${ALL_CAPS}" | ${SHUF} | head -n 1)
-    POLICY+="{ $CAP }\n"
-    POLICY+=${FILE}"\n\n"
+    POLICY+="\n\n{ $CAP }\n"
+    POLICY+="${FILE}"""
 done
 
-echo -e ${POLICY}
+echo -e "${POLICY}"
