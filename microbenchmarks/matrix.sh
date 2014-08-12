@@ -36,7 +36,7 @@ function kill_local_children() {
     for PID in "${ACTIVE_LOCAL_KIDS[@]}"
     do
         kill -9 ${PID} || die "Could not kill pid ${PID}, a local kid pid"
-        wait ${PID} || die "Pid ${PID} appears to not have cleanly died"
+        wait ${PID} && die "Pid ${PID} appears to not have cleanly died"
     done
     ACTIVE_LOCAL_KIDS=()
 }
@@ -162,7 +162,7 @@ do
                         ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT}
 
                         kill_local_children
-                        [ "${DELETE_TEMPORARY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
+                        [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
                     done
 
                     for TEST in ${SIZE_AND_NONEXTANT_PATH_TESTS[@]}
@@ -183,7 +183,7 @@ do
                         ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT}
 
                         kill_local_children
-                        [ "${DELETE_TEMPORARY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
+                        [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
                     done
                 done
 
@@ -192,7 +192,7 @@ do
                     setup_output_file
                     echo_current_test
 
-                    [ "${DELETE_TEMPORARY_FILESP}" -eq 1 ] && rm -rf "${TARGET_PATH}"
+                    [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${TARGET_PATH}"
 
                     # Set up a policy file which well use to hang capabilities
                     # off of the target paths parent directory
@@ -205,7 +205,7 @@ do
                     ${TEST} "${TARGET_PATH}" >> ${OUTPUT}
 
                     kill_local_children
-                    [ "${DELETE_TEMPORARY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
+                    [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
                 done
                 # ensure target path and local policy file are deleted
                 rm -rf "${TARGET_PATH}"
@@ -218,7 +218,7 @@ do
                 ACTIVE_GLOBAL_KIDS=()
             done
         done
-        [ "${DELETE_TEMPORARY_FILESP}" -eq 1 ] && rm -rf "${GLOBAL_POLICY_FILE}"
+        [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${GLOBAL_POLICY_FILE}"
     done
 done
 
