@@ -21,6 +21,25 @@ function setup_output_file() {
     OUTPUT=${TEST_RESULTS_DIR}/data-${SESSION_COUNT}-${GLOBAL_CAP_COUNT}-${LOCAL_CAP_COUNT}-${PATH_LENGTH}-${DATA_SIZE}
     touch ${OUTPUT} || die "Could not create results file ${OUTPUT}"
 }
+function spawn_local_children() {
+    # set up $LOCAL_CAP_COUNT sessions each with one cap on
+    # the target path
+    for i in $(seq ${LOCAL_CAP_COUNT})
+    do
+        ${SANDBOX} ${LOCAL_POLICY_FILE} ./sleep >/dev/null &
+        ACTIVE_LOCAL_KIDS=("${ACTIVE_LOCAL_KIDS[@]}" "$!")
+    done
+    sleep ${PAUSE_BETWEEN_SESSION_ALLOC_SECONDS}
+}
+function kill_local_children() {
+    # kill all local children
+    for PID in "${ACTIVE_LOCAL_KIDS[@]}"
+    do
+        kill -9 ${PID} || die "Could not kill pid ${PID}, a local kid pid"
+        wait ${PID} || die "Pid ${PID} appears to not have cleanly died"
+    done
+    ACTIVE_LOCAL_KIDS=()
+}
 
 # arguments
 
@@ -136,16 +155,11 @@ do
                         echo -e "{ +stat, +lookup }\n${TARGET_PATH}" > ${LOCAL_POLICY_FILE}
                         echo -e "${POLICY_TO_RUN_SLEEP}" >> ${LOCAL_POLICY_FILE}
 
-                        # set up $LOCAL_CAP_COUNT sessions each with one cap on
-                        # the target path
-                        for i in $(seq ${LOCAL_CAP_COUNT})
-                        do
-                            ${SANDBOX} ${LOCAL_POLICY_FILE} ./sleep >/dev/null &
-                            ACTIVE_LOCAL_KIDS=("${ACTIVE_LOCAL_KIDS[@]}" "$!")
-                        done
-                        sleep ${PAUSE_BETWEEN_SESSION_ALLOC_SECONDS}
+                        spawn_local_children
 
                         ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT}
+
+                        kill_local_children
                     done
 
                     for TEST in ${SIZE_AND_NONEXTANT_PATH_TESTS[@]}
@@ -161,15 +175,11 @@ do
                         echo -e "{ +stat, +lookup }\n$(dirname ${TARGET_PATH})" > ${LOCAL_POLICY_FILE}
                         echo -e "${POLICY_TO_RUN_SLEEP}" >> ${LOCAL_POLICY_FILE}
 
-                        # set up $LOCAL_CAP_COUNT sessions each with one cap on the
-                        # target files in /usr, theyll be killed below
-                        for i in $(seq ${LOCAL_CAP_COUNT})
-                        do
-                            ${SANDBOX} ${LOCAL_POLICY_FILE} ./sleep >/dev/null &
-                        done
-                        sleep ${PAUSE_BETWEEN_SESSION_ALLOC_SECONDS}
+                        spawn_local_children
 
                         ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT}
+
+                        kill_local_children
                     done
                 done
 
@@ -186,26 +196,21 @@ do
                     echo -e "{ +stat, +lookup }\n$(dirname ${TARGET_PATH})" > ${LOCAL_POLICY_FILE}
                     echo -e "${POLICY_TO_RUN_SLEEP}" >> ${LOCAL_POLICY_FILE}
 
-                    # set up $LOCAL_CAP_COUNT sessions each with one cap on the
-                    # target files in /usr, theyll be killed below
-                    for i in $(seq ${LOCAL_CAP_COUNT})
-                    do
-                        ${SANDBOX} ${LOCAL_POLICY_FILE} ./sleep >/dev/null &
-                    done
-                    sleep ${PAUSE_BETWEEN_SESSION_ALLOC_SECONDS}
+                    spawn_local_children
 
                     ${TEST} "${TARGET_PATH}" >> ${OUTPUT}
+
+                    kill_local_children
                 done
                 # ensure target path and local policy file are deleted
                 rm -rf "${TARGET_PATH}"
                 rm -rf "${LOCAL_POLICY_FILE}"
-                # kill all children
-                for PID in "${ACTIVE_LOCAL_KIDS[@]}" "${ACTIVE_GLOBAL_KIDS[@]}"
+                # kill all global children
+                for PID in "${ACTIVE_GLOBAL_KIDS[@]}"
                 do
                     kill -9 ${PID}
                     wait ${PID}
                 done
-                ACTIVE_LOCAL_KIDS=()
                 ACTIVE_GLOBAL_KIDS=()
             done
         done
