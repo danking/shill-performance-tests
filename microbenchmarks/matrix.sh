@@ -123,6 +123,14 @@ do
         bash generate-global-policy.sh ${GLOBAL_CAP_COUNT} > ${GLOBAL_POLICY_FILE}
         echo -e "${POLICY_TO_RUN_SLEEP}" >> ${GLOBAL_POLICY_FILE}
 
+        # set up $SESSION_COUNT sessions each with $GLOBAL_CAP_COUNT caps on
+        # random files in /usr, they'll be killed below
+        for i in $(seq 1 ${SESSION_COUNT})
+        do
+            ${SANDBOX} ${GLOBAL_POLICY_FILE} ./sleep >/dev/null &
+            ACTIVE_GLOBAL_KIDS=("${ACTIVE_GLOBAL_KIDS[@]}" "$!")
+        done
+
         for TARGET_PATH in ${PATHS[@]}
         do
             mkdir -p $(dirname "${TARGET_PATH}")
@@ -132,14 +140,6 @@ do
 
             for LOCAL_CAP_COUNT in ${LOCAL_CAP_COUNTS[@]}
             do
-                # set up $SESSION_COUNT sessions each with $GLOBAL_CAP_COUNT caps on
-                # random files in /usr, they'll be killed below
-                for i in $(seq 1 ${SESSION_COUNT})
-                do
-                    ${SANDBOX} ${GLOBAL_POLICY_FILE} ./sleep >/dev/null &
-                    ACTIVE_GLOBAL_KIDS=("${ACTIVE_GLOBAL_KIDS[@]}" "$!")
-                done
-
                 for DATA_SIZE in ${DATA_SIZES[@]}
                 do
                     for TEST in ${SIZE_AND_EXTANT_PATH_TESTS[@]}
