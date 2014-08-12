@@ -76,6 +76,8 @@ PAUSE_BETWEEN_SESSION_ALLOC_SECONDS="0.1"
 ACTIVE_GLOBAL_KIDS=()
 ACTIVE_LOCAL_KIDS=()
 
+DELETE_TEMPORARY_POLICY_FILESP=1 # 1 is true; 0 is false
+
 POLICY_TO_RUN_SLEEP=$(cat <<EOF
 { +lookup }
 /
@@ -160,6 +162,7 @@ do
                         ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT}
 
                         kill_local_children
+                        [ "${DELETE_TEMPORARY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
                     done
 
                     for TEST in ${SIZE_AND_NONEXTANT_PATH_TESTS[@]}
@@ -180,6 +183,7 @@ do
                         ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT}
 
                         kill_local_children
+                        [ "${DELETE_TEMPORARY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
                     done
                 done
 
@@ -188,7 +192,7 @@ do
                     setup_output_file
                     echo_current_test
 
-                    rm -rf "${TARGET_PATH}"
+                    [ "${DELETE_TEMPORARY_FILESP}" -eq 1 ] && rm -rf "${TARGET_PATH}"
 
                     # Set up a policy file which well use to hang capabilities
                     # off of the target paths parent directory
@@ -201,10 +205,10 @@ do
                     ${TEST} "${TARGET_PATH}" >> ${OUTPUT}
 
                     kill_local_children
+                    [ "${DELETE_TEMPORARY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
                 done
                 # ensure target path and local policy file are deleted
                 rm -rf "${TARGET_PATH}"
-                rm -rf "${LOCAL_POLICY_FILE}"
                 # kill all global children
                 for PID in "${ACTIVE_GLOBAL_KIDS[@]}"
                 do
@@ -214,6 +218,8 @@ do
                 ACTIVE_GLOBAL_KIDS=()
             done
         done
-        rm -rf "${GLOBAL_POLICY_FILE}"
+        [ "${DELETE_TEMPORARY_FILESP}" -eq 1 ] && rm -rf "${GLOBAL_POLICY_FILE}"
     done
 done
+
+rm -rf "${TEST_PATHS_FOLDER}"
