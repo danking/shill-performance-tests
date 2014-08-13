@@ -78,7 +78,7 @@ int main(int argc, char *argv[]) {
   gettimeofday(&time_now,NULL);
   time_end = time_now.tv_sec * 1000000 + time_now.tv_usec;
 
-  printf("%d\n", (time_end - time_start)/((float)REPETITIONS));
+  printf("%f\n", (time_end - time_start)/((float)REPETITIONS));
 
   return 0;
 }
