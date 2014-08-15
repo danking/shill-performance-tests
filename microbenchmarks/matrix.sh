@@ -111,7 +111,7 @@ foreground_dont_run_sandbox() {
     shift # throw away the policy file
     COMMAND="$1"
     shift
-    ${COMMAND} $* >/dev/null
+    ${COMMAND} $*
 }
 
 case "${SANDBOXEDP}" in
