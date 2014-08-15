@@ -1,3 +1,4 @@
+
 #include <sys/types.h> /* read */
 #include <sys/uio.h>   /* read */
 #include <unistd.h>    /* read */
@@ -30,6 +31,7 @@ int main(int argc, char *argv[]) {
     printf("failed to read number of bytes, given %s\n", argv[1]);
     printf("  real error num %d\n", errno);
     perror("  sscanf");
+    exit(1);
   }
 
   path = argv[2];
@@ -39,6 +41,7 @@ int main(int argc, char *argv[]) {
     printf("failed to malloc %d bytes\n", bytes);
     printf("  real error num %d\n", errno);
     perror("  malloc");
+    exit(1);
   }
 
   gettimeofday(&time_now,NULL);
@@ -53,6 +56,7 @@ int main(int argc, char *argv[]) {
       printf("failed to open %s\n", path);
       printf("  real error num %d\n", errno);
       perror("  open");
+      exit(1);
     }
 
     err = write(fd, (void*)buf, bytes);
@@ -60,6 +64,7 @@ int main(int argc, char *argv[]) {
       printf("failed to write %d bytes\n", bytes);
       printf("  real error num %d\n", errno);
       perror("  write");
+      exit(1);
     }
 
     err = close(fd);
@@ -67,6 +72,7 @@ int main(int argc, char *argv[]) {
       printf("failed to close the file descriptor\n");
       printf("  real error num %d\n", errno);
       perror("  close");
+      exit(1);
     }
   }
 
