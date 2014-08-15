@@ -75,6 +75,13 @@ int main(int argc, char *argv[]) {
       exit(1);
     }
 
+    err = close(fd);
+    if (err == -1) {
+      printf("failed to close the file descriptor\n");
+      printf("  real error num %d\n", errno);
+      perror("  close");
+      exit(1);
+    }
   }
 
   /* END TIMED */
