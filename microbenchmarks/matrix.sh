@@ -40,18 +40,37 @@ function kill_local_children() {
     done
     ACTIVE_LOCAL_KIDS=()
 }
+function caps_for_test() {
+    case "$1" in
+        "./r")
+            echo "+stat, +lookup, +read" ;;
+        "./w")
+            echo "+stat, +lookup, +write, +append" ;;
+        "./owc")
+            echo "+stat, +lookup, +write, +append" ;;
+        "./orc")
+            echo "+stat, +lookup, +read" ;;
+        "./cwu")
+            echo "+create-file { +stat, +write, +append, +unlink }, +stat, +lookup, +unlink-file " ;;
+        "./mkdir")
+            echo "+create-dir { +stat, +unlink }, +stat, +lookup, +unlink-dir, +unlink-file " ;;
+    esac
+}
 
 # arguments
 
 RESULTS_SUPER_DIR=$1
+SANDBOXEDP=$2
 
-[ "$#" -eq 1 ] || die "Exactly 1 argument required, $# provided. Valid invocation:
+[ "$#" -eq 2 ] || die "Exactly two arguments required, $# provided. Valid invocation:
 
   bash generate-global-policy.sh RESULTS_DIR
 
   - RESULTS_SUPER_DIR -- the directory in which to place results directory
+  - SANDBOXEDP -- whether or not to use the shill sandbox
 "
 [ -d "${RESULTS_SUPER_DIR}" ] || die "The first argument should be an extant directory"
+[ ${SANDBOXEDP} -eq 1 -o ${SANDBOXEDP} -eq 0 ] || die "The second argument should be 1 or 0"
 
 RESULTS_DIR="${RESULTS_SUPER_DIR}/logs-$(date +%F-%T)"
 
@@ -65,11 +84,25 @@ LOCAL_CAP_COUNTS=(1 10 100)
 DATA_SIZES=(1 10 100 1000)
 TEST_PATHS_FOLDER=$(mktemp -d "$0.test.files.XXXXXX")
 PATHS=("${TEST_PATHS_FOLDER}/foo" "${TEST_PATHS_FOLDER}/foo/bar" "${TEST_PATHS_FOLDER}/foo/bar/baz/qux/quux" "${TEST_PATHS_FOLDER}/foo/bar/baz/qux/quux/foo/bar/baz/qux/quux")
-SIZE_AND_EXTANT_PATH_TESTS=(./r ./w ./owc ./orc)
-SIZE_AND_NONEXTANT_PATH_TESTS=(./cwu)
-JUST_NONEXTANT_PATH_TESTS=(./mkdir)
+SIZE_AND_EXTANT_PATH_TESTS=( ) #./r ./w ./owc ./orc)
+SIZE_AND_NONEXTANT_PATH_TESTS=( ) #./cwu)
+JUST_NONEXTANT_PATH_TESTS=( ./mkdir)
 
-SANDBOX="../../shill/sandbox/sandbox"
+run_sandbox() {
+    "../../shill/sandbox/sandbox" $*
+}
+
+dont_run_sandbox() {
+    shift # throw away the policy file
+    COMMAND="$1"
+    shift
+    ${COMMAND} $*
+}
+
+case "${SANDBOXEDP}" in
+    1) SANDBOX="run_sandbox" ;;
+    0) SANDBOX="dont_run_sandbox" ;;
+esac
 
 PAUSE_BETWEEN_SESSION_ALLOC_SECONDS="0.1"
 
@@ -85,6 +118,43 @@ POLICY_TO_RUN_SLEEP=$(cat <<EOF
 
 { +lookup, +read, +stat, +exec }
 ./sleep
+
+{ +lookup, +stat }
+/etc
+/usr
+
+{ +read, +stat }
+/etc/libmap.conf
+
+{ +read }
+/var/run/ld-elf.so.hints
+
+{ +read, +exec }
+/libexec/ld-elf.so.1
+
+{ +read, +exec, +stat }
+/lib/libc.so.7
+/lib/libedit.so.7
+/lib/libncurses.so.8
+
+{ +write, +append, +stat }
+&stdout
+&stderr
+EOF
+)
+
+POLICY_TO_RUN_TEST=$(cat <<EOF
+{ +lookup }
+/
+.
+
+{ +lookup, +read, +stat, +exec }
+./w
+./r
+./owc
+./orc
+./cwu
+./mkdir
 
 { +lookup, +stat }
 /etc
@@ -157,12 +227,17 @@ do
                         echo -e "{ +stat, +lookup }\n${TARGET_PATH}" > ${LOCAL_POLICY_FILE}
                         echo -e "${POLICY_TO_RUN_SLEEP}" >> ${LOCAL_POLICY_FILE}
 
+                        TEST_POLICY_FILE=$(mktemp "$0.test.policy.XXXXXX")
+                        echo -e "{ $(caps_for_test $TEST) }\n${TARGET_PATH}" > ${TEST_POLICY_FILE}
+                        echo -e "${POLICY_TO_RUN_TEST}" >> ${TEST_POLICY_FILE}
+
                         spawn_local_children
 
-                        ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT}
+                        ${SANDBOX} ${TEST_POLICY_FILE} ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT} || die "Test ${TEST} failed!"
 
                         kill_local_children
                         [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
+                        [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${TEST_POLICY_FILE}"
                     done
 
                     for TEST in ${SIZE_AND_NONEXTANT_PATH_TESTS[@]}
@@ -178,14 +253,21 @@ do
                         echo -e "{ +stat, +lookup }\n$(dirname ${TARGET_PATH})" > ${LOCAL_POLICY_FILE}
                         echo -e "${POLICY_TO_RUN_SLEEP}" >> ${LOCAL_POLICY_FILE}
 
+                        TEST_POLICY_FILE=$(mktemp "$0.test.policy.XXXXXX")
+                        echo -e "{ $(caps_for_test $TEST) }\n$(dirname ${TARGET_PATH})" > ${TEST_POLICY_FILE}
+                        echo -e "${POLICY_TO_RUN_TEST}" >> ${TEST_POLICY_FILE}
+
                         spawn_local_children
 
-                        ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT}
+                        ${SANDBOX} ${TEST_POLICY_FILE} ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT} || die "Test ${TEST} failed!"
 
                         kill_local_children
                         [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
+                        [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${TEST_POLICY_FILE}"
                     done
                 done
+
+                DATA_SIZE=0
 
                 for TEST in ${JUST_NONEXTANT_PATH_TESTS[@]}
                 do
@@ -200,12 +282,17 @@ do
                     echo -e "{ +stat, +lookup }\n$(dirname ${TARGET_PATH})" > ${LOCAL_POLICY_FILE}
                     echo -e "${POLICY_TO_RUN_SLEEP}" >> ${LOCAL_POLICY_FILE}
 
+                    TEST_POLICY_FILE=$(mktemp "$0.test.policy.XXXXXX")
+                    echo -e "{ $(caps_for_test $TEST) }\n$(dirname ${TARGET_PATH})" > ${TEST_POLICY_FILE}
+                    echo -e "${POLICY_TO_RUN_TEST}" >> ${TEST_POLICY_FILE}
+
                     spawn_local_children
 
-                    ${TEST} "${TARGET_PATH}" >> ${OUTPUT}
+                    ${SANDBOX} ${TEST_POLICY_FILE} ${TEST} "${TARGET_PATH}" >> ${OUTPUT} || die "Test ${TEST} failed!"
 
                     kill_local_children
                     [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
+                    [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${TEST_POLICY_FILE}"
                 done
                 # ensure target path and local policy file are deleted
                 rm -rf "${TARGET_PATH}"
