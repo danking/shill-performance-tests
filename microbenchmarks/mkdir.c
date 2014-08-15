@@ -1,5 +1,6 @@
 #include <sys/types.h> /* read */
 #include <sys/uio.h>   /* read */
+#include <sys/stat.h>  /* mkdir */
 #include <unistd.h>    /* read */
 #include <fcntl.h>     /* open */
 #include <stdio.h>     /* printf, sscanf */
