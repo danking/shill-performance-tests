@@ -26,8 +26,8 @@ function spawn_local_children() {
     # the target path
     for i in $(seq ${LOCAL_CAP_COUNT})
     do
-        ${SANDBOX} ${LOCAL_POLICY_FILE} ./sleep >/dev/null &
-        ACTIVE_LOCAL_KIDS=("${ACTIVE_LOCAL_KIDS[@]}" "$!")
+        ${BACKGROUND_SANDBOX} ${LOCAL_POLICY_FILE} ./sleep
+        ACTIVE_LOCAL_KIDS=("${ACTIVE_LOCAL_KIDS[@]}" "${LAUNCHED_PID}")
     done
     sleep ${PAUSE_BETWEEN_SESSION_ALLOC_SECONDS}
 }
@@ -84,24 +84,41 @@ LOCAL_CAP_COUNTS=(1 10 100)
 DATA_SIZES=(1 10 100 1000)
 TEST_PATHS_FOLDER=$(mktemp -d "$0.test.files.XXXXXX")
 PATHS=("${TEST_PATHS_FOLDER}/foo" "${TEST_PATHS_FOLDER}/foo/bar" "${TEST_PATHS_FOLDER}/foo/bar/baz/qux/quux" "${TEST_PATHS_FOLDER}/foo/bar/baz/qux/quux/foo/bar/baz/qux/quux")
-SIZE_AND_EXTANT_PATH_TESTS=( ) #./r ./w ./owc ./orc)
-SIZE_AND_NONEXTANT_PATH_TESTS=( ) #./cwu)
-JUST_NONEXTANT_PATH_TESTS=( ./mkdir)
+SIZE_AND_EXTANT_PATH_TESTS=(./r ./w ./owc ./orc)
+SIZE_AND_NONEXTANT_PATH_TESTS=(./cwu)
+JUST_NONEXTANT_PATH_TESTS=(./mkdir)
 
-run_sandbox() {
-    "../../shill/sandbox/sandbox" $*
+LAUNCHED_PID=0
+
+background_run_sandbox() {
+    "../../shill/sandbox/sandbox" $* >/dev/null &
+    LAUNCHED_PID=$!
 }
 
-dont_run_sandbox() {
+background_dont_run_sandbox() {
     shift # throw away the policy file
     COMMAND="$1"
     shift
-    ${COMMAND} $*
+    ${COMMAND} $* >/dev/null &
+    LAUNCHED_PID=$!
+}
+
+foreground_run_sandbox() {
+    "../../shill/sandbox/sandbox" $*
+}
+
+foreground_dont_run_sandbox() {
+    shift # throw away the policy file
+    COMMAND="$1"
+    shift
+    ${COMMAND} $* >/dev/null
 }
 
 case "${SANDBOXEDP}" in
-    1) SANDBOX="run_sandbox" ;;
-    0) SANDBOX="dont_run_sandbox" ;;
+    1) BACKGROUND_SANDBOX="background_run_sandbox"
+       FOREGROUND_SANDBOX="foreground_run_sandbox" ;;
+    0) BACKGROUND_SANDBOX="background_dont_run_sandbox"
+       FOREGROUND_SANDBOX="foreground_dont_run_sandbox" ;;
 esac
 
 PAUSE_BETWEEN_SESSION_ALLOC_SECONDS="0.1"
@@ -197,8 +214,8 @@ do
         # random files in /usr, they'll be killed below
         for i in $(seq 1 ${SESSION_COUNT})
         do
-            ${SANDBOX} ${GLOBAL_POLICY_FILE} ./sleep >/dev/null &
-            ACTIVE_GLOBAL_KIDS=("${ACTIVE_GLOBAL_KIDS[@]}" "$!")
+            ${BACKGROUND_SANDBOX} ${GLOBAL_POLICY_FILE} ./sleep
+            ACTIVE_GLOBAL_KIDS=("${ACTIVE_GLOBAL_KIDS[@]}" "${LAUNCHED_PID}")
         done
 
         for TARGET_PATH in ${PATHS[@]}
@@ -233,7 +250,7 @@ do
 
                         spawn_local_children
 
-                        ${SANDBOX} ${TEST_POLICY_FILE} ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT} || die "Test ${TEST} failed!"
+                        ${FOREGROUND_SANDBOX} ${TEST_POLICY_FILE} ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT} || die "Test ${TEST} failed!"
 
                         kill_local_children
                         [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
@@ -259,7 +276,7 @@ do
 
                         spawn_local_children
 
-                        ${SANDBOX} ${TEST_POLICY_FILE} ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT} || die "Test ${TEST} failed!"
+                        ${FOREGROUND_SANDBOX} ${TEST_POLICY_FILE} ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT} || die "Test ${TEST} failed!"
 
                         kill_local_children
                         [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
@@ -288,7 +305,7 @@ do
 
                     spawn_local_children
 
-                    ${SANDBOX} ${TEST_POLICY_FILE} ${TEST} "${TARGET_PATH}" >> ${OUTPUT} || die "Test ${TEST} failed!"
+                    ${FOREGROUND_SANDBOX} ${TEST_POLICY_FILE} ${TEST} "${TARGET_PATH}" >> ${OUTPUT} || die "Test ${TEST} failed!"
 
                     kill_local_children
                     [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
