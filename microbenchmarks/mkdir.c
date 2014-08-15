@@ -33,13 +33,20 @@ int main(int argc, char *argv[]) {
   /* BEGIN TIMED */
 
   for (i=0; i<REPETITIONS; ++i) {
-    fd = open(path, O_CREAT | O_EXCL);
-
-    err = unlink(path);
+    err = mkdir(path, 0777);
     if (err == -1) {
-      printf("failed to unlink the path %s\n", path);
+      printf("failed to create the directory %s\n", path);
       printf("  real error num %d\n", errno);
-      perror("  unlink");
+      perror("  mkdir");
+      exit(1);
+    }
+
+    err = rmdir(path);
+    if (err == -1) {
+      printf("failed to rmdir the path %s\n", path);
+      printf("  real error num %d\n", errno);
+      perror("  rmdir");
+      exit(1);
     }
   }
 
@@ -50,19 +57,6 @@ int main(int argc, char *argv[]) {
   time_end = time_now.tv_sec * 1000000 + time_now.tv_usec;
 
   printf("%f\n", (time_end - time_start)/((float)REPETITIONS));
-
-  if (fd == -1) {
-    printf("failed to create (i.e. open) %s\n", path);
-    printf("  real error num %d\n", errno);
-    perror("  open");
-  }
-
-  err = close(fd);
-  if (err == -1) {
-    printf("failed to close the file descriptor\n");
-    printf("  real error num %d\n", errno);
-    perror("  close");
-  }
 
   return 0;
 }
