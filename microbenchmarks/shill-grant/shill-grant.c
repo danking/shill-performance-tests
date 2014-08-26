@@ -61,7 +61,6 @@ int main(int argc, char ** argv) {
   }
 
   /* Set new CPU mask */
-  printf ("Setting affinity to CPU %d\n", i);
   CPU_ZERO(&myset);
   CPU_SET(i, &myset);
 
