@@ -59,7 +59,7 @@ int main(int argc, char *argv[]) {
       exit(1);
     }
 
-    err = write(fd, (void*)buf, bytes);
+    err = pwrite(fd, (void*)buf, bytes, 0);
     if (err == -1) {
       printf("failed to write %d bytes\n", bytes);
       printf("  real error num %d\n", errno);

@@ -58,7 +58,7 @@ int main(int argc, char *argv[]) {
   /* BEGIN TIMED */
 
   for (i=0; i<REPETITIONS; ++i) {
-    err = write(fd, (void*)buf, bytes);
+    err = pwrite(fd, (void*)buf, bytes, 0);
     if (err == -1) {
       printf("failed to write %d bytes\n", bytes);
       printf("  real error num %d\n", errno);

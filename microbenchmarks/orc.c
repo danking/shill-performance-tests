@@ -58,7 +58,7 @@ int main(int argc, char *argv[]) {
       exit(1);
     }
 
-    err = read(fd, (void*)buf, bytes);
+    err = pread(fd, (void*)buf, bytes, 0);
     if (err == -1) {
       printf("failed to read %d bytes\n", bytes);
       printf("  real error num %d\n", errno);
