@@ -9,7 +9,7 @@
 #include <errno.h>     /* errno */
 #include <sys/time.h>  /* gettimeofday, struct timeval */
 
-#define REPETITIONS 10000
+#define REPETITIONS 1000000
 
 int main(int argc, char *argv[]) {
   int err;
