@@ -52,6 +52,8 @@ function caps_for_test() {
             echo "+stat, +lookup, +read" ;;
         "./cwu")
             echo "+create-file { +stat, +write, +append, +unlink }, +stat, +lookup, +unlink-file " ;;
+        "./cu")
+            echo "+create-file { +stat, +unlink }, +stat, +lookup, +unlink-file " ;;
         "./mkdir")
             echo "+create-dir { +stat, +unlink }, +stat, +lookup, +unlink-dir, +unlink-file " ;;
     esac
@@ -85,7 +87,7 @@ DATA_SIZES=(1 10 100 1000)
 TEST_PATHS_FOLDER=$(mktemp -d "$0.test.files.XXXXXX")
 PATHS=("${TEST_PATHS_FOLDER}/foo" "${TEST_PATHS_FOLDER}/foo/bar" "${TEST_PATHS_FOLDER}/foo/bar/baz/qux/quux" "${TEST_PATHS_FOLDER}/foo/bar/baz/qux/quux/foo/bar/baz/qux/quux")
 SIZE_AND_EXTANT_PATH_TESTS=(./r ./w ./owc ./orc)
-SIZE_AND_NONEXTANT_PATH_TESTS=(./cwu)
+SIZE_AND_NONEXTANT_PATH_TESTS=(./cwu ./cu)
 JUST_NONEXTANT_PATH_TESTS=(./mkdir)
 
 LAUNCHED_PID=0
@@ -171,6 +173,7 @@ POLICY_TO_RUN_TEST=$(cat <<EOF
 ./owc
 ./orc
 ./cwu
+./cu
 ./mkdir
 
 { +lookup, +stat }
@@ -201,128 +204,127 @@ create_test_results_dirs ${SIZE_AND_EXTANT_PATH_TESTS[@]} \
                          ${SIZE_AND_NONEXTANT_PATH_TESTS[@]} \
                          ${JUST_NONEXTANT_PATH_TESTS[@]}
 
-for SESSION_COUNT in ${SESSION_COUNTS[@]}
+###############################################################################
+# pread 1 byte and 1 megabyte
+
+TARGET_PATH=${PATHS[0]}
+TEST="./r"
+
+for DATA_SIZE in (1 1000000)
 do
-    for GLOBAL_CAP_COUNT in ${GLOBAL_CAP_COUNTS[@]}
+    for LOCAL_CAP_COUNT in (0 10)
     do
-        GLOBAL_POLICY_FILE=$(mktemp "$0.global.policy.XXXXXX")
-        export SHUF="bash shuffle.sh" # for generate-global-policy.sh
-        bash generate-global-policy.sh ${GLOBAL_CAP_COUNT} > ${GLOBAL_POLICY_FILE}
-        echo -e "${POLICY_TO_RUN_SLEEP}" >> ${GLOBAL_POLICY_FILE}
+        set_test_results_dir
+        OUTPUT=${TEST_RESULTS_DIR}/data-${DATA_SIZE}-${LOCAL_CAP_COUNT}
+        touch ${OUTPUT} || die "Could not create results file ${OUTPUT}"
 
-        # set up $SESSION_COUNT sessions each with $GLOBAL_CAP_COUNT caps on
-        # random files in /usr, they'll be killed below
-        for i in $(seq 1 ${SESSION_COUNT})
-        do
-            ${BACKGROUND_SANDBOX} ${GLOBAL_POLICY_FILE} ./sleep
-            ACTIVE_GLOBAL_KIDS=("${ACTIVE_GLOBAL_KIDS[@]}" "${LAUNCHED_PID}")
-        done
+        echo "Running ${TEST}  cap count: ${LOCAL_CAP_COUNT}, size: ${DATA_SIZE}"
 
-        for TARGET_PATH in ${PATHS[@]}
-        do
-            mkdir -p $(dirname "${TARGET_PATH}")
+        rm -rf "${TARGET_PATH}" || die "Could not remove ${TARGET_PATH}"
+        touch "${TARGET_PATH}" || die "Could not create ${TARGET_PATH}"
+        dd if=/dev/zero of="${TARGET_PATH}" bs=${DATA_SIZE} count=1 2>/dev/null || die "Could not copy ${DATA_SIZE} bits into ${OUTPUT}"
 
-            SLASHES=$(echo ${TARGET_PATH} | sed 's:[^/]::g')
-            PATH_LENGTH=${#SLASHES}
+        # Set up a policy file which well use to hang
+        # capabilities off of the target path
+        LOCAL_POLICY_FILE=$(mktemp "$0.local.policy.XXXXXX")
+        echo -e "{ +stat, +lookup }\n${TARGET_PATH}" > ${LOCAL_POLICY_FILE}
+        echo -e "${POLICY_TO_RUN_SLEEP}" >> ${LOCAL_POLICY_FILE}
 
-            for LOCAL_CAP_COUNT in ${LOCAL_CAP_COUNTS[@]}
-            do
-                for DATA_SIZE in ${DATA_SIZES[@]}
-                do
-                    for TEST in ${SIZE_AND_EXTANT_PATH_TESTS[@]}
-                    do
-                        setup_output_file
-                        echo_current_test
+        # and another policy file to run the test
+        TEST_POLICY_FILE=$(mktemp "$0.test.policy.XXXXXX")
+        echo -e "{ $(caps_for_test $TEST) }\n${TARGET_PATH}" > ${TEST_POLICY_FILE}
+        echo -e "${POLICY_TO_RUN_TEST}" >> ${TEST_POLICY_FILE}
 
-                        rm -rf "${TARGET_PATH}" || die "Could not remove ${TARGET_PATH}"
-                        touch "${TARGET_PATH}" || die "Could not create ${TARGET_PATH}"
-                        dd if=/dev/zero of="${TARGET_PATH}" bs=${DATA_SIZE} count=1 2>/dev/null || die "Could not copy ${DATA_SIZE} bits into ${OUTPUT}"
+        spawn_local_children
 
-                        # Set up a policy file which well use to hang
-                        # capabilities off of the target path
-                        LOCAL_POLICY_FILE=$(mktemp "$0.local.policy.XXXXXX")
-                        echo -e "{ +stat, +lookup }\n${TARGET_PATH}" > ${LOCAL_POLICY_FILE}
-                        echo -e "${POLICY_TO_RUN_SLEEP}" >> ${LOCAL_POLICY_FILE}
+        ${FOREGROUND_SANDBOX} ${TEST_POLICY_FILE} ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT} || die "Test ${TEST} failed!"
 
-                        TEST_POLICY_FILE=$(mktemp "$0.test.policy.XXXXXX")
-                        echo -e "{ $(caps_for_test $TEST) }\n${TARGET_PATH}" > ${TEST_POLICY_FILE}
-                        echo -e "${POLICY_TO_RUN_TEST}" >> ${TEST_POLICY_FILE}
+        kill_local_children
+        [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
+        [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${TEST_POLICY_FILE}"
+    done
+done
 
-                        spawn_local_children
+###############################################################################
+# open-pread-close 1 level, 5 level
 
-                        ${FOREGROUND_SANDBOX} ${TEST_POLICY_FILE} ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT} || die "Test ${TEST} failed!"
+TEST="./orc"
 
-                        kill_local_children
-                        [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
-                        [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${TEST_POLICY_FILE}"
-                    done
+for TARGET_PATH in (${PATHS[0]} ${PATHS[2]})
+do
+    SLASHES=$(echo ${TARGET_PATH} | sed 's:[^/]::g')
+    PATH_LENGTH=${#SLASHES}
 
-                    for TEST in ${SIZE_AND_NONEXTANT_PATH_TESTS[@]}
-                    do
-                        setup_output_file
-                        echo_current_test
+    for LOCAL_CAP_COUNT in (0 10)
+    do
+        set_test_results_dir
+        OUTPUT=${TEST_RESULTS_DIR}/data-${PATH_LENGTH}-${DATA_SIZE}-${LOCAL_CAP_COUNT}
+        touch ${OUTPUT} || die "Could not create results file ${OUTPUT}"
 
-                        rm -rf "${TARGET_PATH}"
+        echo "Running ${TEST}  cap count: ${LOCAL_CAP_COUNT}, path length: ${PATH_LENGTH}"
 
-                        # Set up a policy file which well use to hang capabilities
-                        # off of the target paths parent directory
-                        LOCAL_POLICY_FILE=$(mktemp "$0.local.policy.XXXXXX")
-                        echo -e "{ +stat, +lookup }\n$(dirname ${TARGET_PATH})" > ${LOCAL_POLICY_FILE}
-                        echo -e "${POLICY_TO_RUN_SLEEP}" >> ${LOCAL_POLICY_FILE}
+        rm -rf "${TARGET_PATH}" || die "Could not remove ${TARGET_PATH}"
+        touch "${TARGET_PATH}" || die "Could not create ${TARGET_PATH}"
+        dd if=/dev/zero of="${TARGET_PATH}" bs=${DATA_SIZE} count=1 2>/dev/null || die "Could not copy ${DATA_SIZE} bits into ${OUTPUT}"
 
-                        TEST_POLICY_FILE=$(mktemp "$0.test.policy.XXXXXX")
-                        echo -e "{ $(caps_for_test $TEST) }\n$(dirname ${TARGET_PATH})" > ${TEST_POLICY_FILE}
-                        echo -e "${POLICY_TO_RUN_TEST}" >> ${TEST_POLICY_FILE}
+        # Set up a policy file which well use to hang
+        # capabilities off of the target path
+        LOCAL_POLICY_FILE=$(mktemp "$0.local.policy.XXXXXX")
+        echo -e "{ +stat, +lookup }\n${TARGET_PATH}" > ${LOCAL_POLICY_FILE}
+        echo -e "${POLICY_TO_RUN_SLEEP}" >> ${LOCAL_POLICY_FILE}
 
-                        spawn_local_children
+        # and another policy file to run the test
+        TEST_POLICY_FILE=$(mktemp "$0.test.policy.XXXXXX")
+        echo -e "{ $(caps_for_test $TEST) }\n${TARGET_PATH}" > ${TEST_POLICY_FILE}
+        echo -e "${POLICY_TO_RUN_TEST}" >> ${TEST_POLICY_FILE}
 
-                        ${FOREGROUND_SANDBOX} ${TEST_POLICY_FILE} ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT} || die "Test ${TEST} failed!"
+        spawn_local_children
 
-                        kill_local_children
-                        [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
-                        [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${TEST_POLICY_FILE}"
-                    done
-                done
+        ${FOREGROUND_SANDBOX} ${TEST_POLICY_FILE} ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT} || die "Test ${TEST} failed!"
 
-                DATA_SIZE=0
+        kill_local_children
+        [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
+        [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${TEST_POLICY_FILE}"
+    done
+done
 
-                for TEST in ${JUST_NONEXTANT_PATH_TESTS[@]}
-                do
-                    setup_output_file
-                    echo_current_test
+###############################################################################
+# create-unlink
 
-                    [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${TARGET_PATH}"
+TEST="./cu"
 
-                    # Set up a policy file which well use to hang capabilities
-                    # off of the target paths parent directory
-                    LOCAL_POLICY_FILE=$(mktemp "$0.local.policy.XXXXXX")
-                    echo -e "{ +stat, +lookup }\n$(dirname ${TARGET_PATH})" > ${LOCAL_POLICY_FILE}
-                    echo -e "${POLICY_TO_RUN_SLEEP}" >> ${LOCAL_POLICY_FILE}
+for TARGET_PATH in (${PATHS[0]} ${PATHS[2]})
+do
+    SLASHES=$(echo ${TARGET_PATH} | sed 's:[^/]::g')
+    PATH_LENGTH=${#SLASHES}
 
-                    TEST_POLICY_FILE=$(mktemp "$0.test.policy.XXXXXX")
-                    echo -e "{ $(caps_for_test $TEST) }\n$(dirname ${TARGET_PATH})" > ${TEST_POLICY_FILE}
-                    echo -e "${POLICY_TO_RUN_TEST}" >> ${TEST_POLICY_FILE}
+    for LOCAL_CAP_COUNT in (0 10)
+    do
+        set_test_results_dir
+        OUTPUT=${TEST_RESULTS_DIR}/data-${PATH_LENGTH}-${LOCAL_CAP_COUNT}
+        touch ${OUTPUT} || die "Could not create results file ${OUTPUT}"
 
-                    spawn_local_children
+        echo "Running ${TEST}  cap count: ${LOCAL_CAP_COUNT}, path length: ${PATH_LENGTH}"
 
-                    ${FOREGROUND_SANDBOX} ${TEST_POLICY_FILE} ${TEST} "${TARGET_PATH}" >> ${OUTPUT} || die "Test ${TEST} failed!"
+        rm -rf "${TARGET_PATH}" || die "Could not remove ${TARGET_PATH}"
 
-                    kill_local_children
-                    [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
-                    [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${TEST_POLICY_FILE}"
-                done
-                # ensure target path and local policy file are deleted
-                rm -rf "${TARGET_PATH}"
-                # kill all global children
-                for PID in "${ACTIVE_GLOBAL_KIDS[@]}"
-                do
-                    kill -9 ${PID}
-                    wait ${PID}
-                done
-                ACTIVE_GLOBAL_KIDS=()
-            done
-        done
-        [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${GLOBAL_POLICY_FILE}"
+        # Set up a policy file which well use to hang capabilities
+        # off of the target paths parent directory
+        LOCAL_POLICY_FILE=$(mktemp "$0.local.policy.XXXXXX")
+        echo -e "{ +stat, +lookup }\n$(dirname ${TARGET_PATH})" > ${LOCAL_POLICY_FILE}
+        echo -e "${POLICY_TO_RUN_SLEEP}" >> ${LOCAL_POLICY_FILE}
+
+        TEST_POLICY_FILE=$(mktemp "$0.test.policy.XXXXXX")
+        echo -e "{ $(caps_for_test $TEST) }\n$(dirname ${TARGET_PATH})" > ${TEST_POLICY_FILE}
+        echo -e "${POLICY_TO_RUN_TEST}" >> ${TEST_POLICY_FILE}
+
+        spawn_local_children
+
+        ${FOREGROUND_SANDBOX} ${TEST_POLICY_FILE} ${TEST} "${TARGET_PATH}" >> ${OUTPUT} || die "Test ${TEST} failed!"
+
+        kill_local_children
+        [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
+        [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${TEST_POLICY_FILE}"
     done
 done
 
