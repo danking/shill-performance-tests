@@ -6,3 +6,4 @@ default:
 	cc owc.c -o owc
 	cc cwu.c -o cwu
 	cc mkdir.c -o mkdir
+	cc cu.c -o cu
