@@ -2,7 +2,7 @@
 
 sudo sysctl security.mac.shill.shill_debug=0
 
-$RUNS=$1
+RUNS=$1
 
 [ "$#" -eq 1 ] || die "Exactly one argument required, $# provided. Valid invocation:
 
