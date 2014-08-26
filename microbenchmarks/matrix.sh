@@ -220,7 +220,8 @@ do
 
         echo "Running ${TEST}  cap count: ${LOCAL_CAP_COUNT}, size: ${DATA_SIZE}"
 
-        rm -rf "${TARGET_PATH}" || die "Could not remove ${TARGET_PATH}"
+        rm -rf "$(dirname ${TARGET_PATH})" || die "Could not remove $(dirname ${TARGET_PATH})"
+        mkdir -p "$(dirname ${TARGET_PATH})" || die "Could not create $(dirname ${TARGET_PATH})"
         touch "${TARGET_PATH}" || die "Could not create ${TARGET_PATH}"
         dd if=/dev/zero of="${TARGET_PATH}" bs=${DATA_SIZE} count=1 2>/dev/null || die "Could not copy ${DATA_SIZE} bits into ${OUTPUT}"
 
@@ -240,10 +241,14 @@ do
         ${FOREGROUND_SANDBOX} ${TEST_POLICY_FILE} ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT} || die "Test ${TEST} failed!"
 
         kill_local_children
+        rm -rf "${TARGET_PATH}" || die "Could not remove ${TARGET_PATH}"
         [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
         [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${TEST_POLICY_FILE}"
     done
 done
+
+# just in case
+ps | grep ./sleep | awk '{print $1}' | xargs kill -9
 
 ###############################################################################
 # open-pread-close 1 level, 5 level
@@ -263,7 +268,8 @@ do
 
         echo "Running ${TEST}  cap count: ${LOCAL_CAP_COUNT}, path length: ${PATH_LENGTH}"
 
-        rm -rf "${TARGET_PATH}" || die "Could not remove ${TARGET_PATH}"
+        rm -rf "$(dirname ${TARGET_PATH})" || die "Could not remove $(dirname ${TARGET_PATH})"
+        mkdir -p "$(dirname ${TARGET_PATH})" || die "Could not create $(dirname ${TARGET_PATH})"
         touch "${TARGET_PATH}" || die "Could not create ${TARGET_PATH}"
         dd if=/dev/zero of="${TARGET_PATH}" bs=${DATA_SIZE} count=1 2>/dev/null || die "Could not copy ${DATA_SIZE} bits into ${OUTPUT}"
 
@@ -283,10 +289,14 @@ do
         ${FOREGROUND_SANDBOX} ${TEST_POLICY_FILE} ${TEST} "${DATA_SIZE}" "${TARGET_PATH}" >> ${OUTPUT} || die "Test ${TEST} failed!"
 
         kill_local_children
+        rm -rf "${TARGET_PATH}" || die "Could not remove ${TARGET_PATH}"
         [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
         [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${TEST_POLICY_FILE}"
     done
 done
+
+# just in case
+ps | grep ./sleep | awk '{print $1}' | xargs kill -9
 
 ###############################################################################
 # create-unlink
@@ -306,7 +316,8 @@ do
 
         echo "Running ${TEST}  cap count: ${LOCAL_CAP_COUNT}, path length: ${PATH_LENGTH}"
 
-        rm -rf "${TARGET_PATH}" || die "Could not remove ${TARGET_PATH}"
+        rm -rf "$(dirname ${TARGET_PATH})" || die "Could not remove $(dirname ${TARGET_PATH})"
+        mkdir -p "$(dirname ${TARGET_PATH})" || die "Could not create $(dirname ${TARGET_PATH})"
 
         # Set up a policy file which well use to hang capabilities
         # off of the target paths parent directory
@@ -323,9 +334,13 @@ do
         ${FOREGROUND_SANDBOX} ${TEST_POLICY_FILE} ${TEST} "${TARGET_PATH}" >> ${OUTPUT} || die "Test ${TEST} failed!"
 
         kill_local_children
+        rm -rf "${TARGET_PATH}" || die "Could not remove ${TARGET_PATH}"
         [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${LOCAL_POLICY_FILE}"
         [ "${DELETE_TEMPORARY_POLICY_FILESP}" -eq 1 ] && rm -rf "${TEST_POLICY_FILE}"
     done
 done
+
+# just in case
+ps | grep ./sleep | awk '{print $1}' | xargs kill -9
 
 rm -rf "${TEST_PATHS_FOLDER}"
