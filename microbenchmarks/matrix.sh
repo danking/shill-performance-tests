@@ -210,9 +210,9 @@ create_test_results_dirs ${SIZE_AND_EXTANT_PATH_TESTS[@]} \
 TARGET_PATH=${PATHS[0]}
 TEST="./r"
 
-for DATA_SIZE in (1 1000000)
+for DATA_SIZE in 1 1000000
 do
-    for LOCAL_CAP_COUNT in (0 10)
+    for LOCAL_CAP_COUNT in 0 10
     do
         set_test_results_dir
         OUTPUT=${TEST_RESULTS_DIR}/data-${DATA_SIZE}-${LOCAL_CAP_COUNT}
@@ -250,12 +250,12 @@ done
 
 TEST="./orc"
 
-for TARGET_PATH in (${PATHS[0]} ${PATHS[2]})
+for TARGET_PATH in ${PATHS[0]} ${PATHS[2]}
 do
     SLASHES=$(echo ${TARGET_PATH} | sed 's:[^/]::g')
     PATH_LENGTH=${#SLASHES}
 
-    for LOCAL_CAP_COUNT in (0 10)
+    for LOCAL_CAP_COUNT in 0 10
     do
         set_test_results_dir
         OUTPUT=${TEST_RESULTS_DIR}/data-${PATH_LENGTH}-${DATA_SIZE}-${LOCAL_CAP_COUNT}
@@ -293,12 +293,12 @@ done
 
 TEST="./cu"
 
-for TARGET_PATH in (${PATHS[0]} ${PATHS[2]})
+for TARGET_PATH in ${PATHS[0]} ${PATHS[2]}
 do
     SLASHES=$(echo ${TARGET_PATH} | sed 's:[^/]::g')
     PATH_LENGTH=${#SLASHES}
 
-    for LOCAL_CAP_COUNT in (0 10)
+    for LOCAL_CAP_COUNT in 0 10
     do
         set_test_results_dir
         OUTPUT=${TEST_RESULTS_DIR}/data-${PATH_LENGTH}-${LOCAL_CAP_COUNT}
