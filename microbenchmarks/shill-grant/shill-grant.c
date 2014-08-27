@@ -28,7 +28,7 @@
 
 int main(int argc, char ** argv) {
   int err;
-  int fds[];
+  int fds[CAP_COUNT];
   char * path, * dir;
   struct timeval timeval_start, timeval_end;
   int time_start, time_end;
@@ -93,7 +93,7 @@ int main(int argc, char ** argv) {
 
   dir = argv[1];
   for (i = 0; i < CAP_COUNT; ++i) {
-    char * path = NULL;
+    path = NULL;
     err = asprintf(&path, "%s/file-%d", dir, i);
     if (err == -1) {
       printf("failed to asprintf\n");
@@ -149,12 +149,14 @@ int main(int argc, char ** argv) {
 
   printf("%d\n", (time_end - time_start));
 
-  err = close(fd);
-  if (err == -1) {
-    printf("failed to close the file descriptor\n");
-    printf("  real error num %d\n", errno);
-    perror("  close");
-    exit(1);
+  for (i = 0; i < CAP_COUNT; ++i) {
+    err = close(fds[i]);
+    if (err == -1) {
+      printf("failed to close the file descriptor %d\n", i);
+      printf("  real error num %d\n", errno);
+      perror("  close");
+      exit(1);
+    }
   }
 
   return 0;
