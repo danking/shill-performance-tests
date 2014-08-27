@@ -23,15 +23,24 @@
 #include <sys/param.h>
 #include <sys/cpuset.h>
 
+#define LENGTH 15
+#define CAP_COUNT 50
+
 int main(int argc, char ** argv) {
   int err;
   int fd;
   char * path;
   struct timeval timeval_start, timeval_end;
   int time_start, time_end;
-  int i;
+  int i, j;
   cpuset_t myset;
-  struct shill_cap cap_to_install;
+  struct shill_cap cap_to_install[CAP_COUNT];
+  int perms[LENGTH] =
+    { C_CONTENT , C_ADDLNK , C_MAKELNK , C_UNLINKFILE , C_UNLINKDIR
+    , C_READ , C_WRITE , C_APPEND , C_CHMODE , C_CHOWN , C_CHFLAGS
+    , C_CHTIMES , C_STAT , C_READLINK , C_ADDSYMLNK
+    };
+
 
   /****************************************************************************/
   /* And There Was One CPU */
@@ -91,14 +100,18 @@ int main(int argc, char ** argv) {
     exit(1);
   }
 
-  cap_to_install.sc_flags =
-    C_CONTENT | C_ADDLNK | C_MAKELNK | C_UNLINKFILE | C_UNLINKDIR | C_READ
-    | C_WRITE | C_APPEND | C_CHMODE | C_CHOWN | C_CHFLAGS | C_CHTIMES | C_STAT
-    | C_READLINK | C_ADDSYMLNK;
+  for (i = 0; i < CAP_COUNT; ++i) {
+    cap_to_install[i].sc_flags = 0;
+    cap_to_install.sc_lookup = NULL;
+    cap_to_install.sc_createfile = NULL;
+    cap_to_install.sc_createdir = NULL;
 
-  cap_to_install.sc_lookup = NULL;
-  cap_to_install.sc_createfile = NULL;
-  cap_to_install.sc_createdir = NULL;
+    for (j = 0; j < LENGTH; ++j) {
+      if (j & i) {
+        cap_to_install[i].sc_flags |= perms[j];
+      }
+    }
+  }
 
   gettimeofday(&timeval_start,NULL);
   /****************************************************************************/
@@ -107,13 +120,15 @@ int main(int argc, char ** argv) {
   if (0 != (err = shill_init()))
     exit(err);
 
-  err = shill_grant(fd, &cap_to_install);
-  if (0 != err) {
-    printf("failed to grant cap on %s\n", path);
-    printf("  real error num %d\n", errno);
-    perror("  shill_grant");
-    exit(1);
-    exit(err);
+  for (i = 0; i < CAP_COUNT; ++i) {
+    err = shill_grant(fd, &(cap_to_install[i]));
+    if (0 != err) {
+      printf("failed to grant cap on %s\n", path);
+      printf("  real error num %d\n", errno);
+      perror("  shill_grant");
+      exit(1);
+      exit(err);
+    }
   }
 
   /* Let The Games End! */
