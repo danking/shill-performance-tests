@@ -18,6 +18,7 @@ int main(int argc, char *argv[]) {
   int iters;
   char * path;
   char * buf;
+  cpuset_t myset;
   struct timespec time_start_spec, time_end_spec;
   long time_start, time_end;
   int i;
