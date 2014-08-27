@@ -102,9 +102,9 @@ int main(int argc, char ** argv) {
 
   for (i = 0; i < CAP_COUNT; ++i) {
     cap_to_install[i].sc_flags = 0;
-    cap_to_install.sc_lookup = NULL;
-    cap_to_install.sc_createfile = NULL;
-    cap_to_install.sc_createdir = NULL;
+    cap_to_install[i].sc_lookup = NULL;
+    cap_to_install[i].sc_createfile = NULL;
+    cap_to_install[i].sc_createdir = NULL;
 
     for (j = 0; j < LENGTH; ++j) {
       if (j & i) {
