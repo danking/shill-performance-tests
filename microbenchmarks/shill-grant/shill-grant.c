@@ -23,19 +23,19 @@
 #include <sys/param.h>
 #include <sys/cpuset.h>
 
-#define LENGTH 15
+#define PERM_COUNT 15
 #define CAP_COUNT 50
 
 int main(int argc, char ** argv) {
   int err;
-  int fd;
-  char * path;
+  int fds[];
+  char * path, * dir;
   struct timeval timeval_start, timeval_end;
   int time_start, time_end;
   int i, j;
   cpuset_t myset;
   struct shill_cap cap_to_install[CAP_COUNT];
-  int perms[LENGTH] =
+  int perms[PERM_COUNT] =
     { C_CONTENT , C_ADDLNK , C_MAKELNK , C_UNLINKFILE , C_UNLINKDIR
     , C_READ , C_WRITE , C_APPEND , C_CHMODE , C_CHOWN , C_CHFLAGS
     , C_CHTIMES , C_STAT , C_READLINK , C_ADDSYMLNK
@@ -91,22 +91,32 @@ int main(int argc, char ** argv) {
     exit(1);
   }
 
-  path = argv[1];
-  fd = open(path, O_RDONLY);
-  if (fd == -1) {
-    printf("failed to open %s\n", path);
-    printf("  real error num %d\n", errno);
-    perror("  open");
-    exit(1);
-  }
-
+  dir = argv[1];
   for (i = 0; i < CAP_COUNT; ++i) {
+    char * path = NULL;
+    err = asprintf(&path, "%s/file-%d", dir, i);
+    if (err == -1) {
+      printf("failed to asprintf\n");
+      printf("  real error num %d\n", errno);
+      perror("  asprintf");
+      exit(1);
+    }
+
+    fds[i] = open(path, O_CREAT);
+    if (fds[i] == -1) {
+      printf("failed to open %s\n", path);
+      printf("  real error num %d\n", errno);
+      perror("  open");
+      exit(1);
+    }
+    free(path);
+
     cap_to_install[i].sc_flags = 0;
     cap_to_install[i].sc_lookup = NULL;
     cap_to_install[i].sc_createfile = NULL;
     cap_to_install[i].sc_createdir = NULL;
 
-    for (j = 0; j < LENGTH; ++j) {
+    for (j = 0; j < PERM_COUNT; ++j) {
       if (j & i) {
         cap_to_install[i].sc_flags |= perms[j];
       }
@@ -121,7 +131,7 @@ int main(int argc, char ** argv) {
     exit(err);
 
   for (i = 0; i < CAP_COUNT; ++i) {
-    err = shill_grant(fd, &(cap_to_install[i]));
+    err = shill_grant(fds[i], &(cap_to_install[i]));
     if (0 != err) {
       printf("failed to grant cap on %s\n", path);
       printf("  real error num %d\n", errno);
