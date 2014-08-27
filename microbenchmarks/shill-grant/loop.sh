@@ -22,7 +22,7 @@ RESULTS_FILE="${RESULTS_DIR}/${EXE}-results-$(date +%F-%T)"
 touch ${RESULTS_FILE} || die "Could not create ${RESULTS_FILE}"
 for i in $(seq 1 ${RUNS})
 do
-    TARGET_FILE=$(mktemp "$0.test.dir.XXXXXX")
+    TARGET_FILE=$(mktemp -d "$0.test.dir.XXXXXX")
 
     "${EXE}" "${TARGET_FILE}" >> ${RESULTS_FILE}
 
