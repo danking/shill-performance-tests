@@ -13,7 +13,7 @@ function die() { echo "grading-split.sh: $@" 1>&2 ; exit 1; }
 TEST_NAME=grading-split
 COMMAND=racket
 ARGS=(grade.amb)
-BEFORE="pushd ${PATH_TO_SHILL}/examples/grading-split"
+BEFORE="pushd ${PATH_TO_SHILL}/examples/grading-split && ./clean.sh"
 AFTER="popd"
 
 

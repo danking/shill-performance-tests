@@ -13,7 +13,7 @@ function die() { echo "grading-sandbox.sh: $@" 1>&2 ; exit 1; }
 TEST_NAME=grading-shill
 COMMAND=racket
 ARGS=(grade.amb)
-BEFORE="pushd ${PATH_TO_SHILL}/examples/grading"
+BEFORE="pushd ${PATH_TO_SHILL}/examples/grading && ./clean.sh"
 AFTER="popd"
 
 bash generic-test.sh $TEST_NAME $COMMAND "${ARGS[*]}" $RUNS $PATH_TO_TEST_LOGS $PATH_TO_SHILL "$BEFORE" "$AFTER"

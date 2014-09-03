@@ -1,18 +1,18 @@
 #!/usr/local/bin/bash
 
-SCRIPTS+=(find-exec-sandbox.sh find-no-sandbox.sh grading-bash.sh emacs-bash.sh)
-SCRIPTS+=(curl-bash.sh untar-bash.sh configure-bash.sh make-bash.sh install-bash.sh uninstall-bash.sh)
-SCRIPTS+=(find-exec-shill-no-spawn.sh find-exec-shill-yes-spawn.sh)
-SCRIPTS+=(find-exec-shill-yes-spawn-compiled.sh)
-SCRIPTS+=(grading-sandbox.sh grading-shill.sh grading-split.sh)
-SCRIPTS+=(emacs-sandbox.sh emacs-shill.sh)
-SCRIPTS+=(curl-sandbox.sh untar-sandbox.sh configure-sandbox.sh make-sandbox.sh install-sandbox.sh uninstall-sandbox.sh)
+# SCRIPTS+=(find-exec-sandbox.sh find-no-sandbox.sh grading-bash.sh emacs-bash.sh)
+# SCRIPTS+=(curl-bash.sh untar-bash.sh configure-bash.sh make-bash.sh install-bash.sh uninstall-bash.sh)
+# SCRIPTS+=(find-exec-shill-no-spawn.sh find-exec-shill-yes-spawn.sh)
+# SCRIPTS+=(find-exec-shill-yes-spawn-compiled.sh)
+SCRIPTS+=(grading-bash.sh grading-sandbox.sh grading-shill.sh grading-split.sh)
+# SCRIPTS+=(emacs-sandbox.sh emacs-shill.sh)
+# SCRIPTS+=(curl-sandbox.sh untar-sandbox.sh configure-sandbox.sh make-sandbox.sh install-sandbox.sh uninstall-sandbox.sh)
 
 echo "Starting evaluation for:"
 echo "${SCRIPTS[*]}"
 
 PATH_TO_LINUX=/usr/src
-PATH_TO_TEST_LOGS=~/tests/results
+PATH_TO_TEST_LOGS=~/tests-kmod-on-sep-3/results
 PATH_TO_SHILL=~/shill
 PATH_TO_TESTS=~/tests
 
