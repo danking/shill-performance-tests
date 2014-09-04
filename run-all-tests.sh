@@ -21,9 +21,9 @@ echo "Starting evaluation for:"
 echo "${SCRIPTS[*]}"
 
 PATH_TO_LINUX=/usr/src
-PATH_TO_TEST_LOGS=/home/sdmoore/tests/results
-PATH_TO_SHILL=/home/sdmoore/shill
-PATH_TO_TESTS=/home/tests
+PATH_TO_TEST_LOGS=~/tests-kmod-on-sep-3/results
+PATH_TO_SHILL=~/shill
+PATH_TO_TESTS=~/tests
 
 echo ">> I'm going to call sudo now, be ready with your password!"
 sudo sysctl security.mac.shill.shill_debug=0
