@@ -1,0 +1,96 @@
+#lang shill/cap
+
+require shill/contracts
+        shill/io
+        shill/native;
+
+provide [find : forall [X:+path,+lookup,+contents] . [f: X]
+                                                     [filter: [_: X] -> boolean?]
+                                                     [cmd: [_: X] -> any]
+                                                     ->
+                                                     any ];
+
+# filter functions
+provide [name : [_: string?] -> [_ : pathable] -> boolean?]
+        [fullname : [_: string?] ->  [_ : pathable] -> boolean?];
+
+# actions
+provide [grep : [regexp : or/c(string?, regexp?)]
+                [out : writeable?]
+                [dir : dir/c(+lookup)]
+                [wallet : native-wallet?]
+                ->
+                [files : listof(file/c(+read, +path))]
+                ->
+                any ];
+
+provide [grep_all : 
+                [file-wallet : wallet-keys/c(gets = [["files", file/c(+read, +path)]])]
+                [regexp : or/c(string?, regexp?)]
+                [out : writeable?]
+                [dir : dir/c(+lookup)]
+                [wallet : native-wallet?]
+                ->
+                any ];
+
+provide [add-to-wallet : [wallet : wallet-keys/c(puts = [["files", file/c(+read, +path)]])]
+        -> [file : file/c(+read, +path)] -> any];
+
+val pathable = or/c(file/c(+path),dir/c(+path));
+
+val ls = fun(dir) { contents(dir); };
+
+val find = fun(f, filter, cmd) {
+  if and(file?(f),filter(f)) then
+     cmd(f);
+
+  # if f is a directory, recurse on its contents
+  if dir?(f) then
+    for g in ls(f) do {
+      val fc = lookup(f,g);
+      if not(sys-error?(fc)) then
+        find(fc, filter, cmd);
+    };
+};
+
+val grep = fun(regexp, out, dir, wallet) {
+  grepfun = pkg-native("grep", wallet);
+  fun (files) {
+    grepfun(list-append(["-H",regexp],files),
+            stdout = out, stderr = out,
+            extra = [dir]);
+  };
+};
+
+val grep_all = fun(file-wallet, regexp, out, dir, wallet) {
+    val grepfun = grep(regexp,out,dir,wallet);
+    val files = get(file-wallet,"files");
+    val len = length(files);
+    val chunks = +(quotient(len,1000),1);
+    val rem = remainder(len,1000);
+
+    for i in in-range(0,chunks)
+    init cur := take(files,rem), rest := drop(files,rem) do {
+        grepfun(cur)
+    } update cur  := if empty?(rest) then false else take(rest,1000),
+             rest := if empty?(rest) then false else drop(rest,1000);
+    void()
+};
+
+val add-to-wallet = fun(wallet) {
+  fun (file) { put(wallet,"files",file); }  
+};
+
+val name = fun(r) { 
+  val re = regexp(r);
+  fun(f) regexp-match?(re, shortname(path(f))); 
+};
+
+val shortname = fun(path) {
+  path-element->string(last(explode-path(string->path(path))));
+};
+
+val fullname = fun(r) { 
+  val re = regexp(r);
+  fun(f) regexp-match?(re, path(f));
+};

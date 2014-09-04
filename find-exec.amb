@@ -5,6 +5,6 @@ require "find-exec.cap";
 val src = open-dir("/usr/src");
 
 find( src
-    , name(".*\\.c")
+    , name(".*\\.c$")
     , grep("(?m:.*mac_.*)", stdout)
     );

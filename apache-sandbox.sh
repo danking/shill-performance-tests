@@ -12,8 +12,8 @@ function die() { echo "apache-sandbox.sh: $@" 1>&2 ; exit 1; }
 
 TEST_NAME=apache-sandbox
 COMMAND="ab"
-ARGS=(-c 100 -n 1000 127.0.0.1/emacs-24.3.tar.gz)
-BEFORE="pushd ${PATH_TO_SHILL}/examples/apache ; racket httpd.amb"
-AFTER="httpd -k stop ; popd"
+ARGS=(-c 100 -n 5000 127.0.0.1/emacs-24.3.tar.gz)
+BEFORE="pushd ${PATH_TO_SHILL}/examples/apache ; sudo racket httpd.amb"
+AFTER="sudo httpd -k stop ; popd"
 
 bash generic-test.sh $TEST_NAME $COMMAND "${ARGS[*]}" $RUNS $PATH_TO_TEST_LOGS $PATH_TO_SHILL "$BEFORE" "$AFTER"

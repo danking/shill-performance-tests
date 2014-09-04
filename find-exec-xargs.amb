@@ -1,9 +1,7 @@
 #lang shill/ambient
 
-require "find-exec-spawn.cap",
+require "find-exec-xargs.cap",
         shill/native;
-
-print-time();
 
 val src = open-dir("/usr/src");
 val wallet = create-wallet();
@@ -13,10 +11,9 @@ populate-native-wallet( wallet
                       , "/libexec:/lib:/usr/lib"
                       , pipe-factory
                       );
+val file-wallet = create-wallet();
 
 find(src,
      name(".*\\.c$"),
-     grep("mac_",
-          stdout,
-          src,
-          wallet));
+     add-to-wallet(file-wallet));
+grep_all(file-wallet, "mac_", stdout, src, wallet);

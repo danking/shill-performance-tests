@@ -6,14 +6,15 @@ PATH_TO_SHILL=$3
 RUNS=$4
 PATH_TO_TESTS=$5
 
-function die() { echo "apache-native.sh: $@" 1>&2 ; exit 1; }
+function die() { echo "grading-none.sh: $@" 1>&2 ; exit 1; }
 
 [ "$#" -eq 5 ] || die "5 arguments required, $# provided"
 
-TEST_NAME=apache-native
-COMMAND="ab"
-ARGS=(-c 100 -n 5000 127.0.0.1/emacs-24.3.tar.gz)
-BEFORE="pushd ${PATH_TO_SHILL}/examples/apache ; sudo httpd"
-AFTER="sudo httpd -k stop ; popd"
+TEST_NAME=grading-none
+COMMAND=bash
+ARGS=(grade.sh)
+BEFORE="pushd ${PATH_TO_SHILL}/examples/grading-bash"
+AFTER="popd"
 
 bash generic-test.sh $TEST_NAME $COMMAND "${ARGS[*]}" $RUNS $PATH_TO_TEST_LOGS $PATH_TO_SHILL "$BEFORE" "$AFTER"
+

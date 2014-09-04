@@ -1,0 +1,19 @@
+#lang shill/cap
+
+provide [findmac :
+          [wallet : native-wallet?]
+          [src : dir/c(+chdir, +read, +lookup, +stat, +path, +contents)]
+          [out : writeable?]
+          [cwd : dir/c(+chdir, +lookup with { +read, +stat, +exec }, +path)]
+          [pf : pipe-factory/c(+first with { +write, +append, +close },
+                               +second with { +read, +stat, +close })]
+           -> integer?];
+
+require shill/native;
+require shill/contracts;
+require shill/io;
+
+val findmac = fun (wallet,src,out,cwd,pf) {
+    val bash = pkg-native("bash",wallet,"find","grep","xargs");
+    bash(["find-xargs.sh"], stdout = out, stderr = out, extra = [src,cwd,pf]);
+};
